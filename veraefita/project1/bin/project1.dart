@@ -28,4 +28,47 @@ void main(List<String> arguments) {
    stdout.writeln("Tinggi saya $tinggi cm");
    stdout.writeln("Jenis kelamin saya ${jenis_kelamin ? 'laki-laki' : 'perempuan'}"); 
    stdout.writeln("Alamat saya di $alamat");
+
+  //4. type data
+  num nilai = 90.5; // bisa diisi int dan double
+  stdout.writeln("Nilai saya $nilai");
+
+  dynamic bebas = "22";
+  stdout.writeln("Nilai dari dynamic adalah $bebas");//lebih global dari pd num
+  
+    // String angka1 = "15";
+    // int angka2 = int.parse(angka1);
+    // int angka3 = bebas;
+  
+
+  // list
+  List <String> hobby =["masak", "rapat", "tidur"];
+  hobby.add("nonton");
+  stdout.writeln("Hobby saya adalah $hobby");
+
+  // map
+  Map <String, String> data = {
+    "nama" : "vera",
+    "Alamat" : "tuban",
+    "Jenis Kelamin" : "perempuan",
+  };
+  data["umur"] = "20";
+  data.addAll({"hobi" : "Masak"});
+  stdout.writeln("Data : $data");
+  stdout.writeln("Nama yang ada di data ${data['nama']}");
+
+  // Try Catch
+  try {
+    // Code that may throw an error
+    int result = 10 ~/ 0; // This will throw an IntegerDivisionByZeroException
+  } on IntegerDivisionByZeroException {
+    // Handles the specific exception IntegerDivisionByZeroException
+    print('Error: Cannot divide by zero!');
+  } catch (e) {
+    // Handles any other type of exception and provides the exception object/message
+    print('An error occurred: $e');
+  } finally {
+    // Code that runs always executes, regardless of whether an exception occurred or not
+    print('Execution completed.');
+  }
 }
