@@ -4,7 +4,10 @@ import 'package:jobsheet3/jobsheet3.dart' as jobsheet3;
 
 void main(List<String> arguments) {
   //IF ELSE
-  int suhuTubuh = 35;
+  //int suhuTubuh = 35;
+  stdout.write("Masukkan suhu tubuh anda : ");
+  String? input = stdin.readLineSync();
+  int suhuTubuh = int.parse(input ?? '') ?? 0;
   if ((suhuTubuh>=37) && (suhuTubuh<=42)){
     print("Anda sakit demam");
   } else if ((suhuTubuh>= 35) && (suhuTubuh<37)){
