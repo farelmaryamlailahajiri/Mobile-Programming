@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:jobsheet3/jobsheet3.dart' as jobsheet3;
 
 void main(List<String> arguments) {
-  //IF ELSE
+  //IF ELSE IF
   //int suhuTubuh = 35;
   stdout.write("Masukkan suhu tubuh anda : ");
   String? input = stdin.readLineSync();
@@ -17,4 +17,17 @@ void main(List<String> arguments) {
   } else {
     print("Maaf suhu tubuh anda tidak teridentifikasi");
   }
+
+  //if else tradisional
+  String kondisi;
+  if ((suhuTubuh>=37) && (suhuTubuh<=42)){
+    kondisi = "Anda mungkin reaktif Covid";
+  } else {
+    kondisi = "Anda mungkin non-reaktif Covid";
+  }
+  print(kondisi);
+
+  //Ternary Operator
+  String kondisi1 = ((suhuTubuh>=37) && (suhuTubuh<=42)) ? "Anda tidak boleh vaksin" : "Anda boleh vaksin";
+  print(kondisi1);
 }
