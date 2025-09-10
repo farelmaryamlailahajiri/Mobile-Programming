@@ -15,12 +15,12 @@ void main(List<String> arguments) {
   //variabel
   int umur = 21;
   double tinggi = 165.5;
-  bool jenis_kelamin = false; //true = laki-laki, false = perempuan
+  bool jenisKelamin = false; //true = laki-laki, false = perempuan
   String alamat = "Malang";
   stdout.writeln("Umur Saya $umur tahun");
   stdout.writeln("Tinggi Saya $tinggi");
   stdout.writeln(
-    "Jenis Kelamin Saya ${jenis_kelamin ? 'Laki-laki' : 'Perempuan'}",
+    "Jenis Kelamin Saya ${jenisKelamin ? 'Laki-laki' : 'Perempuan'}",
   );
   /*if (jenis_kelamin==false) {
     stdout.writeln("Jenis Kelamin Saya Laki-laki");
