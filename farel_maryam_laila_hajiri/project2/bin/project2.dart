@@ -98,13 +98,61 @@ void main(List<String> arguments) {
     j++;
   } while (j < 3);
 
-    // =========================================
+  // =========================================
   // 5. FOR LOOP dengan BREAK dan CONTINUE
   // =========================================
   stdout.writeln("Perulangan for:");
   for (int k = 0; k < 6; k++) {
     if (k == 2) continue; // skip angka 2
-    if (k == 4) break;    // berhenti kalau k == 4
+    if (k == 4) break; // berhenti kalau k == 4
     stdout.writeln("k = $k");
+  }
+  // === Panggil fungsi kategori mahasiswa ===
+  kategoriMahasiswa();
+}
+
+// =========================================
+// Fungsi: Input 5 mahasiswa dan tentukan kategori nilai
+// =========================================
+void kategoriMahasiswa() {
+  // List untuk menyimpan data mahasiswa
+  List<Map<String, dynamic>> daftarMahasiswa = [];
+
+  // Perulangan untuk input 5 mahasiswa
+  for (int i = 1; i <= 5; i++) {
+    stdout.writeln("\nMahasiswa ke-$i");
+
+    // Input nama mahasiswa
+    stdout.write("Masukkan nama: ");
+    String? nama = stdin.readLineSync();
+
+    // Input nilai mahasiswa
+    stdout.write("Masukkan nilai: ");
+    int nilai = int.parse(stdin.readLineSync()!);
+
+    // Tentukan kategori berdasarkan nilai
+    String kategori;
+    if (nilai >= 80) {
+      kategori = "A (Lulus)";
+    } else if (nilai >= 60) {
+      kategori = "B (Lulus)";
+    } else {
+      kategori = "C (Tidak Lulus)";
+    }
+
+    // Simpan ke list
+    daftarMahasiswa.add({
+      "nama": nama ?? "Tanpa Nama",
+      "nilai": nilai,
+      "kategori": kategori,
+    });
+  }
+
+  // Tampilkan hasil akhir
+  stdout.writeln("\n=== Daftar Mahasiswa dan Kategori ===");
+  for (var mhs in daftarMahasiswa) {
+    stdout.writeln(
+      "Nama: ${mhs['nama']}, Nilai: ${mhs['nilai']}, Kategori: ${mhs['kategori']}",
+    );
   }
 }
