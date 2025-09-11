@@ -35,4 +35,19 @@ void main(List<String> arguments) {
   } else {
     print("Maaf, nilai tidak benar!!");
   } 
+
+  // if tradisional
+  String status;
+  if (nilai >= 60){
+    status = "Anda Lulus";
+  } else {
+    status = "Anda Tidak Lulus";
+  }
+  print(status);
+
+  // ternary operator
+  String status1 = (nilai >=60) 
+  ? "Alhamdulillah Lulus" 
+  : "Maaf Anda Belum Lulus";
+  print(status1);
 }
