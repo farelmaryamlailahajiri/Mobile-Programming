@@ -71,4 +71,30 @@ void main(List<String> arguments) {
   String teks = "123";
   int num = int.parse(teks); // ubah string jadi int
   stdout.writeln("String '$teks' diubah ke int = $num");
+
+  // =========================================
+  // 4. DO-WHILE dan WHILE
+  // =========================================
+
+  int i = 0;
+  stdout.writeln("Perulangan while:");
+
+  // WHILE LOOP
+  // Mengecek kondisi dulu (i < 3), baru menjalankan isi perulangan
+  // Jadi kalau dari awal kondisi salah → perulangan tidak dijalankan sama sekali
+  while (i < 3) {
+    stdout.writeln("i = $i");
+    i++;
+  }
+
+  int j = 0;
+  stdout.writeln("Perulangan do-while:");
+
+  // DO-WHILE LOOP
+  // Menjalankan isi perulangan dulu minimal sekali,
+  // kemudian baru mengecek kondisi (j < 3)
+  do {
+    stdout.writeln("j = $j");
+    j++;
+  } while (j < 3);
 }
