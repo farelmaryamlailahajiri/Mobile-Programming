@@ -97,4 +97,14 @@ void main(List<String> arguments) {
     stdout.writeln("j = $j");
     j++;
   } while (j < 3);
+
+    // =========================================
+  // 5. FOR LOOP dengan BREAK dan CONTINUE
+  // =========================================
+  stdout.writeln("Perulangan for:");
+  for (int k = 0; k < 6; k++) {
+    if (k == 2) continue; // skip angka 2
+    if (k == 4) break;    // berhenti kalau k == 4
+    stdout.writeln("k = $k");
+  }
 }
