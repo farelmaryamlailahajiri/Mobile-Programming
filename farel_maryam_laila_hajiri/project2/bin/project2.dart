@@ -4,7 +4,7 @@ import 'package:project2/project2.dart' as project2;
 
 void main(List<String> arguments) {
   // =========================================
-    // 1. IF / ELSE + TERNARY
+  // 1. IF / ELSE + TERNARY
   // =========================================
   stdout.write("Masukkan nilai (0-100): ");
   String? input = stdin.readLineSync();
@@ -18,15 +18,13 @@ void main(List<String> arguments) {
   }
 
   // Ternary untuk tentukan grade
-  String grade = (nilai > 80)
-      ? "A"
-      : (nilai >= 60 ? "B" : "C");
+  String grade = (nilai > 80) ? "A" : (nilai >= 60 ? "B" : "C");
   stdout.writeln("Grade: $grade");
 
   // =========================================
-  // 2. SWITCH CASE 
+  // 2. SWITCH CASE
   // =========================================
-  int hari = 5; 
+  int hari = 5;
   switch (hari) {
     case 1:
       stdout.writeln("Hari = Senin");
@@ -46,4 +44,31 @@ void main(List<String> arguments) {
     default:
       stdout.writeln("Hari tidak dikenali");
   }
+
+  // =========================================
+  // 3. EQUALITY CHECKING & TYPE COERCION
+  // =========================================
+
+  // Contoh menggunakan String
+  String str1 = "halo";
+  String str2 = "halo";
+  String str3 =
+      "ha" + "lo"; // Dibuat lewat operasi string, bukan literal langsung
+
+  // == membandingkan isi string (value equality)
+  stdout.writeln("Apakah str1 == str2? ${str1 == str2}"); // true
+  stdout.writeln("Apakah str1 == str3? ${str1 == str3}"); // true
+
+  // identical membandingkan apakah objeknya sama persis di memori
+  stdout.writeln(
+    "Apakah str1 identik dengan str2? ${identical(str1, str2)}",
+  ); // true (Dart optimisasi literal)
+  stdout.writeln(
+    "Apakah str1 identik dengan str3? ${identical(str1, str3)}",
+  ); // bisa false (karena hasil operasi string)
+
+  // Contoh TYPE COERCION (konversi tipe data)
+  String teks = "123";
+  int num = int.parse(teks); // ubah string jadi int
+  stdout.writeln("String '$teks' diubah ke int = $num");
 }
