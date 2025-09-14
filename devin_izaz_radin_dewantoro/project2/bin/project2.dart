@@ -44,4 +44,7 @@ void main(List<String> arguments) {
       ? "Alhamdulillah Lulus"
       : "Maaf anda belum lulus";
   print(status1);
+
+  // Switch-Case
+  
 }
