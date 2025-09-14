@@ -12,6 +12,7 @@ void main() {
   String b1 = "Hello";
   print(a1 == b1); //true
   print(a1 != b1); //false
+  print(identical(a1, b1)); //true
 
   //Equality Checking with List
   List<int> a2 = [1, 2, 3];
@@ -19,6 +20,7 @@ void main() {
   print(a2 == b2); //false
   print(a2 != b2); //true
   // mengeceknya apakah berada ditempat yg sama, bukan isinya
+  print(identical(a2, b2)); //false
 
   //Type Coercion
   String a3 = "5";
