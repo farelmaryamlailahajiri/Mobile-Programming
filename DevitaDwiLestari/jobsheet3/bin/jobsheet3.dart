@@ -42,14 +42,24 @@ void main(List<String> arguments) {
   //     }
   //     print("Data dalam list = $grow");
 
-  var grow = [];
-    for (var i = 0; i <= 4; i++) {
-      stdout.write("Masukkan list ke-$i : ");
-      var input = stdin.readLineSync();
-      if(input != null) {
-        grow.add(input);
-        print("Data data index ke: $i = ${grow[i]}");
-      }
-    }
-    print("Data dalam list = $grow");
+  // var grow = [];
+  //   for (var i = 0; i <= 4; i++) {
+  //     stdout.write("Masukkan list ke-$i : ");
+  //     var input = stdin.readLineSync();
+  //     if(input != null) {
+  //       grow.add(input);
+  //       print("Data data index ke: $i = ${grow[i]}");
+  //     }
+  //   }
+  //   print("Data dalam list = $grow");
+
+  // Belajar Set
+  var angka = <int> {1,2,3,4,5};
+  print("Datanya adalah ${angka.elementAt(3)} ");
+
+  // union adalah gabungan
+  var angka2= <int> {4,5,6,7,8};
+  print("Data union adalah = ${angka.union(angka2)}");
+  // intersection adalah angka yang sama
+  print("Data intersection adalah = ${angka.intersection(angka2)}");
 }
