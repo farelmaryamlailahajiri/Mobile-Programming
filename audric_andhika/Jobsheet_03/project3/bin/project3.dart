@@ -80,6 +80,12 @@ void main(List<String> arguments) {
   // function parameter
   // tampil("Audric", 20);
   // tampil("tnx", 26, "Sidoarjo");
+
+  // function anonymous
+  // var nilai = [90, 80, 70, 100];
+  // nilai.forEach((angka) {
+  //   print("Nilai = $angka");
+  // });
 }
 
 // void tampil(String nama, int umur, [String? alamat]){
