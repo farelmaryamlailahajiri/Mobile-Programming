@@ -41,15 +41,34 @@ void main(List<String> arguments) {
   //   print("Data di dalam list = $grow");
   // }
 
-  var grow = [];
-  for (var i = 0; i <= 4; i++) {
-    stdout.write('Masukkan data ke-$i : ');
-    var input = stdin.readLineSync();
-    if (input !=null) {
-      grow.add(input);
-      print("Data index ke-$i : ${grow[i]}");
-    }
-  }
+  // var grow = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write('Masukkan data ke-$i : ');
+  //   var input = stdin.readLineSync();
+  //   if (input !=null) {
+  //     grow.add(input);
+  //     print("Data index ke-$i : ${grow[i]}");
+  //   }
+  // }
 
-  print ("Data di dalam list = $grow");
+  // print ("Data di dalam list = $grow");
+
+  // Set
+  // var angka = <int> {1,2,3,3,4,5};
+  // print("Data nya adalah ${angka.elementAt(3)}");
+
+
+  // var angka2 = <int> {4,5,6,7,8};
+  // print ("Data union ${angka.union(angka2)}");
+  // print ("Data intersection ${angka.intersection(angka2)}");
+
+  var biodata = {
+    'nim' : '123200045',
+    'nama' : 'Muhammad Rizki',
+    'umur' : 20,
+  };
+  biodata['alamat'] = 'Malang';
+
+  print("biodata Mahasiswa = $biodata");
+  print("NIM : ${biodata['nim']}");
 }
