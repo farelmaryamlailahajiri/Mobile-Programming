@@ -26,7 +26,7 @@ void main(List<String> arguments) {
   // print("Data dari list setelah input = $list");
 
   // Growable List
-  var grow = [];
+  // var grow = [10];
 
   // grow.add(20);
   // grow.add(30);
@@ -37,11 +37,28 @@ void main(List<String> arguments) {
 
   // print("Data di dalam grow list : $grow");
 
-   // Growable List dengan inputan
+  // Growable List dengan inputan
+  // var grow = [];
+
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Data List ke-$i : ");
+  //   var input = stdin.readLineSync();
+  //   grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
+  //   }
+
+  //   print("Data dalam list = $grow");
+
+  // Growable List string
+  var grow = [];
+
   for (var i = 0; i <= 4; i++) {
     stdout.write("Data List ke-$i : ");
     var input = stdin.readLineSync();
-    grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
+    if(input != null){
+      grow.add(input);
+      print("Data index ke-$i ${grow[i]}");
     }
+    }
+
     print("Data dalam list = $grow");
 }
