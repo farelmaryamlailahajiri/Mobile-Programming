@@ -55,10 +55,21 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
 
 
   //SET
-    var angka = <int>{1,2,3,4,5};
-    print("Datanya adalah ${angka.elementAt(1)}");
+    // var angka = <int>{1,2,3,4,5};
+    // print("Datanya adalah ${angka.elementAt(1)}");
 
-    var angka2 = <int>{4,5,6,7,8};
-    print("Data union adalah = ${angka.union(angka2)}");
-    print("Data intersection adalah = ${angka.intersection(angka2)}");
+    // var angka2 = <int>{4,5,6,7,8};
+    // print("Data union adalah = ${angka.union(angka2)}");
+    // print("Data intersection adalah = ${angka.intersection(angka2)}");
+  
+  //MAP
+  var biodata = {
+    'NIM' : '2341760081',
+    'Nama' : 'Lovelyta Sekarayu',
+    'Jurusan' : 'Teknologi Informasi',
+    'Nama' : 'Lovelyta Sekarayu' // ke replace
+  };
+  biodata['Nama'] = "2023"; // ke replace
+  print("Biodata Mahasiswa $biodata");
+  print("Nama = ${biodata['Nama']}");
 }
