@@ -31,10 +31,15 @@ void main(List<String> arguments) {
   // print("data union ${x.union(y)}");
   // print("data intersect ${x.intersection(y)}");
 
-  Map<String, Object> mhs = {"name": "ujang", "umur": 20};
-  print(mhs["name"]);
-  mhs["nim"] = "23";
-  print(mhs);
-  mhs["name"] = "tatang";
-  print(mhs);
+  // Map<String, Object> mhs = {"name": "ujang", "umur": 20};
+  // print(mhs["name"]);
+  // mhs["nim"] = "23";
+  // print(mhs);
+  // mhs["name"] = "tatang";
+  // print(mhs);
+
+  // var x = (1, 2, "ujang");
+  // var x = (name: "tatang", age: 2);
+  // Record x = (1, 2);
+  // print(x);
 }
