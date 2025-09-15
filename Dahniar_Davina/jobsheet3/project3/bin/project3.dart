@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:project3/project3.dart' as project3;
 
-void main(List<String> arguments) {
+//void main(List<String> arguments) {
   //print('Hello world: ${project3.calculate()}!');
 
   //fixed list
@@ -60,7 +60,7 @@ void main(List<String> arguments) {
 
   // Tampilkan hasil
   print("Data dalam list nama=$grow");*/
-  
+
   //var SET
   //var angka = <int>[1,2,3,3,4,5];
   //var setA = {2};
@@ -95,12 +95,12 @@ void main(List<String> arguments) {
   //tampil("Davina", 20);
 
   //function anonymous
-  var nilai = {100, 90, 80, 70, 60};
-  nilai.forEach((angka) {
-    print("Nilai = $angka");
-  });
+  // var nilai = {100, 90, 80, 70, 60};
+  // nilai.forEach((angka) {
+  //   print("Nilai = $angka");
+  // });
 
-}
+//}
   // void tampil(String nama, int umur, {String? alamat}) {
   //   print("Nama : $nama");
   //   print("Umur : $umur");
@@ -110,4 +110,21 @@ void main(List<String> arguments) {
   //     print("Alamat : -");
   //   }
   // }
+
+  //function closure
+  Function buatCounter() {
+    var hitung = 0;
+
+    return () {
+      hitung++;
+      return hitung;
+    };
+  }
+
+  void main() {
+    var counter = buatCounter();
+    print(counter()); //1
+    print(counter()); //2
+    print(counter()); //3
+  }
 
