@@ -34,13 +34,24 @@ void main(List<String> arguments) {
   // print("Data di dalam list = $grow ");
 
   //growable list dengan for loop
-  var grow = [];
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Data List ke-$i : ");
-    var input = stdin.readLineSync();
-    grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
-    }
-    print("Data dalam list = $grow");
-  }
+  // var grow = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Data List ke-$i : ");
+  //   var input = stdin.readLineSync();
+  //   grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
+  //   }
+  //   print("Data dalam list = $grow");
+  // }
 
+var grow = [];
+  for (var i = 0; i <= 4; i++) {
+    stdout.write("Masukkan list ke-$i : ");
+    var input = stdin.readLineSync();
+    if(input != null) {
+      grow.add(input);
+      print("Data data index ke: $i ${grow[i]}");
+    }
+  }
+  print("Data dalam list = $grow");
+}
 
