@@ -56,12 +56,26 @@ void main(List<String> arguments) {
 // print("Data nya intersection ${angka.intersection(angka2)}"); 
 
 // map
-var biodata = {
-  'nim': '2341760134',
-  'nama': 'Husein',
-  'jurusan': 'Teknologi Informasi'
-};
-biodata['Angkatan'] = '2023';
-print("Biodata Mahasiswa $biodata");
-print("Biodata Mahasiswa dengan nama = ${biodata['nama']}");
+// var biodata = {
+//   'nim': '2341760134',
+//   'nama': 'Husein',
+//   'jurusan': 'Teknologi Informasi'
+// };
+// biodata['Angkatan'] = '2023';
+// print("Biodata Mahasiswa $biodata");
+// print("Biodata Mahasiswa dengan nama = ${biodata['nama']}");
+
+//record
+// var mahasiswa = ("Luqman", 40, true);
+// print("ini data Pak Luqman : $mahasiswa");
+// print("Mahasiswa = ${mahasiswa.$1}");
+
+// var bio = (nama: "Husein Fadhlullah", umur: 20, status: true);
+// print("Biodata = $bio");
+// print("Nama Saya ${bio.nama}");
+
+// Record x = (1, 2);
+// print(x);
+
+
 }
