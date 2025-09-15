@@ -91,18 +91,23 @@ void main(List<String> arguments) {
   print("Nama : ${bio.nama}");*/
 
   //function parameter
-  tampil("Dahniar", 21, alamat: "London");
-  tampil("Davina", 20);
-  
-  
+  //tampil("Dahniar", 21, alamat: "London");
+  //tampil("Davina", 20);
+
+  //function anonymous
+  var nilai = {100, 90, 80, 70, 60};
+  nilai.forEach((angka) {
+    print("Nilai = $angka");
+  });
+
 }
-  void tampil(String nama, int umur, {String? alamat}) {
-    print("Nama : $nama");
-    print("Umur : $umur");
-    if (alamat != null) {
-      print("Alamat : $alamat");
-    } else {
-      print("Alamat : -");
-    }
-  }
+  // void tampil(String nama, int umur, {String? alamat}) {
+  //   print("Nama : $nama");
+  //   print("Umur : $umur");
+  //   if (alamat != null) {
+  //     print("Alamat : $alamat");
+  //   } else {
+  //     print("Alamat : -");
+  //   }
+  // }
 
