@@ -1,4 +1,5 @@
 import 'dart:io';
+//import 'dart:js_interop';
 import 'package:pertemuan/pertemuan.dart' as pertemuan;
 
 void main(List<String> arguments) {
@@ -81,13 +82,17 @@ void main(List<String> arguments) {
 //tampil("Deva", 20, "kediri");
 //tampil("luqman", 40); 
 
-}
+//anonymous function
+var nilai = [90, 80, 70, 100];
+nilai.forEach((angka) {
+  print("Nilai saya $angka");
+});
 
 //function parameter
-void tampil(String nama, int umur, {String? alamat}) {
-  print("Nama : $nama");
-  print("Umur : $umur");
-  if (alamat != null) {
-    print("Alamat : $alamat");
-  }
+//void tampil(String nama, int umur, {String? alamat}) {
+//  print("Nama : $nama");
+//  print("Umur : $umur");
+//  if (alamat != null) {
+//    print("Alamat : $alamat");
+//  }
 }
