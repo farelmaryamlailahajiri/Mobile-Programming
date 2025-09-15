@@ -1,4 +1,5 @@
 import 'dart:io';
+// import 'dart:js_interop';
 import 'package:project3/project3.dart' as project3;
 
 void main(List<String> arguments) {
@@ -95,16 +96,22 @@ void main(List<String> arguments) {
   // print("Biodata saya $bio");
   // print("Nama saya ${bio.nama}");
   
-  tampil("Izzatir", 20, "Blitar");
-  tampil("Rofi'ah", 19);
+  // tampil("Izzatir", 20, "Blitar");
+  // tampil("Rofi'ah", 19);
+
+  // Anonymous Function
+  var nilai = [90, 80, 70, 100];
+  nilai.forEach((angka) {
+    print("Nilai : $angka");
+  });
 }
   // Function Parameter
-  void tampil(String nama, int umur, [String? alamat]) {
-    print("Nama : $nama");
-    print("Umur : $umur");
-    if (alamat != null){
-      print("Alamat : $alamat");
-    } else{
-      print("Alamat : -");
-    }
-  }
+  // void tampil(String nama, int umur, [String? alamat]) {
+  //   print("Nama : $nama");
+  //   print("Umur : $umur");
+  //   if (alamat != null){
+  //     print("Alamat : $alamat");
+  //   } else{
+  //     print("Alamat : -");
+  //   }
+  // }
