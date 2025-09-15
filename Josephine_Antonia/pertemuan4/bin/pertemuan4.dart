@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
 
@@ -5,7 +6,7 @@ void main(List<String> arguments) {
   // print('Hello world: ${pertemuan4.calculate()}!');
 
   // Belajar Fixed List
-  var list = List<int>.filled(5, 0);
+  // var list = List<int>.filled(5, 0);
   // list[0] = 10;
   // list[1] = 20;
   // list[2] = 30;
@@ -42,15 +43,23 @@ void main(List<String> arguments) {
   //   print("Data dalam list = $Grow");
 
   // Perulangan Growable nama
-  var Grow = [];
+  // var Grow = [];
 
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Data List ke-$i : ");
-    var input = stdin.readLineSync();
-    if(input != null) {
-      Grow.add(input);
-       print("Data dalam index ke = $i ${Grow[i]}");
-    }
-  }
-  print('Data dalam list = $Grow');
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Data List ke-$i : ");
+  //   var input = stdin.readLineSync();
+  //   if(input != null) {
+  //     Grow.add(input);
+  //      print("Data dalam index ke = $i ${Grow[i]}");
+  //   }
+  // }
+  // print('Data dalam list = $Grow');
+
+  // Set
+    var angka = <int> {1,2,3,3,4,5}; //double tetap 1 data
+    print("Datanya adalah : ${angka.elementAt(1)}"); //memanggil data tertentu
+
+    var angka2 = <int> {4,5,6,7,8};
+    print("Data Union adalah = ${angka2.union(angka2)}");
+    print("Data intersection adalah = ${angka.intersection(angka2)}");
 }
