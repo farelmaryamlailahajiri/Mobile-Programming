@@ -63,6 +63,12 @@ void main(List<String> arguments) {
   //   print("Data dalam list = $grow");
 
   // Set
-  var angka = <int>{1, 2, 3, 3, 4, 5};
+  var angka = <int> {1, 2, 3, 3, 4, 5};
   print("Data nya adalah ${angka.elementAt(1)}");
+
+  // Union = penggabungan
+  var angka2 = <int> {4, 5, 6, 7, 8};
+  print("Data union adalah : ${angka.union(angka2)}");
+  // Intersection = irisan
+  print("Data intersection adalah : ${angka.intersection(angka2)}");
 }
