@@ -70,5 +70,15 @@ var list = List<int>.filled(5, 0);
   // print("nama : ${biodata['nama']}");
   // }
 
+// // record
+//  var mahasiswa = ("luqman", 40, true);
+//  print("data pakluqman : $mahasiswa");
+//   print("nama : ${mahasiswa.$1}");
+
+// var biodata = (nama:"khuzaima", umur:20, gender:true);
+// print("data biodata : $biodata");
+// print("nama : ${biodata.nama}");
+
+//  }
 
  }
