@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:project3/project3.dart' as project3;
 import 'dart:io';
 
@@ -24,20 +26,27 @@ void main(List<String> arguments) {
 
   // growable list
 
-  var grow = [];
-  // grow.add(20);
-  // grow.add(40);
-  // grow.add(55);
-  // grow.add(60);
-  // grow.remove(55);
-  // grow.add(10);
+  // var grow = [];
+  // // grow.add(20);
+  // // grow.add(40);
+  // // grow.add(55);
+  // // grow.add(60);
+  // // grow.remove(55);
+  // // grow.add(10);
 
-  // print("Data di dalam list = $grow ");
+  // // print("Data di dalam list = $grow ");
   
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Data list ke-$i : ");
-    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-    grow.add(input);
-  }
-  print("Data nilai mahasiswa = $grow");
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Data list ke-$i : ");
+  //   var input = stdin.readLineSync() ?? '';
+  //   grow.add(input);
+  // }
+  // print("Data nama mahasiswa = $grow");
+
+  var angka = <int> {1,2,3,3,4,5};
+  // print("Data adalah : ${angka.elementAt(1)}");
+
+  var angka2 = <int> {4,5,6,7,8};
+  print("Data union adalah = ${angka.union(angka2)}");
+  print("Data intersection adalah = ${angka.intersection(angka2)}");
 }
