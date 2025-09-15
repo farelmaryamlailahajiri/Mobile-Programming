@@ -42,11 +42,19 @@ void main(List<String> arguments) {
   // }
   // print("Data nilai mahasiswa = $mahasiswa");
 
-  var nama = [];
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan nama ke index $i:");
-    var input = stdin.readLineSync() ?? '';
-    nama.add(input);
-  }
-  print("Data nama mahasiswa = $nama");
+  // var nama = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan nama ke index $i:");
+  //   var input = stdin.readLineSync() ?? '';
+  //   nama.add(input);
+  // }
+  // print("Data nama mahasiswa = $nama");
+
+  // Set
+  var angka = <int>{1, 2, 3, 3, 4, 5};
+  print("Data dari set = ${angka.elementAt(3)}");
+ 
+  var angka2 = <int> {4, 5, 6, 7, 8};
+  print("Data union adalah = ${angka.union(angka2)}");
+  print("Data intersection adalah = ${angka.intersection(angka2)}");
 }
