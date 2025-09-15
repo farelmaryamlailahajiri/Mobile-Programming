@@ -26,7 +26,7 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
   // print("Data dari list setelah diinput = $list");
 
   //growable list
-  var grow = [];
+  //var grow = [];
   // grow.add(20);
   // grow.add(40);
   // grow.add(55);
@@ -35,10 +35,21 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
   // grow.add(10);
   // print("Data dalam growable list = $grow");
 
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan list ke-$i : ");
+  //   var input = stdin.readLineSync();
+  //   grow.add(int.parse(input == null || input.isEmpty ? '0' : input));
+  // }
+  // print("Data dalam list = $grow");
+
+  var grow = [];
   for (var i = 0; i <= 4; i++) {
     stdout.write("Masukkan list ke-$i : ");
     var input = stdin.readLineSync();
-    grow.add(int.parse(input == null || input.isEmpty ? '0' : input));
+    if(input != null) {
+      grow.add(input);
+      print("Data data index ke: $i ${grow[i]}");
+    }
   }
-  print("Data dalam list = $grow");
+  print("Data dalam list = $grow"); 
 }
