@@ -26,13 +26,22 @@ void main(List<String> arguments) {
   // print("Data dari list setelah input = $list");
 
   // Growable List
-  var grow = [0];
-  grow.add(10);
-  grow.add(20);
-  grow.add(30);
-  grow.add(40);
-  grow.remove(55);
-  grow.add(30);
+  var grow = [];
 
-  print("Data di dalam grow list : $grow");
+  // grow.add(20);
+  // grow.add(30);
+  // grow.add(40);
+  // grow.add(50);
+  // grow.remove(55);
+  // grow.add(30);
+
+  // print("Data di dalam grow list : $grow");
+
+   // Growable List dengan inputan
+  for (var i = 0; i <= 4; i++) {
+    stdout.write("Data List ke-$i : ");
+    var input = stdin.readLineSync();
+    grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
+    }
+    print("Data dalam list = $grow");
 }
