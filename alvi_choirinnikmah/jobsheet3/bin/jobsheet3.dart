@@ -36,14 +36,18 @@ void main(List<String> arguments) {
   // print("Data di dalam growable list = $grow");
 
   // Contoh growable list menggunakan for
-  var mahasiswa = <String>[];
-  for (int i = 0; i <= 4; i++) {
-    stdout.write('Masukkan nama mahasiswa ke-${i + 1}: ');
-    String? nama = stdin.readLineSync();
-    if (nama != null && nama.isNotEmpty) {
-      mahasiswa.add(nama);
-    }
-  }
-  print("Daftar nama mahasiswa: $mahasiswa");
+  // var mahasiswa = <String>[];
+  // for (int i = 0; i <= 4; i++) {
+  //   stdout.write('Masukkan nama mahasiswa ke-${i + 1}: ');
+  //   String? nama = stdin.readLineSync();
+  //   if (nama != null && nama.isNotEmpty) {
+  //     mahasiswa.add(nama);
+  //   }
+  // }
+  // print("Daftar nama mahasiswa: $mahasiswa");
 
+  // Set adalah kumpulan data yang tidak berurutan dan tidak boleh ada data yang sama
+  var angka = <int>{1, 2, 3, 3, 4};
+  print("Set angka: $angka"); // Output {1, 2, 3, 4}
+  print("Data nya andalah ${angka.elementAt(3)}"); // Menampilkan data pada index ke 3
 }
