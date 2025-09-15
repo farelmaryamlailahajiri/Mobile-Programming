@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:jobsheet3/jobsheet3.dart' as jobsheet3;
 import 'dart:io';
 
@@ -37,12 +39,35 @@ void main(List<String> arguments) {
   print("Data dalam urut list = $grow");
   */
 
-  List<int> Grow = [];
+  //List<int> Grow = [];
 
+  /*
   for (var i = 0; i <= 4; i++) {
     stdout.write("Data List ke-$i : ");
     var input = stdin.readLineSync();
     Grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
+  }
+  print("Data dalam list = $Grow");
+  */
+
+  /*
+  List<String> grow = [];
+
+  for (var i = 0; i <= 4; i++) {
+    stdout.write('Data list ke-$i : ');
+    var input = stdin.readLineSync();
+    if (input == null) {
+      grow.add(input);
+      print('data index ke: $i ${grow[i]}');
     }
-    print("Data dalam list = $Grow");
+  }
+  print('data dalam list: $grow');
+  */
+
+  //SET
+  var angka = <int> {1,2,3,3,4,5};
+  //print("Datanya adalah ${angka.elementAt(1)}"); //menampilkan pada indeks ke
+
+  var angka2 = <int> {4,5,6,7,8};
+  print("Data Union adalah = ${angka.union(angka2)}"); //union=gabungan
 }
