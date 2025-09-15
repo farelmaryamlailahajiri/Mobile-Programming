@@ -94,7 +94,18 @@ void main(List<String> arguments) {
   //print("Ini data saya: $mahasiswa");
   //print("Mahasiswa = ${mahasiswa.$1}"); //mencetak data ke-1 Angelina
 
+  /*
   var bio = (nama:"Reza", umur:20, gender:true);
   print("Biodata  teman saya $bio");
   print("nama saya ${bio.nama}");
+  */
+
+  //FUNCTION
+  void tampil(String nama, int umur, [String? alamat]) {
+    print("Nama : $nama");
+    print("Umur : $umur");
+    if (alamat != null) {
+      print("Alamat : $alamat");
+    }
+  } 
 }
