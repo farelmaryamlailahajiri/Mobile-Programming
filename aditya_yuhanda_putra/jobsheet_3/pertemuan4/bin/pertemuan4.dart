@@ -65,11 +65,32 @@ void main(List<String> arguments) {
   // print("Nama : ${biodata['nama']}");
 
   // Record in Dart
-  var record = ("Aditya", 21, true);;
-  print("ini data Aditya = $record");
-  print("Elemen ke-1 dari record = ${record.$1}");
+  // var record = ("Aditya", 21, true);;
+  // print("ini data Aditya = $record");
+  // print("Elemen ke-1 dari record = ${record.$1}");
 
-  var bio = (nama:"Mauliddina", umur:18, gender:false);
-  print("ini data Mauliddina = $bio");
-  print("Nama : ${bio.nama}");
+  // var bio = (nama:"Mauliddina", umur:18, gender:false);
+  // print("ini data Mauliddina = $bio");
+  // print("Nama : ${bio.nama}");
+
+  // Function in Dart
+  // tampil("Aditya", 21, "Malang");
+  // tampil("Mauliddina", 18);
+
+  // Anonymous Function in Dart
+  var nilai = [90, 80, 70, 100];
+    nilai.forEach((angka){
+      print("Nilai = $angka");
+    });
 }
+
+// Function in Dart
+// void tampil(String nama, int umur, [String? alamat]) {
+//   print("Nama : $nama");
+//   print("Umur : $umur");
+//   if (alamat != null) {
+//     print("Alamat : $alamat");
+//   } else {
+//     print("Alamat : -");
+//   }
+// }
