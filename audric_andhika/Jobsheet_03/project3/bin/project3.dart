@@ -68,5 +68,12 @@ void main(List<String> arguments) {
   // print("Data biodata = $biodata");
   // print("Nama Mahasiswa = ${biodata['nama']}");
 
-  
+  // record
+  // var mahasiswa = ("audric", 20, true);
+  // print("Biodata mahasiswa = $mahasiswa");
+  // print("Nama mahasiswa = ${mahasiswa.$1}");
+
+  // var bio = (nama : "audric", umur: 20, gender: true);
+  // print("Biodata mahasiswa = $bio");
+  // print("Nama mahasiswa = ${bio.nama}");
 }
