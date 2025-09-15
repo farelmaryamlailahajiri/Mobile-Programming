@@ -6,7 +6,7 @@ void main(List<String> arguments) {
   //print('Hello world: ${pertemuan4.calculate()}!');
 
   //fixed list
-  var list = List<int>.filled(5, 0);
+  // var list = List<int>.filled(5, 0);
   // list[0] = 10;
   // list[1] = 20;
   // list[2] = 30;
@@ -17,12 +17,45 @@ void main(List<String> arguments) {
   // print("data dari list: $list");
 
   //fixed dengan input dan perulangan
-  for (int i = 0; i <= 4; i++) {
-    stdout.write('masukan data ke-$i : ');
-    var input = int.tryParse(stdin.readLineSync()?? '');
-    list[i] = input!;
+  // for (int i = 0; i <= 4; i++) {
+  //   stdout.write('masukan data ke-$i : ');
+  //   var input = int.tryParse(stdin.readLineSync()?? '');
+  //   list[i] = input!;
 
-    print("data dari list setelah di input: $list");
-  }  
+  //   print("data dari list setelah di input: $list");
+  // }  
 
+  // var grow = [10];
+  // grow.add(20);
+  // grow.add(40);
+  // grow.add(50);
+  // grow.add(60);
+  // grow.remove(50);
+  // grow.add(80);
+
+  // print('data dalam grow list: $grow');
+  // var grow = [];
+
+  // for (int i = 0; i <= 4; i++) {
+  //   stdout.write('data list ke-$i : ');
+  //   var input = stdin.readLineSync();
+  //   grow.add(int.parse((input== null ||)))
+
+  //   }
+
+
+
+
+  // print('data dalam grow list: $grow');
+  var grow = [];
+
+  for (var i = 0; i <= 4; i++) {
+    stdout.write('data list ke-$i : ');
+    var input = stdin.readLineSync();
+    if(input !=null) {
+      grow.add(input);
+      print('data index ke: $i ${grow[i]}');
+    }
+}
+print('data dalam list: $grow'); 
 }
