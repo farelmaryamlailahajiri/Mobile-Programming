@@ -26,8 +26,15 @@ void main(List<String> arguments) {
 
   // print("data : ${x.elementAt(1)}");
 
-  Set x = <int>{1, 2, 3, 4, 5};
-  Set y = <int>{4, 5, 6, 7, 8};
-  print("data union ${x.union(y)}");
-  print("data intersect ${x.intersection(y)}");
+  // Set x = <int>{1, 2, 3, 4, 5};
+  // Set y = <int>{4, 5, 6, 7, 8};
+  // print("data union ${x.union(y)}");
+  // print("data intersect ${x.intersection(y)}");
+
+  Map<String, Object> mhs = {"name": "ujang", "umur": 20};
+  print(mhs["name"]);
+  mhs["nim"] = "23";
+  print(mhs);
+  mhs["name"] = "tatang";
+  print(mhs);
 }
