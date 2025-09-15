@@ -2,7 +2,7 @@ import 'package:project3/project3.dart' as project3;
 import 'dart:io';
 
  void main(List<String> arguments) {
-// print('Hello world: ${project3.calculate()}!');
+
 var list = List<int>.filled(5, 0);
 
 // list[0] = 10;
@@ -78,7 +78,19 @@ var list = List<int>.filled(5, 0);
 // var biodata = (nama:"khuzaima", umur:20, gender:true);
 // print("data biodata : $biodata");
 // print("nama : ${biodata.nama}");
+tampil("ircahm", 20, "Malang");
+  }
 
-//  }
+// function parameter
 
+ void tampil (String nama, int umur, [String? alamat]) {
+  print("nama : $nama");
+  print("umur : $umur");
+  if (alamat != null) {
+    print("alamat : $alamat");
+ 
+  } else {
+    print("alamat : -");
+
+ }
  }
