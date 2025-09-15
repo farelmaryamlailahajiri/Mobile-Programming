@@ -88,22 +88,29 @@ void main(List<String> arguments) {
 // }
 
 //record
-var mahasiswa = ('2341760114', 'Maisya', 'Teknologi Informasi');
+// var mahasiswa = ('2341760114', 'Maisya', 'Teknologi Informasi');
 
 // akses berdasarkan posisi (index mulai dari $1, $2, ...)--> data ke-1, ke-2...
-  print("NIM    : ${mahasiswa.$1}");
-  print("Nama   : ${mahasiswa.$2}");
-  print("Jurusan: ${mahasiswa.$3}");
+//   print("NIM    : ${mahasiswa.$1}");
+//   print("Nama   : ${mahasiswa.$2}");
+//   print("Jurusan: ${mahasiswa.$3}");
 
-  tampil("Maisya", 18, "Malang");
-  tampil("adin", 21);
-}
+//   tampil("Maisya", 18, "Malang");
+//   tampil("adin", 21);
+// }
 
 //function parameter
-void tampil(String nama, int umur, [String? alamat]) {
-  print ("Nama : $nama");
-  print ("Umur : $umur");
-  if (alamat != null) {
-    print("Alamat : $alamat") ;
-  }
+// void tampil(String nama, int umur, [String? alamat]) {
+//   print ("Nama : $nama");
+//   print ("Umur : $umur");
+//   if (alamat != null) {
+//     print("Alamat : $alamat") ;
+//   }
+
+//anonymous function
+  var nilai = [90, 80, 100];
+
+  nilai.forEach((angka) {
+    print("nilai = $angka ");
+  });
 }
