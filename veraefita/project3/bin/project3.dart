@@ -59,4 +59,8 @@ void main(List<String> arguments) {
 
   var angka= <int> {1,2,3,4,5};
   print("Data nya adalah ${angka.elementAt(1)}");
+
+  var angka2= <int> {4,5,6,7,8};
+  print("Data Union Adalah = ${angka.union(angka2)}");
+  print("Data intersection Adalah = ${angka.intersection(angka2)}");
 }
