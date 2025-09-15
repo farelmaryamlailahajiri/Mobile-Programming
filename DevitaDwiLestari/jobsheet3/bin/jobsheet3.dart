@@ -84,15 +84,21 @@ void main(List<String> arguments) {
   // print("Biodata sata $bio");
   // print("Nama saya ${bio.nama}");
 
-  tampil("Devita", 20, "Sidoarjo");
-  tampil("Luqman", 21);
+  // tampil("Devita", 20, "Sidoarjo");
+  // tampil("Luqman", 21);
+
+  // Anonymus function
+  var nilai = [90, 80, 70, 100];
+  nilai.forEach((angka){
+    print("Nilai = $angka");
+  });
 }
 
 // function parameter
-void tampil(String nama, int umur, [String? alamat]){
-  print("Nama : $nama");
-  print("Umur : $umur");
-  if (alamat != null){
-    print("Alamat : $alamat");
-  }
-}
+// void tampil(String nama, int umur, [String? alamat]){
+//   print("Nama : $nama");
+//   print("Umur : $umur");
+//   if (alamat != null){
+//     print("Alamat : $alamat");
+//   }
+// }
