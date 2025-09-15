@@ -46,14 +46,17 @@ void main(List<String> arguments) {
 
 
    //growable kedua
-  var grow = [];
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan list ke-$i : ");
-    var input = stdin.readLineSync();
-    if (input != null) {
-      grow.add(input);
-      print("Data index ke-$i = ${grow[i]}");
-    }
-  }
-  print("Data dalam list = $grow");
+  // var grow = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan list ke-$i : ");
+  //   var input = stdin.readLineSync();
+  //   if (input != null) {
+  //     grow.add(input);
+  //     print("Data index ke-$i = ${grow[i]}");
+  //   }
+  // }
+  // print("Data dalam list = $grow");
+
+  var angka= <int> {1,2,3,4,5};
+  print("Data nya adalah ${angka.elementAt(1)}");
 }
