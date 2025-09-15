@@ -22,7 +22,7 @@ void main(List<String> arguments) {
   // print("Data dari list setelah input = $list");
 
   //Belajar Growable list
-  var grow = [];
+  // var grow = [];
   // grow.add(20);
   // grow.add(21);
   // grow.add(22);
@@ -31,11 +31,19 @@ void main(List<String> arguments) {
   // grow.add(20);
   // print("Data didalam list = $grow");
 
-var mahasiswa = [];
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan nilai mahasiswa ke index $i:");
-    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-    mahasiswa.add(input);
+  // var mahasiswa = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan nilai mahasiswa ke index $i:");
+  //   var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+  //   mahasiswa.add(input);
+  // }
+  // print("Data nilai mahasiswa = $mahasiswa");
+
+  var nama = [];
+  for (int i = 0; i <= 4; i++) {
+    stdout.write("Masukkan nama mahasiswa ke- $i:");
+    var input = stdin.readLineSync();
+    nama.add(input);
   }
-  print("Data nilai mahasiswa = $mahasiswa");
+  print("Data nama mahasiswa = $nama");
 }
