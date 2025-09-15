@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 
 import 'package:project3/project3.dart' as project3;
@@ -47,17 +48,24 @@ void main(List<String> arguments) {
   // }
   // print("Data nilai mahasiswa = $mahasiswa");
 
-  var nama = [];
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan nama mahasiswa ke index $i:");
-    var input = stdin.readLineSync();
-    if (input != null) {
-      nama.add(input);
-      print('data index ke-$i ${nama[i]}');
-    }
-  }
+  // var nama = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan nama mahasiswa ke index $i:");
+  //   var input = stdin.readLineSync();
+  //   if (input != null) {
+  //     nama.add(input);
+  //     print('data index ke-$i ${nama[i]}');
+  //   }
+  // }
 
-  print('data dalam list: $nama');
+  // print('data dalam list: $nama');
+
+  var angka = <int> {1,2,3,3,4,5};
+  print("Data nya adalah : ${angka.elementAt(3)}");
+  
+  var angka2 = <int> {4,5,6,7,8};
+  print("data union adalah = ${angka.union(angka2)}");
+  print("Data instersection adalah = ${angka.intersection(angka2)}");
 }
 
 
