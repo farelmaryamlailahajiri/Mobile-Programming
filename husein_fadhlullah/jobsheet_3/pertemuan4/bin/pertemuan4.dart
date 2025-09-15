@@ -82,12 +82,27 @@ void main(List<String> arguments) {
 //   tampil("Luqman", 40);
 
 // Anonymous function
-var nilai = [90, 80, 70, 100];
-nilai.forEach((angka){
-  print("Nilai = $angka");
+// var nilai = [90, 80, 70, 100];
+// nilai.forEach((angka){
+//   print("Nilai = $angka");
 
-});
+// });
 
+var counter = buatCounter();
+  print(counter());
+  print(counter());
+  print(counter());
+
+}
+
+
+Function buatCounter(){
+  var hitung = 0;
+  
+  return (){
+    hitung++;
+    return hitung;
+  };
 }
 
 //function parameter
