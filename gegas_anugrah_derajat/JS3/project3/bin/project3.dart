@@ -24,14 +24,20 @@ void main(List<String> arguments) {
 
   // growable list
 
-  var grow = [10];
-  grow.add(20);
-  grow.add(40);
-  grow.add(55);
-  grow.add(60);
-  grow.remove(55);
-  grow.add(10);
+  var grow = [];
+  // grow.add(20);
+  // grow.add(40);
+  // grow.add(55);
+  // grow.add(60);
+  // grow.remove(55);
+  // grow.add(10);
 
-  print("Data di dalam list = $grow ");
+  // print("Data di dalam list = $grow ");
   
+  for (var i = 0; i <= 4; i++) {
+    stdout.write("Data list ke-$i : ");
+    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+    grow.add(input);
+  }
+  print("Data nilai mahasiswa = $grow");
 }
