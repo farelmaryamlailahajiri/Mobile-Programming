@@ -42,4 +42,19 @@ void main(List<String> arguments) {
   // var x = (name: "tatang", age: 2);
   // Record x = (1, 2);
   // print(x);
+
+  // greet("Name", 20, "Pandaan");
+
+  var lists = [1, 2, 3];
+
+  lists.forEach((list) {
+    print(list);
+  });
 }
+
+// void greet(String name, int age, [String? address]) {
+//   print("Nama: $name\nUmur: $age");
+//   if (address != null) {
+//     print("Alamat: $address");
+//   }
+// }
