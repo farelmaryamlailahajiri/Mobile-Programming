@@ -4,7 +4,7 @@ void main(List<String> arguments) {
   // print('Hello world: ${project3.calculate()}!');
 
   //belajar fixed list
-  var list = List<int>.filled(5,0);
+  // var list = List<int>.filled(5,0);
   // list[0] =10;
   // list[1] =20;
   // list[2] =30;
@@ -14,11 +14,32 @@ void main(List<String> arguments) {
   // print("Data dari list = $list ");
 
   //fixed list dengan perulangan
-  for (int i = 0; i <= 4; i++){
-    stdout.write("Masukkan data ke-$i :");
-    var  input = int .tryParse(stdin.readLineSync() ?? '')?? 0;
-    list[i] = input!;
-  }
+  // for (int i = 0; i <= 4; i++){
+  //   stdout.write("Masukkan data ke-$i :");
+  //   var  input = int .tryParse(stdin.readLineSync() ?? '')?? 0;
+  //   list[i] = input!;
+  // }
 
-  print("Data dari list = $list");
+  // print("Data dari list = $list");
+
+  //growable list
+
+  // var grow = [10];
+  // grow.add(20);
+  // grow.add(45);
+  // grow.add(22);
+  // grow.remove(22);
+  // grow.add(10);
+
+  // print("Data di dalam list = $grow");
+
+  //menggunakan perulangan
+
+    var mahasiswa = [];
+  for (var i = 0; i <= 4; i++) {
+    stdout.write("Masukkan nilai mahasiswa ke index $i:");
+    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+    mahasiswa.add(input);
+  }
+  print("Data nilai mahasiswa = $mahasiswa");
 }
