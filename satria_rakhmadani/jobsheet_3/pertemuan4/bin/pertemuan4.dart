@@ -83,12 +83,18 @@ void main(List<String> arguments) {
   // print("nama saya ${bio.nama}");
 
   // Function
-  void tampil (String nama, int umur, [String? alamat]) {
-    print("Nama saya $nama, umur saya $umur");
-    if (alamat != null) {
-      print("Alamat saya di $alamat");
-    }
-  }
+  // void tampil (String nama, int umur, [String? alamat]) {
+  //   print("Nama saya $nama, umur saya $umur");
+  //   if (alamat != null) {
+  //     print("Alamat saya di $alamat");
+  //   }
+  // }
 
-  tampil("Rizki", 20, "Malang");
+  // tampil("Rizki", 20, "Malang");
+
+  // Anonymous Function
+  var nilai = [90, 80, 70, 60];
+  nilai.forEach((angka) {
+    print("Nilai saya = $angka");
+  });
 }
