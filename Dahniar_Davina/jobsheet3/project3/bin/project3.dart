@@ -1,5 +1,5 @@
 import 'dart:io';
-//import 'package:project3/project3.dart' as project3;
+import 'package:project3/project3.dart' as project3;
 
 void main(List<String> arguments) {
   //print('Hello world: ${project3.calculate()}!');
@@ -46,7 +46,8 @@ void main(List<String> arguments) {
   // Tampilkan hasil
   print("Data dalam list nilai=$grow");*/
 
-  var grow = [];
+  //growable list string
+  /*var grow = [];
 
   for (var i = 0; i <= 4; i++) {
     stdout.write("Masukkan list data nama ke-$i: ");
@@ -58,7 +59,18 @@ void main(List<String> arguments) {
   }
 
   // Tampilkan hasil
-  print("Data dalam list nama=$grow");
+  print("Data dalam list nama=$grow");*/
+  
+  //var SET
+  var angka = <int>[1,2,3,3,4,5];
+  //var setA = {2};
+  //print("Data dalam list angka = $setA");
+  print("Data dalam list angka ${angka.elementAt(1)}");
+
+  var angka2 = <int>[4,5,6,7,8];
+  print("Data Union adalah = ${angka.union(angka2)}");
+  print("Data Intersection adalah = ${angka.intersection(angka2)}");
 
   
 }
+
