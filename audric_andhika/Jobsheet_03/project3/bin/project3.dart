@@ -6,22 +6,41 @@ void main(List<String> arguments) {
   // print('Hello world: ${project3.calculate()}!');
 
   // Belajar Fixed List
-  var list = List<int>.filled(5, 0);
+  // var list = List<int>.filled(5, 0);
 
-  // list[0] = 10;
-  // list[1] = 20;
-  // list[2] = 30;
-  // list[3] = 40;
-  // list[4] = 50;
-  // // list[5] = 60; // error karena index melebihi panjang list
-  // print("Data dari list = $list");
+  // // list[0] = 10;
+  // // list[1] = 20;
+  // // list[2] = 30;
+  // // list[3] = 40;
+  // // list[4] = 50;
+  // // // list[5] = 60; // error karena index melebihi panjang list
+  // // print("Data dari list = $list");
 
-  // Input Data ke Dalam Fixed List
+  // // Input Data ke Dalam Fixed List
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan data ke index $i:");
+  //   var input = int.tryParse(stdin.readLineSync()?? '') ?? 0;
+  //   list[i] = input;
+  // }
+  //   print("Data dari list = $list");
+
+  // Belajar Growable List
+  // var grow = [10];
+  // grow.add(20);
+  // grow.add(30);
+  // grow.add(40);
+  // grow.add(50);
+  // grow.remove(40);
+  // grow.add(10);
+  // print("Data dari growable list = $grow");
+
+  var mahasiswa = [];
   for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan data ke index $i:");
-    var input = int.tryParse(stdin.readLineSync()?? '') ?? 0;
-    list[i] = input;
+    stdout.write("Masukkan nilai mahasiswa ke index $i:");
+    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+    mahasiswa.add(input);
   }
-    print("Data dari list = $list");
+  print("Data nilai mahasiswa = $mahasiswa");
 
+  
 }
