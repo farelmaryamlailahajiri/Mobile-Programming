@@ -72,15 +72,23 @@ void main(List<String> arguments) {
   //print("Data Intersection adalah = ${angka.intersection(angka2)}");
 
   //map Biodata
-  var biodata = {
+  /*var biodata = {
     "nim" : "2341760023",
     "nama" : "Dahniar",
     "prodi" : "Sistem Informasi Bisnis",
   };
   biodata["angkatan"] = "2023"; //klo diganti "nama" isi dari nama akan beruah/terganti dengan 2023
   print("Biodata Mahasiswa = $biodata");
-  print("Nama : ${biodata['nama']}");
+  print("Nama : ${biodata['nama']}");*/
 
+  //record : tidak bisa menentukan tipe data, hanya array
+  var mahasiswa = ("Dahniar", 21, false);
+  print("Ini data saya = $mahasiswa");
+  print("Mahasiswa = ${mahasiswa.$1}"); //mengambil data ke 1
+
+  var bio = (nama:"Davina", umur:21, gender:true);
+  print("Ini data saya = $bio");
+  print("Nama : ${bio.nama}");
   
 }
 
