@@ -51,11 +51,21 @@ void main(List<String> arguments) {
   //print("Data dalam list = $grow");
 
   // Set
-  var angka = <int>{1,2,3,3,4,5};
-  print("Data nya adalah ${angka.elementAt(1)}" );
+  //var angka = <int>{1,2,3,3,4,5};
+  //print("Data nya adalah ${angka.elementAt(1)}" );
 
-  var angka2 = <int>{4,5,6,7,8};
-  print("Data Union Adalah = ${angka.union(angka2)}" );
-  print("Data Intersection Adalah = ${angka.intersection(angka2)}" );
+  //var angka2 = <int>{4,5,6,7,8};
+  //print("Data Union Adalah = ${angka.union(angka2)}" );
+  //print("Data Intersection Adalah = ${angka.intersection(angka2)}" );
+
+  //Map
+  var biodata = {
+    "nim" : "2341760060",
+    "nama" : "Deva Selviana",
+    "jurusan" : 'Teknologi Informasi',
+  };
+  biodata['angkatan'] = "2023";
+  print("Biodata Mahasiswa $biodata");
+  print("Biodata Mahasiswa dengan nama = ${biodata['nama']}");
   
 }
