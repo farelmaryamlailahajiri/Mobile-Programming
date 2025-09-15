@@ -1,3 +1,5 @@
+import 'dart:mirrors';
+
 import 'package:project3/project3.dart' as project3;
 import 'dart:io';
 void main(List<String> arguments) {
@@ -56,10 +58,23 @@ void main(List<String> arguments) {
   // print("data dalam list: $grow");
 
   //belajar set
-  var angka = <int> {1,2,2,3,4,5};
-  print("Elemen ke-2 : ${angka.elementAt(1)}");
+  // var angka = <int> {1,2,2,3,4,5};
+  // print("Elemen ke-2 : ${angka.elementAt(1)}");
 
-  var angka2 = <int> {4,5,6,7,8};
-  print("Data Union adalah = ${angka.union(angka2)}");
-  print("Data intersection adalah = ${angka.intersection(angka2)}");
+  // var angka2 = <int> {4,5,6,7,8};
+  // print("Data Union adalah = ${angka.union(angka2)}");
+  // print("Data intersection adalah = ${angka.intersection(angka2)}");
+
+  //Map
+  var biodata = {
+    "Nim" : "2341760073",
+    "Nama" : "Bayu",
+    "Prodi" : "SIB",
+    "Nama" : "uyab"
+  };
+  // biodata['Angkatan'] = "2023"; //ke replace
+  print("Biodata Mahasiswa $biodata");
+  print("Nama ${biodata['Nama']}");
+
+
 }
