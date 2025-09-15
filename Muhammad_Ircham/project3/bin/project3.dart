@@ -39,19 +39,24 @@ var list = List<int>.filled(5, 0);
 //   print("Data nilai mahasiswa = $mahasiswa");
 
 // grow string
-var grow = [];
+// var grow = [];
 
-for (var i = 0; i <= 4; i++) {
-  stdout.write('data list ke-$i : ');
-  var input = stdin.readLineSync();
-  if (input != null) {
-    grow.add(input);
-    print('data index ke: $i ${grow[i]}');
-  }
-}
+// for (var i = 0; i <= 4; i++) {
+//   stdout.write('data list ke-$i : ');
+//   var input = stdin.readLineSync();
+//   if (input != null) {
+//     grow.add(input);
+//     print('data index ke: $i ${grow[i]}');
+//   }
+// }
 
-print('data dalam list: $grow');
-
+// set
+var angka = <int>{1,2,3,3,4,5};
+print("Elemen ke-2 : ${angka.elementAt(1)}");
   
+var angka2= <int>{4,5,6,7,8};
+print('data union adalah : ${angka.union(angka2)}');
+print ("data intersection adalah : ${angka.intersection(angka2)}");  
   }
+
 
