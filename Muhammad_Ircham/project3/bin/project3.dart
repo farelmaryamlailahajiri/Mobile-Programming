@@ -14,11 +14,44 @@ var list = List<int>.filled(5, 0);
 // print("data dari list = $list ");
 
 // list fixed menggunakan loop
-for (int i = 0; i <= 4; i++) {
-  stdout.write('masukkan data ke-$i : ');
-  var input = int.tryParse(stdin.readLineSync()?? '')?? 0;
-  list[i] = input!;
-} 
-print("data dari list = $list ");
+// for (int i = 0; i <= 4; i++) {
+//   stdout.write('masukkan data ke-$i : ');
+//   var input = int.tryParse(stdin.readLineSync()?? '')?? 0;
+//   list[i] = input!;
+// } 
+// print("data dari list = $list ");
 
- }
+// // growable list
+// var grow = [10];
+// grow.add(20);
+// grow.add(30);
+// grow.add(40);
+// grow.add(10);
+// // grow.remove(30); (untuk dihapus)
+// print("data dari growable list = $grow ");
+
+// var mahasiswa = [];
+//   for (var i = 0; i <= 4; i++) {
+//     stdout.write("Masukkan nilai mahasiswa ke index $i:");
+//     var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+//     mahasiswa.add(input);
+//   }
+//   print("Data nilai mahasiswa = $mahasiswa");
+
+// grow string
+var grow = [];
+
+for (var i = 0; i <= 4; i++) {
+  stdout.write('data list ke-$i : ');
+  var input = stdin.readLineSync();
+  if (input != null) {
+    grow.add(input);
+    print('data index ke: $i ${grow[i]}');
+  }
+}
+
+print('data dalam list: $grow');
+
+  
+  }
+
