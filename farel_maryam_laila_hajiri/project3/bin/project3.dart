@@ -52,12 +52,17 @@ void main(List<String> arguments) {
   // }
   // print("Data dalam list = $nama");
 
-  var angka = <int>{1, 2, 3, 3, 4};
-  stdout.writeln("Set angka ; $angka");
-  print("Elemen ke-2 : ${angka.elementAt(1)}");
+  // var angka = <int>{1, 2, 3, 3, 4};
+  // stdout.writeln("Set angka ; $angka");
+  // print("Elemen ke-2 : ${angka.elementAt(1)}");
 
-  var angka2 = <int>{4, 5, 6, 7, 8};
-  print("data union adalah= ${angka.union(angka2)}");
-  print("Data insersection adalah = ${angka.intersection(angka2)}");
-  
+  // var angka2 = <int>{4, 5, 6, 7, 8};
+  // print("data union adalah= ${angka.union(angka2)}");
+  // print("Data insersection adalah = ${angka.intersection(angka2)}");
+
+  //map
+  var biodata = {"nim": "2341760028", "nama": "Farel", "jurusan": "TI"};
+  biodata["Angkatan"] = "2023";
+  print("Biodata Mahasiswa $biodata");
+  print("Biodata mahasiswa dengan nama = ${biodata['nama']}");
 }
