@@ -42,14 +42,20 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
   // }
   // print("Data dalam list = $grow");
 
-  var grow = [];
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan list ke-$i : ");
-    var input = stdin.readLineSync();
-    if(input != null) {
-      grow.add(input);
-      print("Data data index ke: $i ${grow[i]}");
-    }
-  }
-  print("Data dalam list = $grow"); 
+  // var grow = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan list ke-$i : ");
+  //   var input = stdin.readLineSync();
+  //   if(input != null) {
+  //     grow.add(input);
+  //     print("Data data index ke: $i ${grow[i]}");
+  //   }
+  // }
+  // print("Data dalam list = $grow"); 
+
+
+  //SET
+    var angka = <int>{1,2,3,4,5};
+    print("Datanya adalah ${angka.elementAt(1)}");
+
 }
