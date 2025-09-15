@@ -66,16 +66,24 @@ void main(List<String> arguments) {
 // print('data union adalah = ${angka.union(angka2)}');
 // print('data intersection adalah = ${angka.intersection(angka2)}');
 
-var biodata = {
-  'nim' : '2341760012',
-  'nama' : 'fauzi',
-  'jurusan' : 'teknologi informasi',
-  'nama' : 'jaja',
+// var biodata = {
+//   'nim' : '2341760012',
+//   'nama' : 'fauzi',
+//   'jurusan' : 'teknologi informasi',
+//   'nama' : 'jaja',
 
-};
-//biodata['angkatan'] = '2023';  
-print('biodata mahasiswa $biodata ');
-print('biodata mahasiswa dengan nama = ${biodata['nama']}');
+// };
+// //biodata['angkatan'] = '2023';  
+// print('biodata mahasiswa $biodata ');
+// print('biodata mahasiswa dengan nama = ${biodata['nama']}');
 
+//record
+// var mahasiswa = ('luqman', 40, true);
+// print('ini data pak luqman: $mahasiswa');
+// print('mahasiswa = ${mahasiswa.$1}');
+
+var bio = (nama: 'fauzi', umur: 20, gender: true);
+print('bio saya: $bio');
+  print('nama saya: ${bio.nama}');
 
 }
