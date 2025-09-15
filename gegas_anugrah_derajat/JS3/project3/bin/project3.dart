@@ -43,10 +43,24 @@ void main(List<String> arguments) {
   // }
   // print("Data nama mahasiswa = $grow");
 
-  var angka = <int> {1,2,3,3,4,5};
-  // print("Data adalah : ${angka.elementAt(1)}");
+  // var angka = <int> {1,2,3,3,4,5};
+  // // print("Data adalah : ${angka.elementAt(1)}");
 
-  var angka2 = <int> {4,5,6,7,8};
-  print("Data union adalah = ${angka.union(angka2)}");
-  print("Data intersection adalah = ${angka.intersection(angka2)}");
+  // var angka2 = <int> {4,5,6,7,8};
+  // print("Data union adalah = ${angka.union(angka2)}");
+  // print("Data intersection adalah = ${angka.intersection(angka2)}");
+
+  // map
+  var biodata = {
+    "nim" : "2341760140",
+    "nama" : "Gegas Anugrah",
+    "jurusan" : "teknologi informasi",
+
+  };
+  biodata["angkatan"] = '2023';
+  print("Biodata mahasiswa : $biodata");
+  print("Nama mahasiswa : ${biodata['nama']}");
+  
+
+
 }
