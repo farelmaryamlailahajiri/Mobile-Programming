@@ -47,11 +47,21 @@ void main(List<String> arguments) {
 //latihan set
 
 
-var angka = <int>{1, 2, 3, 3, 4, 5};
-print("Data nya adalah ${angka.elementAt(1)}");
+// var angka = <int>{1, 2, 3, 3, 4, 5};
+// print("Data nya adalah ${angka.elementAt(1)}");
 
 
-var angka2 = <int>{4,5,6,7,8};
-print("Data nya union ${angka.union(angka2)}");
-print("Data nya intersection ${angka.intersection(angka2)}"); 
+// var angka2 = <int>{4,5,6,7,8};
+// print("Data nya union ${angka.union(angka2)}");
+// print("Data nya intersection ${angka.intersection(angka2)}"); 
+
+// map
+var biodata = {
+  'nim': '2341760134',
+  'nama': 'Husein',
+  'jurusan': 'Teknologi Informasi'
+};
+biodata['Angkatan'] = '2023';
+print("Biodata Mahasiswa $biodata");
+print("Biodata Mahasiswa dengan nama = ${biodata['nama']}");
 }
