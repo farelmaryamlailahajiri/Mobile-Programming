@@ -25,4 +25,13 @@ void main(List<String> arguments) {
   }
 
   print("Data dalam urut list = $list");
+
+  //Growable list
+  var grow = [10];
+  grow.add(20); //untuk menambah add
+  grow.add(30);
+  grow.add(40);
+  grow.remove(50); //untuk menghapus remove
+
+  print("Data dalam urut list = $grow");
 }
