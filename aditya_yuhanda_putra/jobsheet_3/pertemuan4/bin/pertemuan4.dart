@@ -24,16 +24,16 @@ void main(List<String> arguments) {
   // print("Data dari list = $list ");
 
   // Growable List for Dart
-  var grow = [];
-  for (var i = 0; i < 5; i++) {
-    stdout.write("Masukkan data index ke-$i: ");
-    var input = stdin.readLineSync() ?? '0';
-    if (input != null) {
-      grow.add(input);
-      print("Data index ke-$i: ${grow[i]}");
-    }
-  }
-  print("Data dalam list: $grow");
+  // var grow = [];
+  // for (var i = 0; i < 5; i++) {
+  //   stdout.write("Masukkan data index ke-$i: ");
+  //   var input = stdin.readLineSync() ?? '0';
+  //   if (input != null) {
+  //     grow.add(input);
+  //     print("Data index ke-$i: ${grow[i]}");
+  //   }
+  // }
+  // print("Data dalam list: $grow");
 
   // var grow = [10];
   // grow.add(20);
@@ -43,4 +43,12 @@ void main(List<String> arguments) {
   // grow.remove(55);
   // grow.add(10);
   // stdout.writeln("Data dari growable list = $grow");
+
+  var angka = <int>{1, 2, 3, 3, 4, 5};
+  stdout.writeln("Data dari set = $angka");
+  print("Elemen ke-2 : ${angka.elementAt(1)}");
+
+  var angka2 = {4, 5, 6, 7, 8};
+  print("Data Union adalah : ${angka.union(angka2)}");
+  print("Data Intersection adalah : ${angka.intersection(angka2)}");
 }
