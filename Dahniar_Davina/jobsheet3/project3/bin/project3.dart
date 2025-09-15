@@ -5,7 +5,7 @@ void main(List<String> arguments) {
   //print('Hello world: ${project3.calculate()}!');
 
   //fixed list
-  var list = List<int>.filled(5, 0);
+  /*var list = List<int>.filled(5, 0);
 
   list[0] = 10;
   list[1] = 20;
@@ -22,8 +22,29 @@ void main(List<String> arguments) {
     list[i-1] = input ?? 0;
   }
 
-    // Tampilkan hasil
-    print("Data dalam list=$list");
+  // Tampilkan hasil
+  print("Data dalam list=$list");*/
 
+  //growable list
+  var grow = [];
+  /*grow.add(20);
+  grow.add(30);
+  grow.add(40);
+  grow.add(50);
+  grow.remove(30); //menghapus data 30
+  grow.add(10); //double tidak berpengaruh
 
+  print("Data dalam growable list=$grow");*/
+
+  //insert nilai growable list
+  for (var i = 1; i <= 5; i++) {
+    stdout.write("Masukkan list data nilai ke-$i: ");
+    var input = int.tryParse(stdin.readLineSync()!);
+    grow.insert(i-1, input ?? 0);
+  }
+
+  // Tampilkan hasil
+  print("Data dalam list nilai=$grow");
+
+  
 }
