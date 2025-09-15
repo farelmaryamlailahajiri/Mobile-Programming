@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:jobsheet3/jobsheet3.dart' as jobsheet3;
 import 'dart:io';
 
@@ -72,11 +74,27 @@ void main(List<String> arguments) {
   */
 
   //MAP
+  /*
   var biodata = {
     "nim" : "2341760015",
     "nama" : "Reza Angelina",
     "jurusan" : "Teknologi Informasi"
   };
-  print("Biodata Mahasiswa $biodata");
-  print("Biodata Mahasiswa dengan nama ${biodata["nama"]}");
+  */
+  //print("Biodata Mahasiswa $biodata");
+  //print("Biodata Mahasiswa dengan nama ${biodata["nama"]}");
+  
+  //Buat menambahkan map
+  //biodata["Angkatan"] = "23";
+  //rint("Biodata Mahasiswa $biodata");
+
+  //BELAJAR RECORD
+  //Tidak bisa menentukan identifier nya contoh 20 itu apa pada konteks dibawah
+  //var mahasiswa = ("Angelina", 20, true);
+  //print("Ini data saya: $mahasiswa");
+  //print("Mahasiswa = ${mahasiswa.$1}"); //mencetak data ke-1 Angelina
+
+  var bio = (nama:"Reza", umur:20, gender:true);
+  print("Biodata  teman saya $bio");
+  print("nama saya ${bio.nama}");
 }
