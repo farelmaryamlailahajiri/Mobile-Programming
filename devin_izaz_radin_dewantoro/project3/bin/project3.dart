@@ -82,16 +82,22 @@ void main(List<String> arguments) {
   // print("Nama saya: ${biodata.Nama}");
 
   // Function Parameter
-  tampil("Devin", 21, "Pasuruan");
-  tampil("Devin", 21);
+  // tampil("Devin", 21, "Pasuruan");
+  // tampil("Devin", 21);
+
+  // Anonimus Function
+  var nilai = [90, 80, 70, 100];
+  nilai.forEach((angka) {
+    print("Nilai = $angka");
+  });
 }
 
-void tampil(String nama, int umur, [String? alamat]) {
-  print("Nama : $nama");
-  print("Umur : $umur");
-  if (alamat != null) {
-    print("Alamat : $alamat");
-  } else {
-    print("Alamat : -");
-  }
-}
+// void tampil(String nama, int umur, [String? alamat]) {
+//   print("Nama : $nama");
+//   print("Umur : $umur");
+//   if (alamat != null) {
+//     print("Alamat : $alamat");
+//   } else {
+//     print("Alamat : -");
+//   }
+// }
