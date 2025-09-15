@@ -27,22 +27,12 @@ void main(List<String> arguments) {
   // print("Data dari list setelah input = $list");
 
   // Growable List digunakan untuk menyimpan data dengan jumlah yang bisa berubah-ubah
-  // var grow = [10];
-  // grow.add(20);
-  // grow.add(55);
-  // grow.add(60);
-  // grow.remove(55);
-  // grow.add(10);
-  // print("Data di dalam growable list = $grow");
+  var grow = [10];
+  grow.add(20);
+  grow.add(55);
+  grow.add(60);
+  grow.remove(55);
+  grow.add(10);
+  print("Data di dalam growable list = $grow");
 
-  // Contoh growable list menggunakan nama mahasiswa dengan for
-  var mahasiswa = <String>[];
-  for (int i = 0; i <= 4; i++) {
-    stdout.write('Masukkan nama mahasiswa ke-${i + 1}: ');
-    String? nama = stdin.readLineSync();
-    if (nama != null && nama.isNotEmpty) {
-      mahasiswa.add(nama);
-    }
-  }
-  print("Daftar nama mahasiswa: $mahasiswa");
 }
