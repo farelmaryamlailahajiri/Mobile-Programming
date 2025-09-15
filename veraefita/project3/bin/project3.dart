@@ -15,5 +15,15 @@ void main(List<String> arguments) {
   // list[5] =60; list tidak boleh melebihi 5
   print("Data dalam list = $list ");
 
- 
+ // for fixed
+  for (int i = 0; i <=4; i++) {
+    stdout.write("Masukkan list ke-${i + 1}: ");
+    var input = int.tryParse(stdin.readLineSync()?? '') ?? 0; // null safety operator (!);
+
+    list[i] = input!;
+  }
+
+  // Tampilkan hasil
+  stdout.writeln("Data dalam list = $list");
 }
+ 
