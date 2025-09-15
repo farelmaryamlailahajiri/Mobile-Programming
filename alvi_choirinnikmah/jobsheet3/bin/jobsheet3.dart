@@ -47,16 +47,27 @@ void main(List<String> arguments) {
   // print("Daftar nama mahasiswa: $mahasiswa");
 
   // Set adalah kumpulan data yang tidak berurutan dan tidak boleh ada data yang sama
-  var angka = <int>{1, 2, 3, 3, 4};
-  print("Set angka: $angka"); // Output {1, 2, 3, 4}
-  print("Data nya andalah ${angka.elementAt(3)}"); // Menampilkan data pada index ke 3
+  // var angka = <int>{1, 2, 3, 3, 4};
+  // print("Set angka: $angka"); // Output {1, 2, 3, 4}
+  // print("Data nya andalah ${angka.elementAt(3)}"); // Menampilkan data pada index ke 3
 
-  var angka2 = <int>{4, 5, 6, 7, 8};
-  print("Data Union adalah ${angka.union(angka2)}");
-  print("Data Intersection adalah ${angka.intersection(angka2)}");
+  // var angka2 = <int>{4, 5, 6, 7, 8};
+  // print("Data Union adalah ${angka.union(angka2)}");
+  // print("Data Intersection adalah ${angka.intersection(angka2)}");
 
-  var setA = {1, 2, 3};
-  var setB = {3, 4, 5};
-  print("Union: ${setA.union(setB)}"); // Output: {1, 2, 3, 4, 5}
-  print("Intersection: ${setA.intersection(setB)}");
+  // var setA = {1, 2, 3};
+  // var setB = {3, 4, 5};
+  // print("Union: ${setA.union(setB)}"); // Output: {1, 2, 3, 4, 5}
+  // print("Intersection: ${setA.intersection(setB)}");
+
+  // Map digunakan untuk menyimpan data dengan pasangan key dan value
+  var biodata = {
+    'nim' : '2341760191',
+    'nama' : 'Alvi Choirinnikmah',
+    'jurusan' : 'Teknologi Informasi',
+    'nama' : 'Alvi' // key nama ditulis ulang dan akan direplace menjadi 'Alvi'
+  };
+  biodata['nama'] = '2023'; // update nama akan direplace menjadi '2023'
+  print("Biodata mahasiswa: $biodata");
+  print("Biota mahasiswa dengan nama = ${biodata['nama']}");
 }
