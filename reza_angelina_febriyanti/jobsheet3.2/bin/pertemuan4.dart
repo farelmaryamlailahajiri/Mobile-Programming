@@ -16,8 +16,7 @@ void main(List<String> arguments) {
   print("Data dalam list = $list");
   */
 
-  Map<int, int> list = {};
-
+  /*
   for (int i = 1; i <= 3; i++) {
     stdout.write("Masukkan nilai List ke $i: ");
     var input = int.parse(stdin.readLineSync() ?? '') ?? 0;
@@ -25,8 +24,10 @@ void main(List<String> arguments) {
   }
 
   print("Data dalam urut list = $list");
+  */
 
   //Growable list
+  /*
   var grow = [10];
   grow.add(20); //untuk menambah add
   grow.add(30);
@@ -34,4 +35,14 @@ void main(List<String> arguments) {
   grow.remove(50); //untuk menghapus remove
 
   print("Data dalam urut list = $grow");
+  */
+
+  List<int> Grow = [];
+
+  for (var i = 0; i <= 4; i++) {
+    stdout.write("Data List ke-$i : ");
+    var input = stdin.readLineSync();
+    Grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
+    }
+    print("Data dalam list = $Grow");
 }
