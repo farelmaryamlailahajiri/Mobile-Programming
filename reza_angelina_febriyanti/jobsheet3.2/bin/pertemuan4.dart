@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:jobsheet3/jobsheet3.dart' as jobsheet3;
 import 'dart:io';
 
@@ -65,9 +63,20 @@ void main(List<String> arguments) {
   */
 
   //SET
+  /*
   var angka = <int> {1,2,3,3,4,5};
   //print("Datanya adalah ${angka.elementAt(1)}"); //menampilkan pada indeks ke
 
   var angka2 = <int> {4,5,6,7,8};
   print("Data Union adalah = ${angka.union(angka2)}"); //union=gabungan
+  */
+
+  //MAP
+  var biodata = {
+    "nim" : "2341760015",
+    "nama" : "Reza Angelina",
+    "jurusan" : "Teknologi Informasi"
+  };
+  print("Biodata Mahasiswa $biodata");
+  print("Biodata Mahasiswa dengan nama ${biodata["nama"]}");
 }
