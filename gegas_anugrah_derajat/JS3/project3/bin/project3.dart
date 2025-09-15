@@ -71,8 +71,14 @@ void main(List<String> arguments) {
   // print("nama saya : ${bio.nama}");
 
   // function
-  tampil("Luqman", 40, "Malang");
-  tampil("Gegas", 20);
+  // tampil("Luqman", 40, "Malang");
+  // tampil("Gegas", 20);
+
+  // anonymous function
+  var nilai = [90,80,70,60];
+  nilai.forEach((angka) {
+    print("Nilai = $angka");
+  });
 
 }
 
