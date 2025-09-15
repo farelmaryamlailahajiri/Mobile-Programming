@@ -66,11 +66,25 @@ void main(List<String> arguments) {
 
 
   // map
-  var biodata = {
-    "nim": "2341760114",
-    "nama": "Maisya",
-    "jurusan": "Teknologi Informasi"
-  };
-  print("Biodata Mahasiswa: $biodata");
-  print("Biodata Mahasiswa dengan nama = ${biodata['nama']}");
+//   var biodata = {
+//     "nim": "2341760114",
+//     "nama": "Maisya",
+//     "jurusan": "Teknologi Informasi"
+//   };
+//   print("Biodata Mahasiswa: $biodata");
+//   print("Biodata Mahasiswa dengan nama = ${biodata['nama']}");
+// }
+
+// Map
+    var biodata = {
+      "nim" : "2341760114",
+      "nama": "Maisya",
+      "Jurusan" : "Teknologi Informasi",
+      "nama" : "Mei" // replace
+    };
+    // biodata['Nama'] = "2023"; //ke replace
+    print("Biodata Mahasiswa $biodata");
+    print("Biodata Mahasiswa = ${biodata['nama']}");
 }
+
+
