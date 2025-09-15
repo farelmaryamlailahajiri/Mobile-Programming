@@ -78,19 +78,28 @@ var list = List<int>.filled(5, 0);
 // var biodata = (nama:"khuzaima", umur:20, gender:true);
 // print("data biodata : $biodata");
 // print("nama : ${biodata.nama}");
-tampil("ircahm", 20, "Malang");
-  }
+// tampil("ircahm", 20, "Malang");
+//   }
 
-// function parameter
+// // function parameter
 
- void tampil (String nama, int umur, [String? alamat]) {
-  print("nama : $nama");
-  print("umur : $umur");
-  if (alamat != null) {
-    print("alamat : $alamat");
+//  void tampil (String nama, int umur, [String? alamat]) {
+//   print("nama : $nama");
+//   print("umur : $umur");
+//   if (alamat != null) {
+//     print("alamat : $alamat");
  
-  } else {
-    print("alamat : -");
+//   } else {
+//     print("alamat : -");
 
- }
+//  }
+//  
+
+// //anonymous function
+// var nilai = [90, 80, 70, 100];
+// nilai.forEach((angka){
+//   print("Nilai = $angka");
+
+// });
+ 
  }
