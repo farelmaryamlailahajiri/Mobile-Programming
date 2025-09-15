@@ -4,23 +4,34 @@ import 'dart:io';
 void main(List<String> arguments) {
   // print('Hello world: ${project3.calculate()}!');
 
-  // belajar fixedList
-  var list = List<int>.filled(5, 0);
+  // // belajar fixedList
+  // var list = List<int>.filled(5, 0);
 
-  // list[0] = 10;
-  // list[1] = 20;
-  // list[2] = 30;
-  // list[3] = 40;
-  // list[4] = 50;  
-  // list[5] = 60;  
+  // // list[0] = 10;
+  // // list[1] = 20;
+  // // list[2] = 30;
+  // // list[3] = 40;
+  // // list[4] = 50;  
+  // // list[5] = 60;  
 
-  for (int i = 0; i <= 4; i++) {
-    stdout.write("Masukkan data ke-$i: ");
-    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-    list[i] = input;
-  }
+  // for (int i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan data ke-$i: ");
+  //   var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+  //   list[i] = input;
+  // }
 
-  print("Data dari list = $list ");
+  // print("Data dari list = $list ");
 
+  // growable list
+
+  var grow = [10];
+  grow.add(20);
+  grow.add(40);
+  grow.add(55);
+  grow.add(60);
+  grow.remove(55);
+  grow.add(10);
+
+  print("Data di dalam list = $grow ");
   
 }
