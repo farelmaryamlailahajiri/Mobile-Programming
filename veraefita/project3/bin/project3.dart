@@ -80,9 +80,20 @@ void main(List<String> arguments) {
   print("ini data pak Luqman :$mahasiswa");
   print("mahasiswa = ${mahasiswa.$1}");
  
-  var biodata =(nama : "Vera Efita Hudi Putri", umur : 40, gender : true);
+  var biodata =(nama : "Vera Efita Hudi Putri", umur : 20, gender : true);
   print("biodata saya $biodata");
   print("biodata saya = ${biodata.umur}");
-}
-  
 
+  // fuction parameter
+    void tampil(String nama, int umur, [String? alamat]) {
+    print('Nama : $nama');
+    print('Umur : $umur');
+    if (alamat != null) {
+      print('Alamat : $alamat');
+    }else {
+      print('Alamat : -');
+    }
+
+    }
+    
+    }
