@@ -63,13 +63,35 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
     // print("Data intersection adalah = ${angka.intersection(angka2)}");
   
   //MAP
-  var biodata = {
-    'NIM' : '2341760081',
-    'Nama' : 'Lovelyta Sekarayu',
-    'Jurusan' : 'Teknologi Informasi',
-    'Nama' : 'Lovelyta Sekarayu' // ke replace
-  };
-  biodata['Nama'] = "2023"; // ke replace
-  print("Biodata Mahasiswa $biodata");
-  print("Nama = ${biodata['Nama']}");
-}
+  // var biodata = {
+  //   'NIM' : '2341760081',
+  //   'Nama' : 'Lovelyta Sekarayu',
+  //   'Jurusan' : 'Teknologi Informasi',
+  //   'Nama' : 'Lovelyta Sekarayu' // ke replace
+  // };
+  // biodata['Nama'] = "2023"; // ke replace
+  // print("Biodata Mahasiswa $biodata");
+  // print("Nama = ${biodata['Nama']}");
+
+  //Record
+  // var Mahasiswa = ('Luqman', 40, true);
+  // print("Ini data Pak Luqman : $Mahasiswa");
+  // print("Mahasiswa = ${Mahasiswa.$1}");
+
+  // var bio = (nama : "Lovelyta", umur : 20, gender : false);
+  // print("Bio saya $bio");
+  // print("Nama saya ${bio.nama}");
+
+  tampil("Lovelyta", 20, "Malang");
+  tampil("Luqman", 40);
+  }
+  //function parameter
+  void tampil(String nama, int umur, [String? alamat]){
+    print("Nama : $nama");
+    print("Umur : $umur");
+    if(alamat != null){
+      print("Alamat : $alamat");
+    } else {
+      print("Alamat : -");
+    }
+  }
