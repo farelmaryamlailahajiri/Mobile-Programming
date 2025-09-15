@@ -6,20 +6,41 @@ void main(List<String> arguments) {
   // print('Hello world: ${pertemuan4.calculate()}!');
 
   // Belajar Fixed List
-  var list = List<int>.filled(5, 0);
+  // var list = List<int>.filled(5, 0);
 
-  // Perulangan untuk mengisi data ke dalam list
-  print("Mengisi data ke dalam list");
-  for (var i = 0; i < list.length; i++) {
-    stdout.write("Masukkan data ke index ke-$i : ");
-    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-    list[i] = input;
+  // // Perulangan untuk mengisi data ke dalam list
+  // print("Mengisi data ke dalam list");
+  // for (var i = 0; i < list.length; i++) {
+  //   stdout.write("Masukkan data ke index ke-$i : ");
+  //   var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+  //   list[i] = input;
+  // }
+  // // list[0] = 10;
+  // // list[1] = 20;
+  // // list[2] = 13;
+  // // list[3] = 33;
+  // // list[4] = 23;
+  // // list[5] = 44; // akan error karena index melebihi batas
+  // print("Data dari list = $list ");
+
+  // Growable List for Dart
+  var grow = [];
+  for (var i = 0; i < 5; i++) {
+    stdout.write("Masukkan data index ke-$i: ");
+    var input = stdin.readLineSync() ?? '0';
+    if (input != null) {
+      grow.add(input);
+      print("Data index ke-$i: ${grow[i]}");
+    }
   }
-  // list[0] = 10;
-  // list[1] = 20;
-  // list[2] = 13;
-  // list[3] = 33;
-  // list[4] = 23;
-  // list[5] = 44; // akan error karena index melebihi batas
-  print("Data dari list = $list ");
+  print("Data dalam list: $grow");
+
+  // var grow = [10];
+  // grow.add(20);
+  // grow.add(40);
+  // grow.add(55);
+  // grow.add(60);
+  // grow.remove(55);
+  // grow.add(10);
+  // stdout.writeln("Data dari growable list = $grow");
 }
