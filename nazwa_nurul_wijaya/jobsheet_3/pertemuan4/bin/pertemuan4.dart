@@ -83,11 +83,25 @@ void main(List<String> arguments) {
   // print("Biodata Mahasiswa: $biodata");
 
   //Record
-  var mahasiswa = ('Luqman', 40, true);
-  print("ini data Pak Luqman: $mahasiswa");
-  print("Mahasiswa = ${mahasiswa.$1}");
+  // var mahasiswa = ('Luqman', 40, true);
+  // print("ini data Pak Luqman: $mahasiswa");
+  // print("Mahasiswa = ${mahasiswa.$1}");
 
-  var bio = (nama: 'Nazwa Nurul Wijaya', umur: 20, gender: true);
-  print("Biodata saya adalah: $bio");
-  print("Nama saya adalah: ${bio.nama}");
+  // var bio = (nama: 'Nazwa Nurul Wijaya', umur: 20, gender: true);
+  // print("Biodata saya adalah: $bio");
+  // print("Nama saya adalah: ${bio.nama}");
+
+tampil ("Nazwa", 20, "Jl. Mawar");
+tampil('Luqman', 21)
 }
+  //function parameter
+  void tampil(String nama, int umur, [String? alamat]) {
+    print('Nama : $nama');
+    print('Umur : $umur');
+    if (alamat != null) {
+      print('Alamat : $alamat');
+    }else {
+      print('Alamat : -');
+    }
+  }
+
