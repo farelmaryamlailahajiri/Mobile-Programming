@@ -68,18 +68,25 @@ void main(List<String> arguments) {
   // print("Data instersection adalah = ${angka.intersection(angka2)}");
 
   //onk map e
-  var biodata = {
-    "nim" : "2341760078",
-    "nama" : "Khuzaima Filla Januartha",
-    "jurusan" : "Teknologi Informasi",
-    "nama" : "Budiono"
-  };
+  // var biodata = {
+  //   "nim" : "2341760078",
+  //   "nama" : "Khuzaima Filla Januartha",
+  //   "jurusan" : "Teknologi Informasi",
+  //   "nama" : "Budiono"
+  // };
 
-  // biodata["nama"] = "2023";
-  print("Biodata Mahasiswa $biodata");
-  print("Biodata Mahasiswa dengan nama ${biodata['nama']}");
+  // // biodata["nama"] = "2023";
+  // print("Biodata Mahasiswa $biodata");
+  // print("Biodata Mahasiswa dengan nama ${biodata['nama']}");
 
-  
+  // Record
+  var mahasiswa = ("Luqman", 40, true);
+  print("Ini data Pak Luqman : $mahasiswa");
+  print("Mahasiswa = ${mahasiswa.$1}");
+
+  var bio = (nama:"Khuzaima Filla Januartha", umur:20, gender:true);
+  print("bio saya $bio");
+  print("nama saya ${bio.nama}");
 
 }
 
