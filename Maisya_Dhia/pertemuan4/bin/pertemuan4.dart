@@ -62,5 +62,5 @@ void main(List<String> arguments) {
 //set dengan union
 var angka2= <int> {4,5,6,7,8};
 print( "Data Union Adalah = ${angka.union(angka2)}");
+print("Data intersection Adalah = ${angka.intersection(angka2)}");
 }
-
