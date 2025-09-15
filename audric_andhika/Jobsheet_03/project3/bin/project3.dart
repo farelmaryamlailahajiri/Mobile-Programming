@@ -76,4 +76,18 @@ void main(List<String> arguments) {
   // var bio = (nama : "audric", umur: 20, gender: true);
   // print("Biodata mahasiswa = $bio");
   // print("Nama mahasiswa = ${bio.nama}");
+
+  // function parameter
+//   tampil("Audric", 20);
+//   tampil("tnx", 26, "Sidoarjo");
+// }
+
+// void tampil(String nama, int umur, [String? alamat]){
+//   print("Nama : $nama");
+//   print("Umur : $umur");
+//   if (alamat != null) {
+//     print("Alamat : $alamat");
+//   } else {
+//     print("Alamat : -");
+//   }
 }
