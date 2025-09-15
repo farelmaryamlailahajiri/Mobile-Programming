@@ -35,11 +35,23 @@ void main(List<String> arguments) {
 
   //menggunakan perulangan
 
-    var mahasiswa = [];
+  // var mahasiswa = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan nilai mahasiswa ke index $i:");
+  //   var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+  //   mahasiswa.add(input);
+  // }
+  // print("Data nilai mahasiswa = $mahasiswa");
+
+  // dgn tipe data String
+  var grow = [];
   for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan nilai mahasiswa ke index $i:");
-    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-    mahasiswa.add(input);
+    stdout.write("Masukkan list ke index $i:");
+    var input = stdin.readLineSync();
+    if(input !=null){
+      grow.add(input);
+      print("data index ke: $i ${grow[i]}");
+    }
   }
-  print("Data nilai mahasiswa = $mahasiswa");
+  print("data dalam list: $grow");
 }
