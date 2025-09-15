@@ -60,12 +60,27 @@ void main(List<String> arguments) {
 
   // print('data dalam list: $nama');
 
-  var angka = <int> {1,2,3,3,4,5};
-  print("Data nya adalah : ${angka.elementAt(3)}");
+  // var angka = <int> {1,2,3,3,4,5};
+  // print("Data nya adalah : ${angka.elementAt(3)}");
   
-  var angka2 = <int> {4,5,6,7,8};
-  print("data union adalah = ${angka.union(angka2)}");
-  print("Data instersection adalah = ${angka.intersection(angka2)}");
+  // var angka2 = <int> {4,5,6,7,8};
+  // print("data union adalah = ${angka.union(angka2)}");
+  // print("Data instersection adalah = ${angka.intersection(angka2)}");
+
+  //onk map e
+  var biodata = {
+    "nim" : "2341760078",
+    "nama" : "Khuzaima Filla Januartha",
+    "jurusan" : "Teknologi Informasi",
+    "nama" : "Budiono"
+  };
+
+  // biodata["nama"] = "2023";
+  print("Biodata Mahasiswa $biodata");
+  print("Biodata Mahasiswa dengan nama ${biodata['nama']}");
+
+  
+
 }
 
 
