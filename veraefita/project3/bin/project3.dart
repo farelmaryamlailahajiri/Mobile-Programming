@@ -35,6 +35,13 @@ void main(List<String> arguments) {
   grow.add(60);
   grow.remove(55);
   grow.add(10);
-  print("Data di dalam list = $grow");
+  // print("Data di dalam list = $grow");
+
+  for (var i =0; i<= 4; i++){
+    stdout.write("Masukkan data ke-${i+1}: ");
+    var input = int.tryParse(stdin.readLineSync()?? '') ?? 0;
+    grow.add(input);
+  }
+   print("Data di dalam list = $grow");
 }
  
