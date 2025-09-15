@@ -39,14 +39,25 @@ void main(List<String> arguments) {
   // print("Data di dalam list = $grow");
 
   //NYOBA LAGI
+  // var mahasiswa = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan nilai mahasiswa ke index $i:");
+  //   var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+  //   mahasiswa.add(input);
+  // }
+  // print("Data nilai mahasiswa = $mahasiswa");
 
-  var mahasiswa = [];
+  var nama = [];
   for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan nilai mahasiswa ke index $i:");
-    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
-    mahasiswa.add(input);
+    stdout.write("Masukkan nama mahasiswa ke index $i:");
+    var input = stdin.readLineSync();
+    if (input != null) {
+      nama.add(input);
+      print('data index ke-$i ${nama[i]}');
+    }
   }
-  print("Data nilai mahasiswa = $mahasiswa");
+
+  print('data dalam list: $nama');
 }
 
 
