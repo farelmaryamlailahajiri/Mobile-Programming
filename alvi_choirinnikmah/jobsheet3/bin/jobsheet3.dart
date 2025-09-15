@@ -82,6 +82,12 @@ void main(List<String> arguments) {
   // Memanggil fungsi tampil
   tampil("Alvi", 20, "Jl. Mawar");
   tampil("Devita", 21);
+
+  // Anonimous Function
+  var nilai = [90, 80, 70, 100];
+  nilai.forEach((angka){
+    print("Nilai = $angka");
+  });
 }
 
 // Function tampil
