@@ -59,12 +59,23 @@ void main(List<String> arguments) {
 // }
 // print('data dalam list: $grow'); 
 
-var angka = <int> {1,2,3,4,5};
+// var angka = <int> {1,2,3,4,5};
 // print('data nya adalah ${angka.elementAt(1)}');
 
-var angka2 = <int> {4,5,6,7,8,};
-print('data union adalah = ${angka.union(angka2)}');
-print('data intersection adalah = ${angka.intersection(angka2)}');
+// var angka2 = <int> {4,5,6,7,8,};
+// print('data union adalah = ${angka.union(angka2)}');
+// print('data intersection adalah = ${angka.intersection(angka2)}');
+
+var biodata = {
+  'nim' : '2341760012',
+  'nama' : 'fauzi',
+  'jurusan' : 'teknologi informasi',
+  'nama' : 'jaja',
+
+};
+//biodata['angkatan'] = '2023';  
+print('biodata mahasiswa $biodata ');
+print('biodata mahasiswa dengan nama = ${biodata['nama']}');
 
 
 }
