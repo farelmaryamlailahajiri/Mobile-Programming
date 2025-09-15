@@ -51,12 +51,24 @@ var list = List<int>.filled(5, 0);
 // }
 
 // set
-var angka = <int>{1,2,3,3,4,5};
-print("Elemen ke-2 : ${angka.elementAt(1)}");
+// var angka = <int>{1,2,3,3,4,5};
+// print("Elemen ke-2 : ${angka.elementAt(1)}");
   
-var angka2= <int>{4,5,6,7,8};
-print('data union adalah : ${angka.union(angka2)}');
-print ("data intersection adalah : ${angka.intersection(angka2)}");  
-  }
+// var angka2= <int>{4,5,6,7,8};
+// print('data union adalah : ${angka.union(angka2)}');
+// print ("data intersection adalah : ${angka.intersection(angka2)}");  
+  
+  // // map
+  // var biodata = {
+  //   'nim' : '2341760115',
+  //   'nama' : 'Ircham',
+  //   'jurusan' : 'Informatika'
+  // };
+  // // biodata['nama'] = '23'; replace
+  //  biodata['angkatan'] = '23'; 
+  // print("biodata Mahasiswa : $biodata");
+  // print("nama : ${biodata['nama']}");
+  // }
 
 
+ }
