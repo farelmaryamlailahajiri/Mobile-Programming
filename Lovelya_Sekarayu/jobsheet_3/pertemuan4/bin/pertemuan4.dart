@@ -82,16 +82,23 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
   // print("Bio saya $bio");
   // print("Nama saya ${bio.nama}");
 
-  tampil("Lovelyta", 20, "Malang");
-  tampil("Luqman", 40);
+  // tampil("Lovelyta", 20, "Malang");
+  // tampil("Luqman", 40);
+
+
+  //Anonymous function
+    var nilai = [90, 80, 70, 100];
+    nilai.forEach((angka){
+      print("Nilai = $angka");
+    });
   }
   //function parameter
-  void tampil(String nama, int umur, [String? alamat]){
-    print("Nama : $nama");
-    print("Umur : $umur");
-    if(alamat != null){
-      print("Alamat : $alamat");
-    } else {
-      print("Alamat : -");
-    }
-  }
+  // void tampil(String nama, int umur, [String? alamat]){
+  //   print("Nama : $nama");
+  //   print("Umur : $umur");
+  //   if(alamat != null){
+  //     print("Alamat : $alamat");
+  //   } else {
+  //     print("Alamat : -");
+  //   }
+  // }
