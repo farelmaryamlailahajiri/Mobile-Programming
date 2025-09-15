@@ -62,13 +62,33 @@ void main(List<String> arguments) {
   // print ("Data union ${angka.union(angka2)}");
   // print ("Data intersection ${angka.intersection(angka2)}");
 
-  var biodata = {
-    'nim' : '123200045',
-    'nama' : 'Muhammad Rizki',
-    'umur' : 20,
-  };
-  biodata['alamat'] = 'Malang';
+  // Map
+  // var biodata = {
+  //   'nim' : '123200045',
+  //   'nama' : 'Muhammad Rizki',
+  //   'umur' : 20,
+  // };
+  // biodata['alamat'] = 'Malang';
 
-  print("biodata Mahasiswa = $biodata");
-  print("NIM : ${biodata['nim']}");
+  // print("biodata Mahasiswa = $biodata");
+  // print("NIM : ${biodata['nim']}");
+
+  // // Record
+  // var mahasiswa = ("Luqman", 40, true);
+  // print("Ini data Pak Luqman = $mahasiswa");
+  // print("Mahasiswa = ${mahasiswa.$1}");
+
+  // var bio = (nama : "Satria Rakhmadani", umur: 20, gender: true);
+  // print("Ini data Satria = $bio");
+  // print("nama saya ${bio.nama}");
+
+  // Function
+  void tampil (String nama, int umur, [String? alamat]) {
+    print("Nama saya $nama, umur saya $umur");
+    if (alamat != null) {
+      print("Alamat saya di $alamat");
+    }
+  }
+
+  tampil("Rizki", 20, "Malang");
 }
