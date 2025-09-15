@@ -5,7 +5,7 @@ void main(List<String> arguments) {
   // print('Hello world: ${project3.calculate()}!');
 
   //belajar fix list
-  var list = List<int>.filled(5, 0);
+  // var list = List<int>.filled(5, 0);
 
   // list[0] = 10;
   // list[1] = 20;
@@ -16,11 +16,39 @@ void main(List<String> arguments) {
   // stdout.writeln("Data dari list: $list");
 
   //list fixed pakai perulangan
-  for (int i = 0; i <= 4; i++) { 
-    stdout.write('Masukkan data ke-$i: '); // Minta input dari user untuk isi list
-    var input = int.tryParse(stdin.readLineSync() ?? "");// Membaca input user (String) lalu mengubahnya ke integer 
-    list[i] = input ?? 0; // Menyimpan hasil input ke elemen list pada indeks ke-i (pakai ! karena kita yakin input bukan null)
-  }
+  // for (int i = 0; i <= 4; i++) {
+  //   stdout.write(
+  //     'Masukkan data ke-$i: ',
+  //   ); // Minta input dari user untuk isi list
+  //   var input = int.tryParse(
+  //     stdin.readLineSync() ?? "",
+  //   ); // Membaca input user (String) lalu mengubahnya ke integer
+  //   list[i] =
+  //       input ??
+  //       0; // Menyimpan hasil input ke elemen list pada indeks ke-i (pakai ! karena kita yakin input bukan null)
+  // }
 
-  stdout.writeln("Data dari list: $list");
+  // stdout.writeln("Data dari list: $list");
+
+  //list growable
+  // var grow = [];
+  // grow.add(20);
+  // grow.add(30);
+  // grow.remove(20);
+  // stdout.writeln("Data di dalam list: $grow");
+
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Data List ke-$i : ");
+  //   var input = stdin.readLineSync();
+  //   grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
+  //   }
+  //   print("Data dalam list = $grow");
+
+  var nama = [];
+  for (int i = 0; i <= 4; i++) {
+    stdout.write("Data List ke-$i : ");
+    var input = stdin.readLineSync();
+    nama.add(input ?? "");
+  }
+  print("Data dalam list = $nama");
 }
