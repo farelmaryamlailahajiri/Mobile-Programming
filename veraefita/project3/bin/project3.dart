@@ -96,4 +96,9 @@ void main(List<String> arguments) {
 
     }
     
-    }
+  //Anonymous Function
+  var nilai = [90, 80, 100, 70];
+  nilai.forEach((angka) {
+    print('Nilai = $angka');});
+}
+    
