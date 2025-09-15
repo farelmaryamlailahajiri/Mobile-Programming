@@ -80,14 +80,35 @@ void main(List<String> arguments) {
   // print("Biodata Mahasiswa dengan nama ${biodata['nama']}");
 
   // Record
-  var mahasiswa = ("Luqman", 40, true);
-  print("Ini data Pak Luqman : $mahasiswa");
-  print("Mahasiswa = ${mahasiswa.$1}");
+  // var mahasiswa = ("Luqman", 40, true);
+  // print("Ini data Pak Luqman : $mahasiswa");
+  // print("Mahasiswa = ${mahasiswa.$1}");
 
-  var bio = (nama:"Khuzaima Filla Januartha", umur:20, gender:true);
-  print("bio saya $bio");
-  print("nama saya ${bio.nama}");
+  // var bio = (nama:"Khuzaima Filla Januartha", umur:20, gender:true);
+  // print("bio saya $bio");
+  // print("nama saya ${bio.nama}");
 
+  //fangsen
+  // tampil("Filla", 20, "Dau");
+  // tampil("Filla", 20);
+
+  //anonymous fansen
+  var nilai = [90,80,100,20];
+  nilai.forEach((angka){
+    print("Nilai = $angka");
+  });
 }
+
+void tampil(String nama, int umur, [String? alamat]){
+  print("nama : $nama");
+  print("umur : $umur");
+  if (alamat != null) {
+    print("Alamat : $alamat");
+  } else {
+    print("Alamat: -");
+  }
+}
+
+
 
 
