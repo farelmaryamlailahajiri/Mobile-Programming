@@ -39,11 +39,19 @@ void main(List<String> arguments) {
   // }
   // print("Data nilai mahasiswa = $mahasiswa");
 
-  var nama = [];
-  for (int i = 0; i <= 4; i++) {
-    stdout.write("Masukkan nama mahasiswa ke- $i:");
-    var input = stdin.readLineSync();
-    nama.add(input);
-  }
-  print("Data nama mahasiswa = $nama");
+  // var nama = [];
+  // for (int i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan nama mahasiswa ke- $i:");
+  //   var input = stdin.readLineSync();
+  //   nama.add(input);
+  // }
+  // print("Data nama mahasiswa = $nama");
+
+  //Set
+  var angka = <int>{1, 2, 2, 3, 3, 4, 5};
+  print("ini adalah angka = ${angka.elementAt(3)}");
+
+  var angka2 = <int>{4, 5, 6, 7, 8};
+  print("Data Union = ${angka.union(angka2)}");
+  print("Data Intersection = ${angka.intersection(angka2)}");
 }
