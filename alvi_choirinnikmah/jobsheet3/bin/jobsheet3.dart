@@ -50,4 +50,13 @@ void main(List<String> arguments) {
   var angka = <int>{1, 2, 3, 3, 4};
   print("Set angka: $angka"); // Output {1, 2, 3, 4}
   print("Data nya andalah ${angka.elementAt(3)}"); // Menampilkan data pada index ke 3
+
+  var angka2 = <int>{4, 5, 6, 7, 8};
+  print("Data Union adalah ${angka.union(angka2)}");
+  print("Data Intersection adalah ${angka.intersection(angka2)}");
+
+  var setA = {1, 2, 3};
+  var setB = {3, 4, 5};
+  print("Union: ${setA.union(setB)}"); // Output: {1, 2, 3, 4, 5}
+  print("Intersection: ${setA.intersection(setB)}");
 }
