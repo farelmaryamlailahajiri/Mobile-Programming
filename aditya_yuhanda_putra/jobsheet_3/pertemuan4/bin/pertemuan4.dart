@@ -44,6 +44,7 @@ void main(List<String> arguments) {
   // grow.add(10);
   // stdout.writeln("Data dari growable list = $grow");
 
+  // Set in Dart
   var angka = <int>{1, 2, 3, 3, 4, 5};
   stdout.writeln("Data dari set = $angka");
   print("Elemen ke-2 : ${angka.elementAt(1)}");
@@ -51,4 +52,17 @@ void main(List<String> arguments) {
   var angka2 = {4, 5, 6, 7, 8};
   print("Data Union adalah : ${angka.union(angka2)}");
   print("Data Intersection adalah : ${angka.intersection(angka2)}");
+
+  // Map in Dart
+  var biodata = {
+    "nim": "2341760050",
+    "nama": "Aditya Yuhanda Putra",
+    "jurusan": "Teknologi Informasi",
+    "nama": "Mauliddina Fuji",
+  };
+  // biodata['angkatan'] = "2023";
+  print("Biodata Mahasiswa : $biodata");
+  print("Nama : ${biodata['nama']}");
+
+  
 }
