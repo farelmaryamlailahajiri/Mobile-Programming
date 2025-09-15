@@ -10,5 +10,6 @@ void main(List<String> arguments) {
   list[2] = 19;
   list[3] = 25;
   list[4] = 23;
+  //list[5] = 28; //Eror karena disediakan tempat cuma 5
   print("Data dalam list = $list");
 }
