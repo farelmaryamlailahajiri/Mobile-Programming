@@ -86,9 +86,15 @@ void main(List<String> arguments) {
   // print("bio saya $bio");
   // print("nama Saya ${bio.nama}");
 
-  tampil("Uyab", 21, "Jombang");
-  
-}
+  // tampil("Uyab", 21, "Jombang");
+
+  var nilai = [90, 80, 60, 100];
+  nilai.forEach((angka){
+    print("Nilai = $angka");
+});
+  }
+
+
 //function parameter
 void  tampil(String nama, int umur, [String? alamat]){
   print("Nama : $nama");
