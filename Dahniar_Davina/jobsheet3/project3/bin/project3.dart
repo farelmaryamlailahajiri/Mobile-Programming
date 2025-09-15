@@ -1,4 +1,4 @@
-//import 'dart:io';
+import 'dart:io';
 //import 'package:project3/project3.dart' as project3;
 
 void main(List<String> arguments) {
@@ -14,5 +14,16 @@ void main(List<String> arguments) {
   list[4] = 50; //kalau tdk diisi, maka akan bernilai 0
   //list[5] = 60; //akan error, karena index melebihi ukuran list
   print("Data dalam list=$list");
+
+  //insert fixed list 
+  for (int i = 1; i <= 5; i++) {
+    stdout.write("Masukkan list data ke-$i: ");
+    var input = int.tryParse(stdin.readLineSync()!);
+    list[i-1] = input ?? 0;
+  }
+
+    // Tampilkan hasil
+    print("Data dalam list=$list");
+
 
 }
