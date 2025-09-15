@@ -19,8 +19,38 @@ void main(List<String> arguments) {
   // List fixed list menggunakan perulangan
   for (int i = 0; i <= 4; i++) {
     stdout.write('Masukkan data ke-$i : ');
-    var input = int.tryParse(stdin.readLineSync()?? '')?? 0;
+    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
     list[i] = input!;
   }
   stdout.writeln("Data dalam list: $list");
+
+  // Growable list
+  // var grow = [10];
+  // grow.add(20);
+  // grow.add(30);
+  // grow.add(40);
+  // grow.remove(10);
+  // grow.add(10);
+
+  // stdout.writeln("Data didalam list: $grow");
+
+  for (var i = 0; i <= 4; i++) {
+    stdout.write('Masukkan data ke-$i : ');
+    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+    list[i] = input!;
+  }
+  stdout.writeln("Data dalam list: $list");
+
+  print('data dalam grow list');
+  var grow = [];
+
+  for (var i = 0; i <= 4; i++) {
+    stdout.write('data list ke- $i: ');
+    var input = stdin.readByteSync();
+    if (input != null) {
+      grow.add(input);
+      print('data index ke: $i ${grow[i]}');
+    }
+  }
+  print('data dalam list: $grow');
 }
