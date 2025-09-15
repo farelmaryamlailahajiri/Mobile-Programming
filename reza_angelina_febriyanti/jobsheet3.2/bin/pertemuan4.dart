@@ -101,11 +101,22 @@ void main(List<String> arguments) {
   */
 
   //FUNCTION
+  /*
   void tampil(String nama, int umur, [String? alamat]) {
     print("Nama : $nama");
     print("Umur : $umur");
     if (alamat != null) {
       print("Alamat : $alamat");
     }
-  } 
+  }
+
+  tampil("Reza", 20, "Malang");
+  tampil("Vio", 22);
+  */
+
+  //Anonimous Function
+  var nilai = [90, 80, 70, 100];
+  nilai.forEach((angka){
+    print("Nilai = ${angka}");
+  });
 }
