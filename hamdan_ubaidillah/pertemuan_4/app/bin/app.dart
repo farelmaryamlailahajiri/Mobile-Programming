@@ -1,14 +1,33 @@
+import 'dart:ffi';
 import 'dart:io';
 
-import 'package:app/app.dart' as app;
+// import 'package:app/app.dart' as app;
 
 void main(List<String> arguments) {
-  List<int> list = List<int>.filled(5, 0);
+  // List<int> list = List<int>.filled(5, 0);
 
-  for (int i = 0; i < list.length; i++) {
-    String? number = stdin.readLineSync();
-    list[i] = int.tryParse(number ?? "") ?? 0;
-  }
+  // list[0] = 1;
+  // list[1] = 2;
+  // list[2] = 3;
+  // list[3] = 4;
+  // list[4] = 5;
 
-  print(list);
+  // for (int i = 0; i < list.length; i++) {
+  //   list[i] = int.tryParse(number ?? "") ?? 0;
+  // }
+  //   String? number = stdin.readLineSync();
+
+  // List<String> grow = [];
+
+  // for (int i = 0; i < 5; i++) {
+  //   String? mhs = stdin.readLineSync();
+  //   grow.add(mhs ?? "");
+  // }
+
+  // print("data : ${x.elementAt(1)}");
+
+  Set x = <int>{1, 2, 3, 4, 5};
+  Set y = <int>{4, 5, 6, 7, 8};
+  print("data union ${x.union(y)}");
+  print("data intersect ${x.intersection(y)}");
 }
