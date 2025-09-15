@@ -82,13 +82,27 @@ void main(List<String> arguments) {
   print("Nama : ${biodata['nama']}");*/
 
   //record : tidak bisa menentukan tipe data, hanya array
-  var mahasiswa = ("Dahniar", 21, false);
+  /*var mahasiswa = ("Dahniar", 21, false);
   print("Ini data saya = $mahasiswa");
   print("Mahasiswa = ${mahasiswa.$1}"); //mengambil data ke 1
 
   var bio = (nama:"Davina", umur:21, gender:true);
   print("Ini data saya = $bio");
-  print("Nama : ${bio.nama}");
+  print("Nama : ${bio.nama}");*/
+
+  //function parameter
+  tampil("Dahniar", 21, alamat: "London");
+  tampil("Davina", 20);
+  
   
 }
+  void tampil(String nama, int umur, {String? alamat}) {
+    print("Nama : $nama");
+    print("Umur : $umur");
+    if (alamat != null) {
+      print("Alamat : $alamat");
+    } else {
+      print("Alamat : -");
+    }
+  }
 
