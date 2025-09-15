@@ -61,13 +61,21 @@ void main(List<String> arguments) {
   // print("Intersection: ${setA.intersection(setB)}");
 
   // Map digunakan untuk menyimpan data dengan pasangan key dan value
-  var biodata = {
-    'nim' : '2341760191',
-    'nama' : 'Alvi Choirinnikmah',
-    'jurusan' : 'Teknologi Informasi',
-    'nama' : 'Alvi' // key nama ditulis ulang dan akan direplace menjadi 'Alvi'
-  };
-  biodata['nama'] = '2023'; // update nama akan direplace menjadi '2023'
-  print("Biodata mahasiswa: $biodata");
-  print("Biota mahasiswa dengan nama = ${biodata['nama']}");
+  // var biodata = {
+  //   'nim' : '2341760191',
+  //   'nama' : 'Alvi Choirinnikmah',
+  //   'jurusan' : 'Teknologi Informasi',
+  //   'nama' : 'Alvi' // key nama ditulis ulang dan akan direplace menjadi 'Alvi'
+  // };
+  // biodata['nama'] = '2023'; // update nama akan direplace menjadi '2023'
+  // print("Biodata mahasiswa: $biodata");
+  // print("Biota mahasiswa dengan nama = ${biodata['nama']}");
+
+  // Record
+  var mahasiswa = ("Zanoy", 17, true);
+  print("Ini data Zanoy : $mahasiswa");
+  print("Mahasiswa = ${mahasiswa.$1}"); // menampilkan hanya nama saja
+
+  var bio = (nama: "Alvi", umur : 20, status : true);
+  print("Ini biodata ${bio.nama}"); // menampilkan hanya nama saja
 }
