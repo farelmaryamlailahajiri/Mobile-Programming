@@ -83,7 +83,7 @@ void main(List<String> arguments) {
   tampil("Alvi", 20, "Jl. Mawar");
   tampil("Devita", 21);
 
-  // Anonimous Function
+  // Anonymous Function
   var nilai = [90, 80, 70, 100];
   nilai.forEach((angka){
     print("Nilai = $angka");
