@@ -78,9 +78,9 @@ void main(List<String> arguments) {
   // print("Nama mahasiswa = ${bio.nama}");
 
   // function parameter
-//   tampil("Audric", 20);
-//   tampil("tnx", 26, "Sidoarjo");
-// }
+  // tampil("Audric", 20);
+  // tampil("tnx", 26, "Sidoarjo");
+}
 
 // void tampil(String nama, int umur, [String? alamat]){
 //   print("Nama : $nama");
@@ -90,4 +90,4 @@ void main(List<String> arguments) {
 //   } else {
 //     print("Alamat : -");
 //   }
-}
+// }
