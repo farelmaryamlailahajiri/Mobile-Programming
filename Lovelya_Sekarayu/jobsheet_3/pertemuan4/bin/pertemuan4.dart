@@ -16,9 +16,9 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
   // print("Data dalam list = $list");
 
   //list fixed
-  for (int i = 0; i < list.length; i++) {
+  for (int i = 0; i <= 4; i++) {
     stdout.write("Masukkan list ke-$i : ");
-    var input = int.tryParse(stdin.readLineSync()!);
+    var input = int.tryParse(stdin.readLineSync()?? '')?? 0;
     list[i] = input!;
   }
 
