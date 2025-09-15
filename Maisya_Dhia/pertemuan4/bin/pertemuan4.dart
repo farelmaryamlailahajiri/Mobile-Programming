@@ -76,15 +76,23 @@ void main(List<String> arguments) {
 // }
 
 // Map
-    var biodata = {
-      "nim" : "2341760114",
-      "nama": "Maisya",
-      "Jurusan" : "Teknologi Informasi",
-      "nama" : "Mei" // replace
-    };
-    // biodata['Nama'] = "2023"; //ke replace
-    print("Biodata Mahasiswa $biodata");
-    print("Biodata Mahasiswa = ${biodata['nama']}");
-}
+//     var biodata = {
+//       "nim" : "2341760114",
+//       "nama": "Maisya",
+//       "Jurusan" : "Teknologi Informasi",
+//       "nama" : "Mei" // replace
+//     };
+//     // biodata['Nama'] = "2023"; //ke replace
+//     print("Biodata Mahasiswa $biodata");
+//     print("Biodata Mahasiswa = ${biodata['nama']}");
+// }
 
+//record
+var mahasiswa = ('2341760114', 'Maisya', 'Teknologi Informasi');
+
+// akses berdasarkan posisi (index mulai dari $1, $2, ...)--> data ke-1, ke-2...
+  print("NIM    : ${mahasiswa.$1}");
+  print("Nama   : ${mahasiswa.$2}");
+  print("Jurusan: ${mahasiswa.$3}");
+}
 
