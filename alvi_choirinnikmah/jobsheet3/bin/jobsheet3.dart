@@ -72,10 +72,23 @@ void main(List<String> arguments) {
   // print("Biota mahasiswa dengan nama = ${biodata['nama']}");
 
   // Record
-  var mahasiswa = ("Zanoy", 17, true);
-  print("Ini data Zanoy : $mahasiswa");
-  print("Mahasiswa = ${mahasiswa.$1}"); // menampilkan hanya nama saja
+  // var mahasiswa = ("Zanoy", 17, true);
+  // print("Ini data Zanoy : $mahasiswa");
+  // print("Mahasiswa = ${mahasiswa.$1}"); // menampilkan hanya nama saja
 
-  var bio = (nama: "Alvi", umur : 20, status : true);
-  print("Ini biodata ${bio.nama}"); // menampilkan hanya nama saja
+  // var bio = (nama: "Alvi", umur : 20, status : true);
+  // print("Ini biodata ${bio.nama}"); // menampilkan hanya nama saja
+
+  // Memanggil fungsi tampil
+  tampil("Alvi", 20, "Jl. Mawar");
+  tampil("Devita", 21);
+}
+
+// Function tampil
+void tampil(String nama, int umur, [String? alamat]) {
+  print("Nama : $nama");
+  print("Umur : $umur");
+  if (alamat != null) {
+    print("Alamat : $alamat");
+  }
 }
