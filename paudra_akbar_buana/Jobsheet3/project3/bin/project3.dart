@@ -48,10 +48,20 @@ void main(List<String> arguments) {
   // print("Data nama mahasiswa = $nama");
 
   //Set
-  var angka = <int>{1, 2, 2, 3, 3, 4, 5};
-  print("ini adalah angka = ${angka.elementAt(3)}");
+  // var angka = <int>{1, 2, 2, 3, 3, 4, 5};
+  // print("ini adalah angka = ${angka.elementAt(3)}");
 
-  var angka2 = <int>{4, 5, 6, 7, 8};
-  print("Data Union = ${angka.union(angka2)}");
-  print("Data Intersection = ${angka.intersection(angka2)}");
+  // var angka2 = <int>{4, 5, 6, 7, 8};
+  // print("Data Union = ${angka.union(angka2)}");
+  // print("Data Intersection = ${angka.intersection(angka2)}");
+
+  // Map
+  var biodata = {
+    "NIM": "2341760063",
+    "Nama": "Paudra Akbar Buana",
+    "Jurusan": "Teknologi informasi",
+  };
+  biodata["Angkatan"] = "2023";
+  print("Biodata Mahasiswa= $biodata");
+  print("Biodata ${biodata['Nama']}");
 }
