@@ -94,5 +94,16 @@ var mahasiswa = ('2341760114', 'Maisya', 'Teknologi Informasi');
   print("NIM    : ${mahasiswa.$1}");
   print("Nama   : ${mahasiswa.$2}");
   print("Jurusan: ${mahasiswa.$3}");
+
+  tampil("Maisya", 18, "Malang");
+  tampil("adin", 21);
 }
 
+//function parameter
+void tampil(String nama, int umur, [String? alamat]) {
+  print ("Nama : $nama");
+  print ("Umur : $umur");
+  if (alamat != null) {
+    print("Alamat : $alamat") ;
+  }
+}
