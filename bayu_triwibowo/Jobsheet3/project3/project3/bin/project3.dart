@@ -44,14 +44,22 @@ void main(List<String> arguments) {
   // print("Data nilai mahasiswa = $mahasiswa");
 
   // dgn tipe data String
-  var grow = [];
-  for (var i = 0; i <= 4; i++) {
-    stdout.write("Masukkan list ke index $i:");
-    var input = stdin.readLineSync();
-    if(input !=null){
-      grow.add(input);
-      print("data index ke: $i ${grow[i]}");
-    }
-  }
-  print("data dalam list: $grow");
+  // var grow = [];
+  // for (var i = 0; i <= 4; i++) {
+  //   stdout.write("Masukkan list ke index $i:");
+  //   var input = stdin.readLineSync();
+  //   if(input !=null){
+  //     grow.add(input);
+  //     print("data index ke: $i ${grow[i]}");
+  //   }
+  // }
+  // print("data dalam list: $grow");
+
+  //belajar set
+  var angka = <int> {1,2,2,3,4,5};
+  print("Elemen ke-2 : ${angka.elementAt(1)}");
+
+  var angka2 = <int> {4,5,6,7,8};
+  print("Data Union adalah = ${angka.union(angka2)}");
+  print("Data intersection adalah = ${angka.intersection(angka2)}");
 }
