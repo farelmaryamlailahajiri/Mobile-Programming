@@ -73,16 +73,23 @@ void main(List<String> arguments) {
   // var bio = (nama: "Paud", umur: "20", gender: true);
   // print("Biodata saya = $bio");
   // print("Nama saya = ${bio.nama}");
-  tampil("paud", 20, "jl.basket");
-}
-//Function Parameter
+  // tampil("paud", 20, "jl.basket");
 
-void tampil(String nama, int umur, [String? alamat]) {
-  print("Nama : $nama");
-  print("Umur : $umur");
-  if (alamat != null) {
-    print("Alamat : $alamat");
-  } else {
-    print("Alamat : -");
-  }
+  //Anonymous Function
+  var nilai = [90, 80, 70, 100];
+  nilai.forEach((angka){
+    print("Nilai = $angka");
+
+  });
 }
+// //Function Parameter
+
+// void tampil(String nama, int umur, [String? alamat]) {
+//   print("Nama : $nama");
+//   print("Umur : $umur");
+//   if (alamat != null) {
+//     print("Alamat : $alamat");
+//   } else {
+//     print("Alamat : -");
+//   }
+// }
