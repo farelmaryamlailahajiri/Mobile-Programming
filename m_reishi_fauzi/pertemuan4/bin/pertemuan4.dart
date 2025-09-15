@@ -87,18 +87,23 @@ void main(List<String> arguments) {
 
 //function parameter
 
-tampil('fauzi', 20, 'malang');
-tampil('luqman', 21);
-}
+// tampil('fauzi', 20, 'malang');
+// tampil('luqman', 21);
+// }
 
-void tampil (String nama, int umur, [String? alamat]) {
-  print('nama: $nama');
-  print('umur : $umur');
-  if (alamat != null) {
-    print('alamat : $alamat');
-  }else{
-    print('alamat: -');
-      
-  }
+// void tampil (String nama, int umur, [String? alamat]) {
+//   print('nama: $nama');
+//   print('umur : $umur');
+//   if (alamat != null) {
+//     print('alamat : $alamat');
+//   }else{
+//     print('alamat: -');
+//   }
 
+
+  //anonymous function
+  var nilai = [90, 80, 70, 100];
+  nilai.forEach((angka) {
+    print('nilai = $angka');
+  });
 }
