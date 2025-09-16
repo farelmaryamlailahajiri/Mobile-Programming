@@ -19,12 +19,33 @@ void main(List<String> arguments) {
   // print("Jumlah: ${mahasiswa.length}");
 
   // Praktikum-2 : Union & Intersection
-  stdout.write("Masukkan elemen set A: ");
-  var setA = stdin.readLineSync()!.split(",").map((e) => e.trim()).toSet();
+  // stdout.write("Masukkan elemen set A: ");
+  // var setA = stdin.readLineSync()!.split(",").map((e) => e.trim()).toSet();
 
-  stdout.write("Masukkan elemen set B: ");
-  var setB = stdin.readLineSync()!.split(",").map((e) => e.trim()).toSet();
+  // stdout.write("Masukkan elemen set B: ");
+  // var setB = stdin.readLineSync()!.split(",").map((e) => e.trim()).toSet();
 
-  print("\nUnion: ${setA.union(setB)}");
-  print("Intersection: ${setA.intersection(setB)}");
+  // print("\nUnion: ${setA.union(setB)}");
+  // print("Intersection: ${setA.intersection(setB)}");
+
+  // Praktikum-3 : Map untuk Data Barang
+  var barang = {};
+
+  stdout.write("Masukkan jumlah barang: ");
+  var jumlah = int.parse(stdin.readLineSync()!);
+
+  for (var i = 0; i < jumlah; i++) {
+    stdout.write("Masukkan kode barang ke-$i: ");
+    var kode = stdin.readLineSync()!;
+
+    stdout.write("Masukkan nama barang ke-$i: ");
+    var nama = stdin.readLineSync()!;
+
+    barang[kode] = nama;
+  }
+
+  print("\nData barang:");
+  barang.forEach((kode, nama) {
+    print("Kode: $kode, Nama: $nama");
+  });
 }
