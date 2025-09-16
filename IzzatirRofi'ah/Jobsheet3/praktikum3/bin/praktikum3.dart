@@ -29,23 +29,42 @@ void main(List<String> arguments) {
   // print("Intersection: ${setA.intersection(setB)}");
 
   // Praktikum-3 : Map untuk Data Barang
-  var barang = {};
+  // var barang = {};
 
-  stdout.write("Masukkan jumlah barang: ");
-  var jumlah = int.parse(stdin.readLineSync()!);
+  // stdout.write("Masukkan jumlah barang: ");
+  // var jumlah = int.parse(stdin.readLineSync()!);
 
-  for (var i = 0; i < jumlah; i++) {
-    stdout.write("Masukkan kode barang ke-$i: ");
-    var kode = stdin.readLineSync()!;
+  // for (var i = 0; i < jumlah; i++) {
+  //   stdout.write("Masukkan kode barang ke-$i: ");
+  //   var kode = stdin.readLineSync()!;
 
-    stdout.write("Masukkan nama barang ke-$i: ");
-    var nama = stdin.readLineSync()!;
+  //   stdout.write("Masukkan nama barang ke-$i: ");
+  //   var nama = stdin.readLineSync()!;
 
-    barang[kode] = nama;
+  //   barang[kode] = nama;
+  // }
+
+  // print("\nData barang:");
+  // barang.forEach((kode, nama) {
+  //   print("Kode: $kode, Nama: $nama");
+  // });
+
+  // Praktikum-4 : Closure untuk menghitung Diskon
+  var buatDiskon = () {
+    var diskon = 0;
+    return (double harga) {
+      diskon += 5;
+      var total = harga - (harga * diskon / 100);
+      print("Diskon: $diskon% | Harga akhir: $total");
+    };
+  };
+
+  var hitungDiskon = buatDiskon();
+
+  while (true) {
+    stdout.write("Masukkan harga (atau 'exit'): ");
+    var input = stdin.readLineSync();
+    if (input == "exit") break;
+    hitungDiskon(double.parse(input!));
   }
-
-  print("\nData barang:");
-  barang.forEach((kode, nama) {
-    print("Kode: $kode, Nama: $nama");
-  });
 }
