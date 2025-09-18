@@ -39,16 +39,28 @@ void main() {
   // print("\nUnion (gabungan kedua set): ${set1.union(set2)}");
   // print("Intersection (elemen yang sama): ${set1.intersection(set2)}");
 
-  // 3. Membuat Map barang
-  var barang = {
-    "B001": {"nama": "Pensil", "harga": 2000},
-    "B002": {"nama": "Buku Tulis", "harga": 5000},
-    "B003": {"nama": "Penghapus", "harga": 1500},
+  // // 3. Membuat Map barang
+  // var barang = {
+  //   "B001": {"nama": "Pensil", "harga": 2000},
+  //   "B002": {"nama": "Buku Tulis", "harga": 5000},
+  //   "B003": {"nama": "Penghapus", "harga": 1500},
+  // };
+
+  // // Menampilkan semua data barang
+  // print("Daftar barang:");
+  // barang.forEach((kode, info) {
+  //   print("$kode: ${info['nama']} - Rp${info['harga']}");
+  // });
+
+  // 4. function closure yang menghitung diskon bertingkat
+  int diskon = 0; 
+
+  int Function() tambahDiskon = () {
+    diskon += 5; // setiap dipanggil, diskon bertambah 5%
+    return diskon;
   };
 
-  // Menampilkan semua data barang
-  print("Daftar barang:");
-  barang.forEach((kode, info) {
-    print("$kode: ${info['nama']} - Rp${info['harga']}");
-  });
+  print("Diskon pertama: ${tambahDiskon()}%"); 
+  print("Diskon kedua: ${tambahDiskon()}%");   
+  print("Diskon ketiga: ${tambahDiskon()}%");  
 }
