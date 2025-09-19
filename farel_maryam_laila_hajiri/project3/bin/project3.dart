@@ -146,27 +146,41 @@ void main(List<String> arguments) {
 
   //tugas no3
   // Map untuk menyimpan data barang dengan kode sebagai key
-  Map<String, Map<String, dynamic>> barang = {};
+  // Map<String, Map<String, dynamic>> barang = {};
 
-  // Menambahkan minimal 3 barang
-  barang['B001'] = {
-    'nama': 'TWS',
-    'harga': 175000,
-  };
-  barang['B002'] = {
-    'nama': 'Mouse',
-    'harga': 98000,
-  };
-  barang['B003'] = {
-    'nama': 'Keyboard Wireless',
-    'harga': 215000,
-  };
+  // // Menambahkan minimal 3 barang
+  // barang['B001'] = {
+  //   'nama': 'TWS',
+  //   'harga': 175000,
+  // };
+  // barang['B002'] = {
+  //   'nama': 'Mouse',
+  //   'harga': 98000,
+  // };
+  // barang['B003'] = {
+  //   'nama': 'Keyboard Wireless',
+  //   'harga': 215000,
+  // };
 
-  // Menampilkan daftar barang
-  print("=== Daftar Barang ===");
-  barang.forEach((kode, data) {
-    print("Kode: $kode | Nama: ${data['nama']} | Harga: Rp${data['harga']}");
-  });
+  // // Menampilkan daftar barang
+  // print("=== Daftar Barang ===");
+  // barang.forEach((kode, data) {
+  //   print("Kode: $kode | Nama: ${data['nama']} | Harga: Rp${data['harga']}");
+  // });
+
+  //tugas no5
+  // Buat closure perhitungan diskon
+  var hitungDiskon = buatDiskon();
+
+  // Contoh belanja
+  List<double> daftarBelanja = [120000, 70000, 30000];
+
+  for (var belanja in daftarBelanja) {
+    var hasil = hitungDiskon(belanja);
+    print("Total Belanja: Rp${hasil['belanja']}");
+    print("Diskon       : Rp${hasil['diskon']}");
+    print("Total Bayar  : Rp${hasil['totalBayar']}\n");
+  }
 }
 
 //function parameter
@@ -179,3 +193,24 @@ void main(List<String> arguments) {
 //     print("alamat: -");
 //   }
 // }
+
+// Fungsi closure untuk membuat perhitungan diskon
+Function buatDiskon() {
+  return (double totalBelanja) {
+    double diskon = 0;
+
+    if (totalBelanja >= 100000) {
+      diskon = totalBelanja * 0.20; // 20%
+    } else if (totalBelanja >= 50000) {
+      diskon = totalBelanja * 0.10; // 10%
+    }
+
+    double totalBayar = totalBelanja - diskon;
+
+    return {
+      'belanja': totalBelanja,
+      'diskon': diskon,
+      'totalBayar': totalBayar,
+    };
+  };
+}
