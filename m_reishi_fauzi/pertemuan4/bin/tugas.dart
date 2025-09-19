@@ -37,17 +37,32 @@ void main() {
   // print("Intersection = ${set1.intersection(set2)}");
 
   //MAP UNTUK DATA BARANG MIN 3
-   var barang = {
-    'BRG1': {'nama': 'Laptop Thinkpad T470P', 'harga': 10000000},
-    'BRG2': {'nama': 'Mouse Red Dragon', 'harga': 125000},
-    'BRG3': {'nama': 'Charger Original', 'harga': 300000},
+  //  var barang = {
+  //   'BRG1': {'nama': 'Laptop Thinkpad T470P', 'harga': 10000000},
+  //   'BRG2': {'nama': 'Mouse Red Dragon', 'harga': 125000},
+  //   'BRG3': {'nama': 'Charger Original', 'harga': 300000},
+  // };
+
+  // print("Data barang:");
+  // barang.forEach((kode, data) {
+  //   print("Kode: $kode, Nama: ${data['nama']}, Harga: ${data['harga']}");
+  // });
+
+  //  FUNCTION CLOSURE DISKON BERTINGKAT 5%
+
+  Function hitungDiskon = Diskon();
+  print("1. Harga setelah diskon: Rp${hitungDiskon(100000)}");
+  print("2. Harga setelah diskon: Rp${hitungDiskon(100000)}");
+  print("3. Harga setelah diskon: Rp${hitungDiskon(100000)}");
+  }
+
+  Function Diskon() {
+  int diskon = 0;
+  return (int harga) {
+    diskon += 5; 
+    double potongan = harga * diskon / 100;
+    return harga - potongan;
   };
-
-  print("Data barang:");
-  barang.forEach((kode, data) {
-    print("Kode: $kode, Nama: ${data['nama']}, Harga: ${data['harga']}");
-  });
-
 }
 
 
