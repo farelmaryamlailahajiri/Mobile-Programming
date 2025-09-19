@@ -44,15 +44,27 @@ void main (List<String> arguments) {
 //   print("Data Intersection = ${set1.intersection(set2)}\n");
 
 // 3. Map Data Barang
-var barang = <String, Map<String, dynamic>>{
-"B001": {"nama": "Lampu", "harga": 100000},
-"B002": {"nama": "Buku", "harga": 90000},
-"B003": {"nama": "Gelas", "harga": 50000},
-};
-print("Data Barang:");
-barang.forEach((kode, data) {
-  print("Kode: $kode, Nama: ${data['nama']}, Harga: ${data['harga']}");
-  });
+// var barang = <String, Map<String, dynamic>>{
+// "B001": {"nama": "Lampu", "harga": 100000},
+// "B002": {"nama": "Buku", "harga": 90000},
+// "B003": {"nama": "Gelas", "harga": 50000},
+// };
+// print("Data Barang:");
+// barang.forEach((kode, data) {
+//   print("Kode: $kode, Nama: ${data['nama']}, Harga: ${data['harga']}");
+//   });
 
   // 4. Function Closure Diskon Bertingkat
+  Function closureDiskon() {
+    var diskon = 0;
+    return () {
+      diskon += 5;
+      return diskon;
+      };
+  }
+  var hitungDiskon = closureDiskon();
+  print("Pemanggilan 1, Diskon = ${hitungDiskon()}%");
+  print("Pemanggilan 2, Diskon = ${hitungDiskon()}%");
+  print("Pemanggilan 3, Diskon = ${hitungDiskon()}%");
+  print("Pemanggilan 4, Diskon = ${hitungDiskon()}%");
 }
