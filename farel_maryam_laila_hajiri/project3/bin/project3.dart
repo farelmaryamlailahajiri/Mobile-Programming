@@ -80,10 +80,30 @@ void main(List<String> arguments) {
   // tampil("jose", 20);
 
   //anonimous function
-  var nilai = [90, 80, 70, 100];
-  nilai.forEach((angka) {
-    print("Nilai = $angka");
-  });
+  // var nilai = [90, 80, 70, 100];
+  // nilai.forEach((angka) {
+  //   print("Nilai = $angka");
+  // });
+
+  //tugas no.1
+  // Membuat growable list kosong untuk menyimpan nama mahasiswa
+  // Membuat growable list dengan beberapa nama langsung
+  List<String> mahasiswa = [];
+
+  // Menambahkan data mahasiswa
+  mahasiswa.add("farel");
+  mahasiswa.add("adin");
+  mahasiswa.add("aida");
+  mahasiswa.add("dina");
+
+  // Menampilkan daftar mahasiswa
+  print("=== Daftar Nama Mahasiswa ===");
+  for (var mhs in mahasiswa) {
+    print(mhs);
+  }
+
+  // Menampilkan jumlah mahasiswa
+  print("\nJumlah mahasiswa: ${mahasiswa.length}");
 }
 
 //function parameter
