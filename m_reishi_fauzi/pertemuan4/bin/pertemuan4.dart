@@ -38,8 +38,13 @@ void main(List<String> arguments) {
 
   // for (int i = 0; i <= 4; i++) {
   //   stdout.write('data list ke-$i : ');
-  //   var input = stdin.readLineSync();
-  //   grow.add(int.parse((input== null ||)))
+  //   var input = stdin.readLineSync() ?? '0';
+  //   if (input !=null) {
+
+  //   }
+  //   grow.add(input);
+  //   print("Data index ke-$i: ${grow[i]}");
+  //   print("Data dalam list: $grow");
 
   //   }
 
