@@ -88,61 +88,85 @@ void main(List<String> arguments) {
   //tugas no.1
   // Membuat growable list kosong untuk menyimpan nama mahasiswa
   // Membuat growable list dengan beberapa nama langsung
-  List<String> mahasiswa = [];
+  // List<String> mahasiswa = [];
 
-  // Menambahkan data mahasiswa
-  mahasiswa.add("farel");
-  mahasiswa.add("adin");
-  mahasiswa.add("aida");
-  mahasiswa.add("dina");
+  // // Menambahkan data mahasiswa
+  // mahasiswa.add("farel");
+  // mahasiswa.add("adin");
+  // mahasiswa.add("aida");
+  // mahasiswa.add("dina");
 
-  // Menampilkan daftar mahasiswa
-  print("=== Daftar Nama Mahasiswa ===");
-  for (var mhs in mahasiswa) {
-    print(mhs);
-  }
+  // // Menampilkan daftar mahasiswa
+  // print("=== Daftar Nama Mahasiswa ===");
+  // for (var mhs in mahasiswa) {
+  //   print(mhs);
+  // }
 
-  // Menampilkan jumlah mahasiswa
-  print("\nJumlah mahasiswa: ${mahasiswa.length}");
+  // // Menampilkan jumlah mahasiswa
+  // print("\nJumlah mahasiswa: ${mahasiswa.length}");
 
-  //tugas no2
-  // Input untuk Set A
-  stdout.write("Masukkan jumlah elemen Set A: ");
-  int? jumlahA = int.tryParse(stdin.readLineSync()!);
-  Set<int> setA = {};
+  // //tugas no2
+  // // Input untuk Set A
+  // stdout.write("Masukkan jumlah elemen Set A: ");
+  // int? jumlahA = int.tryParse(stdin.readLineSync()!);
+  // Set<int> setA = {};
 
-  for (int i = 0; i < (jumlahA ?? 0); i++) {
-    stdout.write("Elemen ke-${i + 1} Set A: ");
-    int? elemen = int.tryParse(stdin.readLineSync()!);
-    if (elemen != null) {
-      setA.add(elemen);
-    }
-  }
+  // for (int i = 0; i < (jumlahA ?? 0); i++) {
+  //   stdout.write("Elemen ke-${i + 1} Set A: ");
+  //   int? elemen = int.tryParse(stdin.readLineSync()!);
+  //   if (elemen != null) {
+  //     setA.add(elemen);
+  //   }
+  // }
 
-  // Input untuk Set B
-  stdout.write("\nMasukkan jumlah elemen Set B: ");
-  int? jumlahB = int.tryParse(stdin.readLineSync()!);
-  Set<int> setB = {};
+  // // Input untuk Set B
+  // stdout.write("\nMasukkan jumlah elemen Set B: ");
+  // int? jumlahB = int.tryParse(stdin.readLineSync()!);
+  // Set<int> setB = {};
 
-  for (int i = 0; i < (jumlahB ?? 0); i++) {
-    stdout.write("Elemen ke-${i + 1} Set B: ");
-    int? elemen = int.tryParse(stdin.readLineSync()!);
-    if (elemen != null) {
-      setB.add(elemen);
-    }
-  }
+  // for (int i = 0; i < (jumlahB ?? 0); i++) {
+  //   stdout.write("Elemen ke-${i + 1} Set B: ");
+  //   int? elemen = int.tryParse(stdin.readLineSync()!);
+  //   if (elemen != null) {
+  //     setB.add(elemen);
+  //   }
+  // }
 
-  // Menampilkan isi Set
-  print("\nSet A: $setA");
-  print("Set B: $setB");
+  // // Menampilkan isi Set
+  // print("\nSet A: $setA");
+  // print("Set B: $setB");
 
-  // Union (gabungan)
-  Set<int> unionSet = setA.union(setB);
-  print("Union (A ∪ B): $unionSet");
+  // // Union (gabungan)
+  // Set<int> unionSet = setA.union(setB);
+  // print("Union (A ∪ B): $unionSet");
 
-  // Intersection (irisan)
-  Set<int> intersectionSet = setA.intersection(setB);
-  print("Intersection (A ∩ B): $intersectionSet");
+  // // Intersection (irisan)
+  // Set<int> intersectionSet = setA.intersection(setB);
+  // print("Intersection (A ∩ B): $intersectionSet");
+
+  //tugas no3
+  // Map untuk menyimpan data barang dengan kode sebagai key
+  Map<String, Map<String, dynamic>> barang = {};
+
+  // Menambahkan minimal 3 barang
+  barang['B001'] = {
+    'nama': 'TWS',
+    'harga': 175000,
+  };
+  barang['B002'] = {
+    'nama': 'Mouse',
+    'harga': 98000,
+  };
+  barang['B003'] = {
+    'nama': 'Keyboard Wireless',
+    'harga': 215000,
+  };
+
+  // Menampilkan daftar barang
+  print("=== Daftar Barang ===");
+  barang.forEach((kode, data) {
+    print("Kode: $kode | Nama: ${data['nama']} | Harga: Rp${data['harga']}");
+  });
 }
 
 //function parameter
