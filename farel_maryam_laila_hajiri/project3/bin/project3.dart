@@ -104,6 +104,45 @@ void main(List<String> arguments) {
 
   // Menampilkan jumlah mahasiswa
   print("\nJumlah mahasiswa: ${mahasiswa.length}");
+
+  //tugas no2
+  // Input untuk Set A
+  stdout.write("Masukkan jumlah elemen Set A: ");
+  int? jumlahA = int.tryParse(stdin.readLineSync()!);
+  Set<int> setA = {};
+
+  for (int i = 0; i < (jumlahA ?? 0); i++) {
+    stdout.write("Elemen ke-${i + 1} Set A: ");
+    int? elemen = int.tryParse(stdin.readLineSync()!);
+    if (elemen != null) {
+      setA.add(elemen);
+    }
+  }
+
+  // Input untuk Set B
+  stdout.write("\nMasukkan jumlah elemen Set B: ");
+  int? jumlahB = int.tryParse(stdin.readLineSync()!);
+  Set<int> setB = {};
+
+  for (int i = 0; i < (jumlahB ?? 0); i++) {
+    stdout.write("Elemen ke-${i + 1} Set B: ");
+    int? elemen = int.tryParse(stdin.readLineSync()!);
+    if (elemen != null) {
+      setB.add(elemen);
+    }
+  }
+
+  // Menampilkan isi Set
+  print("\nSet A: $setA");
+  print("Set B: $setB");
+
+  // Union (gabungan)
+  Set<int> unionSet = setA.union(setB);
+  print("Union (A ∪ B): $unionSet");
+
+  // Intersection (irisan)
+  Set<int> intersectionSet = setA.intersection(setB);
+  print("Intersection (A ∩ B): $intersectionSet");
 }
 
 //function parameter
