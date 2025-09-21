@@ -46,18 +46,37 @@ void main() {
 // map_databarang();
 // unionIntersection();
 
-void recordMahasiswa() {
-  // Record = tipe data baru untuk menampung beberapa nilai sekaligus
-  var mhs = (nim: "2341760047", nama: "Vera Efita", ipk: 3.75);
+// record mahasiswa
+// void recordMahasiswa() {
+//   // Record = tipe data baru untuk menampung beberapa nilai sekaligus
+//   var mhs = (nim: "2341760047", nama: "Vera Efita", ipk: 3.75);
 
-  print("Data Mahasiswa:");
-  print("NIM : ${mhs.nim}");
-  print("Nama: ${mhs.nama}");
-  print("IPK : ${mhs.ipk}");
+//   print("Data Mahasiswa:");
+//   print("NIM : ${mhs.nim}");
+//   print("Nama: ${mhs.nama}");
+//   print("IPK : ${mhs.ipk}");
+// }
+// recordMahasiswa();
+
+//diskon
+
+Function buatDiskonBertingkat() {
+  double diskon = 0;
+  return () {
+    diskon += 5;
+    return diskon;
+  };
 }
-recordMahasiswa();
+
+// Fungsi demo untuk tugas 5
+void diskon_Bertingkat() {
+  var hitungDiskon = buatDiskonBertingkat();
+
+  print("Diskon pertama: ${hitungDiskon()}%");
+  print("Diskon kedua  : ${hitungDiskon()}%");
+  print("Diskon ketiga : ${hitungDiskon()}%");
 }
-
-
+diskon_Bertingkat();
+}
 
 
