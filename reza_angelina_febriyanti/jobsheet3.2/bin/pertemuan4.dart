@@ -39,16 +39,14 @@ void main(List<String> arguments) {
   print("Data dalam urut list = $grow");
   */
 
-  //List<int> Grow = [];
+  List<int> Grow = List.filled(5, 0);
 
-  /*
   for (var i = 0; i <= 4; i++) {
     stdout.write("Data List ke-$i : ");
-    var input = stdin.readLineSync();
-    Grow.add(int.parse((input == null || input.isEmpty) ? "0" : input));
+    var input = int.tryParse(stdin.readLineSync() ?? '') ?? 0;
+    Grow[i] = input!;
   }
   print("Data dalam list = $Grow");
-  */
 
   /*
   List<String> grow = [];
@@ -115,8 +113,10 @@ void main(List<String> arguments) {
   */
 
   //Anonimous Function
+  /*
   var nilai = [90, 80, 70, 100];
   nilai.forEach((angka){
     print("Nilai = ${angka}");
   });
+  */
 }
