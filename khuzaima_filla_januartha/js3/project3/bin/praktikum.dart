@@ -24,16 +24,40 @@ void main() {
 
 
   //TUGAS PRAKTIKUM 3
-  var dataBarang = <Map<String, dynamic>>[
-    {'kode': 'A001', 'nama': 'Buku Tulis', 'harga': 5000},
-    {'kode': 'A002', 'nama': 'Pensil', 'harga': 2000},
-    {'kode': 'B001', 'nama': 'Penghapus', 'harga': 1000},
-  ];
+  // var dataBarang = <Map<String, dynamic>>[
+  //   {'kode': 'A001', 'nama': 'Buku Tulis', 'harga': 5000},
+  //   {'kode': 'A002', 'nama': 'Pensil', 'harga': 2000},
+  //   {'kode': 'B001', 'nama': 'Penghapus', 'harga': 1000},
+  // ];
 
-  print('Data Barang:');
+  // print('Data Barang:');
   
-  for (var barang in dataBarang) {
-    print(
-        '- Kode: ${barang['kode']}, Nama: ${barang['nama']}, Harga: Rp ${barang['harga']}');
+  // for (var barang in dataBarang) {
+  //   print(
+  //       '- Kode: ${barang['kode']}, Nama: ${barang['nama']}, Harga: Rp ${barang['harga']}');
+  // }
+
+
+  //TUGAS PRAKTIKUM 4
+  double hargaBarang = 170000;
+  print('Harga Awal Barang: $hargaBarang');
+
+  var hitungDiskonBarang = buatPenghitungDiskon(hargaBarang);
+
+  hitungDiskonBarang();
+  hitungDiskonBarang();
+  hitungDiskonBarang();
+}
+
+Function buatPenghitungDiskon(double hargaAwal) {
+  double diskon = 0.0;
+
+  void hitungDiskon() {
+    diskon += 0.05; 
+    double hargaAkhir = hargaAwal - (hargaAwal * diskon);
+    
+    print('Diskon: ${diskon * 100}%, Harga Akhir: $hargaAkhir');
   }
+
+  return hitungDiskon;
 }
