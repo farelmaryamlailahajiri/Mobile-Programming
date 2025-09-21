@@ -10,15 +10,30 @@ void main() {
 
 
   // TUGAS PRAKTIKUM 2
-  var setA = <int>{1, 2, 3, 4, 5};
-  var setB = <int>{4, 5, 6, 7, 8};
+  // var setA = <int>{1, 2, 3, 4, 5};
+  // var setB = <int>{4, 5, 6, 7, 8};
 
-  var union = setA.union(setB);
+  // var union = setA.union(setB);
 
-  var intersection = setA.intersection(setB);
+  // var intersection = setA.intersection(setB);
 
-  print('Set A: $setA');
-  print('Set B: $setB');
-  print('Union (Gabungan): $union');
-  print('Intersection (Irisan): $intersection');
+  // print('Set A: $setA');
+  // print('Set B: $setB');
+  // print('Union (Gabungan): $union');
+  // print('Intersection (Irisan): $intersection');
+
+
+  //TUGAS PRAKTIKUM 3
+  var dataBarang = <Map<String, dynamic>>[
+    {'kode': 'A001', 'nama': 'Buku Tulis', 'harga': 5000},
+    {'kode': 'A002', 'nama': 'Pensil', 'harga': 2000},
+    {'kode': 'B001', 'nama': 'Penghapus', 'harga': 1000},
+  ];
+
+  print('Data Barang:');
+  
+  for (var barang in dataBarang) {
+    print(
+        '- Kode: ${barang['kode']}, Nama: ${barang['nama']}, Harga: Rp ${barang['harga']}');
+  }
 }
