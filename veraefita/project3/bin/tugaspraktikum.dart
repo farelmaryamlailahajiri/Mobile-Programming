@@ -15,7 +15,7 @@ void main() {
 //   // print("Jumlah mahasiswa: ${mahasiswa.length}");
 
 
-// Union & Intersection dari 2 Set;
+//Union & Intersection dari 2 Set;
 // void unionIntersection() {
 
 //   var set1 = {1, 2, 3, 4, 5};
@@ -30,20 +30,32 @@ void main() {
 
 // map data barang
 
-void map_databarang() {
-  // Map = key:value, bisa untuk simpan data barang
-  var barang = {
-    "B001": {"nama": "Pensil", "harga": 2000},
-    "B002": {"nama": "Buku", "harga": 5000},
-    "B003": {"nama": "Penghapus", "harga": 1000},
-  };
+// void map_databarang() {
+//   // Map = key:value, bisa untuk simpan data barang
+//   var barang = {
+//     "B001": {"nama": "Pensil", "harga": 2000},
+//     "B002": {"nama": "Buku", "harga": 5000},
+//     "B003": {"nama": "Penghapus", "harga": 1000},
+//   };
 
-  print("Daftar Barang:");
-  barang.forEach((kode, data) {
-    print("Kode: $kode, Nama: ${data['nama']}, Harga: ${data['harga']}");
-  });
+//   print("Daftar Barang:");
+//   barang.forEach((kode, data) {
+//     print("Kode: $kode, Nama: ${data['nama']}, Harga: ${data['harga']}");
+//   });
+// }
+// map_databarang();
+// unionIntersection();
+
+void recordMahasiswa() {
+  // Record = tipe data baru untuk menampung beberapa nilai sekaligus
+  var mhs = (nim: "2341760047", nama: "Vera Efita", ipk: 3.75);
+
+  print("Data Mahasiswa:");
+  print("NIM : ${mhs.nim}");
+  print("Nama: ${mhs.nama}");
+  print("IPK : ${mhs.ipk}");
 }
-map_databarang();
+recordMahasiswa();
 }
 
 
