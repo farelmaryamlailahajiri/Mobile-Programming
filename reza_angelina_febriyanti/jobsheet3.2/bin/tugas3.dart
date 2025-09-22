@@ -19,6 +19,7 @@ void main() {
   */
 
   //Menghitung union & intersection dari dua set yang diinput manual
+  /*
   Set<String> set1 = {};
   Set<String> set2 = {};
 
@@ -41,5 +42,31 @@ void main() {
 
   print("Union = ${set1.union(set2)}");
   print("Intersection = ${set1.intersection(set2)}");
+  */
 
+  //MAP untuk menyimpan data barang (kode, nama, harga)
+  Map<String, Map<String, dynamic>> barang = {};
+
+  stdout.write("Masukkan jumlah barang: ");
+  int jumlah = int.parse(stdin.readLineSync()!);
+
+  for (int i = 0; i < jumlah; i++) {
+    print("\nInput data barang ke-${i + 1}");
+
+    stdout.write("Kode barang : ");
+    String kode = stdin.readLineSync()!;
+
+    stdout.write("Nama barang : ");
+    String nama = stdin.readLineSync()!;
+
+    stdout.write("Harga barang : ");
+    int harga = int.parse(stdin.readLineSync()!);
+
+    barang[kode] = {"nama": nama, "harga": harga};
+  }
+
+  print("\nDaftar barang:");
+  barang.forEach((kode, detail) {
+    print("Kode: $kode, Nama: ${detail['nama']}, Harga: Rp${detail['harga']}");
+  });
 }
