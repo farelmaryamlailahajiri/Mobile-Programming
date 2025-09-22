@@ -2,6 +2,7 @@ import 'dart:io';
 
 void main() {
   //Menyimpan daftar nama mahasiswa menggunakan Growable List
+  /*
   List<String> mahasiswa = [];
 
   stdout.write("Masukkan jumlah mahasiswa: ");
@@ -15,4 +16,30 @@ void main() {
 
   print("\nDaftar nama mahasiswa: $mahasiswa");
   print("Jumlah data mahasiswa: ${mahasiswa.length}");
+  */
+
+  //Menghitung union & intersection dari dua set yang diinput manual
+  Set<String> set1 = {};
+  Set<String> set2 = {};
+
+  stdout.write("Masukkan jumlah elemen set 1: ");
+  int n1 = int.parse(stdin.readLineSync()!);
+  for (int i = 0; i < n1; i++) {
+    stdout.write("Elemen set 1 ke-${i + 1}: ");
+    set1.add(stdin.readLineSync()!);
+  }
+
+  stdout.write("Masukkan jumlah elemen set 2: ");
+  int n2 = int.parse(stdin.readLineSync()!);
+  for (int i = 0; i < n2; i++) {
+    stdout.write("Elemen set 2 ke-${i + 1}: ");
+    set2.add(stdin.readLineSync()!);
+  }
+
+  print("\nSet 1: $set1");
+  print("Set 2: $set2");
+
+  print("Union = ${set1.union(set2)}");
+  print("Intersection = ${set1.intersection(set2)}");
+
 }
