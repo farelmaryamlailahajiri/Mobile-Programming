@@ -39,6 +39,8 @@ void main(List<String> arguments) {
   print("Data dalam urut list = $grow");
   */
 
+  /*
+  //Menggunakan int
   List<int> Grow = List.filled(5, 0);
 
   for (var i = 0; i <= 4; i++) {
@@ -47,20 +49,20 @@ void main(List<String> arguments) {
     Grow[i] = input!;
   }
   print("Data dalam list = $Grow");
+  */
 
-  /*
+  //Menggunakan string
   List<String> grow = [];
 
   for (var i = 0; i <= 4; i++) {
     stdout.write('Data list ke-$i : ');
     var input = stdin.readLineSync();
-    if (input == null) {
+    if (input != null) {
       grow.add(input);
       print('data index ke: $i ${grow[i]}');
     }
   }
   print('data dalam list: $grow');
-  */
 
   //SET
   /*
