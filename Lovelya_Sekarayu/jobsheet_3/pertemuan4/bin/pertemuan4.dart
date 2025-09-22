@@ -2,11 +2,11 @@ import 'dart:io';
 
 import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
 
-  void main(List<String> arguments) {
+  //void main(List<String> arguments) {
   // print('Hello world: ${jobsheet3.calculate()}!');
 
   // belajar fixed list
-  var list = List<int>.filled(5,0); //List<int> digunakan untuk mengisi data integer.
+  //var list = List<int>.filled(5,0); //List<int> digunakan untuk mengisi data integer.
 
   // list[0] = 10;
   // list[1] = 20;
@@ -87,11 +87,11 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
 
 
   //Anonymous function
-    var nilai = [90, 80, 70, 100];
-    nilai.forEach((angka){
-      print("Nilai = $angka");
-    });
-  }
+    // var nilai = [90, 80, 70, 100];
+    // nilai.forEach((angka){
+    //   print("Nilai = $angka");
+    // });
+
   //function parameter
   // void tampil(String nama, int umur, [String? alamat]){
   //   print("Nama : $nama");
@@ -102,3 +102,20 @@ import 'package:pertemuan4/pertemuan4.dart' as pertemuan4;
   //     print("Alamat : -");
   //   }
   // }
+
+//function closure
+  Function buatCounter() {
+    var hitung = 0;
+
+    return () {
+      hitung++;
+      return hitung;
+    };
+  }
+
+  void main() {
+    var counter = buatCounter();
+    print(counter()); //1
+    print(counter()); //2
+    print(counter()); //3
+  }
