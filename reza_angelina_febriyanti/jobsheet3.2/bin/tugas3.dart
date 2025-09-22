@@ -1,5 +1,14 @@
 import 'dart:io';
 
+Function buatDiskonBertingkat() {
+  double diskon = 0;
+
+  return () {
+    diskon += 5; // tiap kali dipanggil, bertambah 5%
+    return diskon;
+  };
+}
+
 void main() {
   //Menyimpan daftar nama mahasiswa menggunakan Growable List
   /*
@@ -45,6 +54,7 @@ void main() {
   */
 
   //MAP untuk menyimpan data barang (kode, nama, harga)
+  /*
   Map<String, Map<String, dynamic>> barang = {};
 
   stdout.write("Masukkan jumlah barang: ");
@@ -69,4 +79,12 @@ void main() {
   barang.forEach((kode, detail) {
     print("Kode: $kode, Nama: ${detail['nama']}, Harga: Rp${detail['harga']}");
   });
+  */
+
+  //Function closure yang menghitung diskon bertingkat
+  var hitungDiskon = buatDiskonBertingkat();
+
+  print("Diskon sekarang: ${hitungDiskon()}%");
+  print("Diskon sekarang: ${hitungDiskon()}%");
+  print("Diskon sekarang: ${hitungDiskon()}%");
 }
