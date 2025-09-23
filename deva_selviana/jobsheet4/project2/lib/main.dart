@@ -16,9 +16,10 @@ class Percobaan1 extends StatelessWidget {
           title: const Text(
             "Deva Selviana",
             style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.italic),
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+            ),
           ),
           backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
@@ -40,51 +41,51 @@ class Percobaan1 extends StatelessWidget {
               ),
               SizedBox(height: 20),
 
-              // Bagian kiri
+              // Bagian kiri (justify)
               Align(
                 alignment: Alignment.centerLeft,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text("Balonku ada Lima",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.normal)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25)),
                     Text("Rupa-rupa warnanya",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.normal)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25)),
                     Text("Hijau, Kuning, Kelabu",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.normal)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25)),
                     Text("Merah muda dan biru",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.normal)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25)),
                     Text("Meletus balon hijau",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.normal)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25)),
                   ],
                 ),
               ),
 
               SizedBox(height: 20),
 
-              // Bagian kanan
+              // Bagian kanan (justify)
               Align(
                 alignment: Alignment.centerRight,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text("DORRR!",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
                     Text("Hatiku sangat kacau",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.normal)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25)),
                     Text("Balonku tinggal empat",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.normal)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25)),
                     Text("Kupegang erat-erat",
-                        style:
-                            TextStyle(fontSize: 25, fontWeight: FontWeight.normal)),
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontSize: 25)),
                   ],
                 ),
               ),
