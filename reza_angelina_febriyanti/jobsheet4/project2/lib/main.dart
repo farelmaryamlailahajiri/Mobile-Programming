@@ -1,9 +1,119 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Percobaan2());
 }
 
+class Percobaan2 extends StatelessWidget {
+  const Percobaan2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title : 'Lagu Balonku',
+      home : Scaffold(
+        appBar : AppBar(
+          title: const Text("Balonku",
+            style: TextStyle(
+              fontSize: 35, //besarnya teks
+              fontStyle: FontStyle.italic, //teks miring
+              fontWeight: FontWeight.bold, //teks tebal
+              ),
+            ),
+          backgroundColor :Colors.green, //warna latar AppBar
+          foregroundColor: CupertinoColors.black, //warna teks putih
+        ),
+        body: const Align(
+          child : Column(
+            children: [
+              Text("Ciptaan: A.T Mahmud", 
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              )),
+
+              SizedBox(height: 20), //Jarak antar bagian
+
+              Align(
+                alignment: Alignment.centerLeft, //mengatur letak teks dikiri
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start, //mengatur rata kiri
+                  children: [
+                    Text(
+                      "Balonku ada lima",
+                      style: TextStyle(
+                        fontFamily: "Times New Roman", //mengatur style font
+                      )
+                    ),
+                    Text(
+                      "Rupa-rupa warnanya",
+                      style: TextStyle(
+                        fontFamily: "Times New Roman",
+                      )
+                    ),
+                    Text(
+                      "Hijau, kuning, kelabu",
+                      style: TextStyle(
+                        fontFamily: "Times New Roman",
+                      )
+                    ),
+                    Text(
+                      "Merah muda dan biru",
+                      style: TextStyle(
+                        fontFamily: "Times New Roman",
+                      )
+                    ),
+                  ],
+                ),
+              ),
+
+              SizedBox(height: 20),
+              
+              Align(
+                alignment: Alignment.centerRight, //mengatur letak teks dikanan
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start, //mengatur rata kanan
+                  children: [
+                    Text(
+                      "Meletus balon hijau",
+                      style: TextStyle(
+                        fontFamily: "Times New Roman",
+                      )
+                    ),
+                    Text(
+                      "DORR !!",
+                      style: TextStyle(
+                        fontFamily: "Times New Roman",
+                        fontSize : 16,
+                        color: Colors.deepOrangeAccent,
+                        fontWeight: FontWeight.bold,
+                      )
+                    ),
+                    Text(
+                      "Balonku tinggal empat",
+                      style: TextStyle(
+                        fontFamily: "Times New Roman",
+                      )
+                    ),
+                    Text(
+                      "Kupegang erat-erat",
+                      style: TextStyle(
+                        fontFamily: "Times New Roman",
+                      )
+                    ),
+                  ],
+                ),
+              ),
+            ]
+          )
+        ),
+      ),
+    );
+  }
+}
+
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -120,3 +230,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
