@@ -21,25 +21,36 @@ class Percobaan1 extends StatelessWidget {
           foregroundColor: Colors.white,
           centerTitle: true,
         ),
-        body: const Align(
-          alignment: AlignmentGeometry.topCenter,
+        body: Align(
+          alignment: Alignment.topLeft,
           child: Column(
+            // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text('data'),
               Align(
-                alignment: AlignmentGeometry.topLeft,
-                child: Column(children: [
-                      
+                alignment: Alignment.topCenter,
+                child: Column(
+                  children: [
+                    Text("Balonku Ada Lima"),
+                    Text("A.T. Mahmud"),
                   ],
-                ),
+                )
               ),
-
               Align(
-                alignment: AlignmentGeometry.topLeft,
-                child: Column(children: [
-                    
+                alignment: Alignment.topLeft,
+                child: Column(
+                  children: [
+                    Text("Balonku ada lima \nRupa-rupa warnanya \nHijau, kuning, kelabu \nMerah muda dan biru"),
                   ],
-                ),
+                )
+              ),
+              Align(
+                alignment: Alignment.topRight,
+                child: Column(
+                  children: [
+                    Text("Meletus balon hijau \nDOOOOR.... \nHatiku sangat kacau \nBalonku tinggal empat \nKupegang erat-erat"),
+                    Text("Meletus balon hijau \nDOOOOR.... \nHatiku sangat kacau \nBalonku tinggal empat \nKupegang erat-erat"),
+                  ],
+                )
               ),
             ],
           ),
