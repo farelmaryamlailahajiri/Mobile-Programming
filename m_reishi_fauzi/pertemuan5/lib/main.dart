@@ -26,29 +26,55 @@ class Percobaan1 extends StatelessWidget {
           backgroundColor: Colors.cyanAccent,
           foregroundColor: Colors.deepPurple,
         ),
-        body: const Align(
+        body: Align(
           //alignment: AlignmentGeometry.topLeft,
           child: Column(
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.topCenter,
-                child: Text(
-                  'balonku ada lima\nReishi Fauzi',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                child: Column(
+                  children: [
+                    Text(
+                      'balonku ada lima',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text('-Reishi Fauzi-'),
+                  ],
                 ),
               ),
 
-              Align(
-                alignment: AlignmentGeometry.topLeft,
+              const Align(
+                alignment: Alignment.topLeft,
                 child: Text(
                   'balonku ada lima\nrupa-rupa warnanya\nhijau, kuning, kelabu\nmerah mudah dan biru',
                 ),
               ),
 
               Align(
-                alignment: AlignmentGeometry.topRight,
-                child: Text(
-                  'meletus balon hijau,\nDOORRR!!!\nhatiku sangat kacau\nbalonku tinggal empat\nkupegang erat erat',
+                alignment: Alignment.topRight,
+                child: IntrinsicWidth(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('meletus balon hijau,'),
+
+                      Container(
+                        color: Colors.redAccent,
+                        padding: const EdgeInsets.all(6),
+                        child: const Text(
+                          'DOORRR!!!',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+
+                      const Text(
+                        'hatiku sangat kacau\nbalonku tinggal empat\nkupegang erat erat',
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
