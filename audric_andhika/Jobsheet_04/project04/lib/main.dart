@@ -63,7 +63,7 @@ class percobaan1 extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 5),
-                    Text(
+                    Text( 
                       "Hatiku sangat kacau\nBalonku tinggal 4\nKupegang erat-erat",
                       textAlign: TextAlign.left, 
                     ),
