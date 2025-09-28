@@ -95,7 +95,7 @@ void main(List<String> arguments) {
   }
 
 
-//function parameter
+//function function
 void  tampil(String nama, int umur, [String? alamat]){
   print("Nama : $nama");
   print("Umur : $umur");
