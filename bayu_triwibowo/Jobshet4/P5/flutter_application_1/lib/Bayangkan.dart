@@ -2,17 +2,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Lagu());
+  runApp(const Lirik());
 }
 
-class Lagu extends StatefulWidget {
-  const Lagu({super.key});
+class Lirik extends StatefulWidget {
+  const Lirik({super.key});
 
   @override
-  State<Lagu> createState() => _PuisiAppState();
+  State<Lirik> createState() => _LirikAppState();
 }
 
-class _PuisiAppState extends State<Lagu> {
+// Perbaiki nama class State
+class _LirikAppState extends State<Lirik> {
   final List<String> bait = [
     '''Pernahkah kau bayangkan,
 jika kita tak pernah menyerah;
@@ -42,7 +43,6 @@ jika kita tidak menyerah.''',
   @override
   void initState() {
     super.initState();
-    // setiap 2 detik tambah bait baru
     timer = Timer.periodic(const Duration(seconds: 2), (t) {
       if (tampilBait < bait.length) {
         setState(() {
