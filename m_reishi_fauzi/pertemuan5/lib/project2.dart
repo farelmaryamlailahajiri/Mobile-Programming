@@ -82,11 +82,7 @@ class _Project2State extends State<Project2> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [
-              Color(0xFF231a3b), // Ungu gelap
-              Color(0xFF622448), // Merah keunguan
-              Color(0xFFd45145), // Oranye senja
-            ],
+            colors: [Color(0xFF231a3b), Color(0xFF622448), Color(0xFFd45145)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -95,7 +91,7 @@ class _Project2State extends State<Project2> {
           child: Column(
             children: [
               SizedBox(height: 20 * scaleFactor),
-              // judul 
+              // judul
               Text(
                 "Lantas",
                 textAlign: TextAlign.center,
@@ -117,7 +113,7 @@ class _Project2State extends State<Project2> {
                 ),
               ),
               Text(
-                "Juicy Luicy",
+                "-Juicy Luicy-",
                 style: GoogleFonts.lato(
                   fontSize: 20 * scaleFactor,
                   fontStyle: FontStyle.italic,
@@ -126,11 +122,15 @@ class _Project2State extends State<Project2> {
               ),
               SizedBox(height: 20 * scaleFactor),
 
-              // --- LYRICS CONTAINER (TETAP DENGAN EFEK KACA) ---
+              //lirik kontainer
               Expanded(
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(
-                      16 * scaleFactor, 0, 16 * scaleFactor, 16 * scaleFactor),
+                    16 * scaleFactor,
+                    0,
+                    16 * scaleFactor,
+                    16 * scaleFactor,
+                  ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20 * scaleFactor),
                     child: BackdropFilter(
@@ -138,8 +138,7 @@ class _Project2State extends State<Project2> {
                       child: Container(
                         decoration: BoxDecoration(
                           color: Colors.white.withOpacity(0.1),
-                          borderRadius:
-                              BorderRadius.circular(20 * scaleFactor),
+                          borderRadius: BorderRadius.circular(20 * scaleFactor),
                           border: Border.all(
                             color: Colors.white.withOpacity(0.2),
                             width: 1.5,
@@ -148,8 +147,9 @@ class _Project2State extends State<Project2> {
                         child: SingleChildScrollView(
                           controller: _scrollController,
                           padding: EdgeInsets.symmetric(
-                              horizontal: 16 * scaleFactor,
-                              vertical: 8 * scaleFactor),
+                            horizontal: 16 * scaleFactor,
+                            vertical: 8 * scaleFactor,
+                          ),
                           child: Column(
                             children: grouped.asMap().entries.map((entry) {
                               final index = entry.key;
@@ -174,13 +174,13 @@ class _Project2State extends State<Project2> {
                                 alignment = Alignment.centerLeft;
                               } else {
                                 alignment = Alignment.centerRight;
-                                lyricChunk =
-                                    IntrinsicWidth(child: lyricChunk);
+                                lyricChunk = IntrinsicWidth(child: lyricChunk);
                               }
 
                               return Padding(
                                 padding: EdgeInsets.symmetric(
-                                    vertical: 24 * scaleFactor),
+                                  vertical: 24 * scaleFactor,
+                                ),
                                 child: Align(
                                   alignment: alignment,
                                   child: lyricChunk,
@@ -202,10 +202,8 @@ class _Project2State extends State<Project2> {
   }
 }
 
-
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Project2(),
-  ));
+  runApp(
+    const MaterialApp(debugShowCheckedModeBanner: false, home: Project2()),
+  );
 }
