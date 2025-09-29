@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-// Entry point aplikasi Flutter
 void main() {
   runApp(const Percobaan2());
 }
 
-// Widget utama aplikasi
 class Percobaan2 extends StatelessWidget {
   const Percobaan2({super.key});
 

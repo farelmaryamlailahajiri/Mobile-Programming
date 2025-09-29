@@ -29,7 +29,6 @@ class Percobaan1 extends StatelessWidget {
                 child: Text('Balonku Ada Lima\nA.T. Mahmud', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold), textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(height: 20),
 
               Align(
                 alignment: Alignment.centerLeft,
@@ -43,7 +42,6 @@ class Percobaan1 extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
 
               Align(
                 alignment: Alignment.centerRight,
