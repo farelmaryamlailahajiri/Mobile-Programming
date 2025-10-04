@@ -77,7 +77,7 @@ class Sib3aApp extends StatelessWidget {
                 color: Colors.amber,
                 child: const Text("Dasar Widget Container dengan Margin dan Padding", style: TextStyle(color: Colors.white)),
               ), */
-              Container(
+              /* Container(
                 width: 400,
                 height: 250,
                 decoration: BoxDecoration(
@@ -85,6 +85,21 @@ class Sib3aApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: Colors.black, width: 3),
                 )
+              ), */
+              Container(
+                width: 400,
+                height: 250,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Colors.teal, Colors.tealAccent],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(20)), // border radius 20
+               ),
+                child: const Center(
+                  child: Text("Saya Sedang Belajar Dasar Widget Gradient Container", style: TextStyle(color: Colors.white)),
+                ),
               ),
               const Text("Saya Sedang Belajar Dasar Widget Pada Flutter"),
             ],
