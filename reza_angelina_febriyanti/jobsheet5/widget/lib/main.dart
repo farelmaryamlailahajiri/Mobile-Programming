@@ -13,11 +13,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Contoh Scaffold',
       home: Scaffold(
+        //CONTOH SCAFOLD & APPBAR
         appBar: AppBar(
-          title: const Text("Contoh Scaffold"),
+          //title: const Text("Contoh Scaffold"),
+          title: const Text("Belajar Scaffold & AppBar"),
+          backgroundColor: Colors.teal,
+          actions: const [
+            Icon(Icons.search),
+            Icon(Icons.settings),
+          ],
         ),
         body: const Center(
-          child: Text("Halo Flutter!"),
+          //child: Text("Halo Flutter!"),
+          child: Text("Ini Body Aplikasi"),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
