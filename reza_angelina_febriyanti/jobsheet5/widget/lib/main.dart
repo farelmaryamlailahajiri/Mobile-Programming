@@ -42,12 +42,33 @@ class MyApp extends StatelessWidget {
         ),
         */
         //ROWS
+        /*
         body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: const [
             Icon(Icons.home, size: 40),
             Icon(Icons.star, size: 40),
             Icon(Icons.settings, size: 40),
+          ],
+        ),
+        */
+        //COLUMN & ROWS
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text("Baris 1"),
+            Text("Baris 2"),
+            Text("Baris 3"),
+            SizedBox(height: 20), // beri jarak
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(Icons.home, size: 40),
+                Icon(Icons.star, size: 40),   // <- perbaikan: Icon(Icons.start) tidak ada
+                Icon(Icons.settings, size: 40),
+              ],
+            ),
           ],
         ),
         floatingActionButton: FloatingActionButton(
