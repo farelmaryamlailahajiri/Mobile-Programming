@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
         ),
         */
         //COLUMN
+        /*
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,6 +38,16 @@ class MyApp extends StatelessWidget {
             Text("Baris 1"),
             Text("Baris 2"),
             Text("Baris 3"),
+          ],
+        ),
+        */
+        //ROWS
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: const [
+            Icon(Icons.home, size: 40),
+            Icon(Icons.star, size: 40),
+            Icon(Icons.settings, size: 40),
           ],
         ),
         floatingActionButton: FloatingActionButton(
