@@ -13,7 +13,13 @@ class Sib3aApp extends StatelessWidget {
       title: 'SIB 3A - Alvi Choirinnikmah',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Contoh Scafflold"),
+          title: const Text("Ini AppBar"),
+          backgroundColor: Colors.blue,
+          leading: const Icon(Icons.menu), // ikon di kiri 
+          actions: const [
+            Icon(Icons.search), // ikon di kanan
+            Icon(Icons.more_vert),
+          ],
         ),
         body: const Center(
           child: Text("Hello Flutter"),
