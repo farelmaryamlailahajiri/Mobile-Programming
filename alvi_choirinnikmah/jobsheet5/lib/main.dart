@@ -49,7 +49,7 @@ class Sib3aApp extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center, // digunakan untuk mengatur posisi vertikal
+            mainAxisAlignment: MainAxisAlignment.start, // digunakan untuk mengatur posisi vertikal
             children: [
               const Text("Hello World!"),
               Row(
@@ -71,11 +71,20 @@ class Sib3aApp extends StatelessWidget {
                   child: Text("Dasar Widget Container"),
                 ),
               ), */
-              Container(
+              /* Container(
                 margin: const EdgeInsets.all(20), // jarak dari widget lain
                 padding: const EdgeInsets.all(10), // jarak dari border
                 color: Colors.amber,
                 child: const Text("Dasar Widget Container dengan Margin dan Padding", style: TextStyle(color: Colors.white)),
+              ), */
+              Container(
+                width: 400,
+                height: 250,
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.black, width: 3),
+                )
               ),
               const Text("Saya Sedang Belajar Dasar Widget Pada Flutter"),
             ],
