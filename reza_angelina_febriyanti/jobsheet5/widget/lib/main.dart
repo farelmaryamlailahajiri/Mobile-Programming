@@ -23,9 +23,21 @@ class MyApp extends StatelessWidget {
             Icon(Icons.settings),
           ],
         ),
+        /*
         body: const Center(
           //child: Text("Halo Flutter!"),
           child: Text("Ini Body Aplikasi"),
+        ),
+        */
+        //COLUMN
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text("Baris 1"),
+            Text("Baris 2"),
+            Text("Baris 3"),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
