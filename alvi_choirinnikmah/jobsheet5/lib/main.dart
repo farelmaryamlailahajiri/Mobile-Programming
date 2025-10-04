@@ -48,7 +48,15 @@ class Sib3aApp extends StatelessWidget {
           ],
         ),
         body: const Center(
-          child: Text("Hello Flutter ini jobsheet 5 - Scaffold & AppBar"),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center, // digunakan untuk mengatur posisi vertikal
+            crossAxisAlignment: CrossAxisAlignment.start, // digunakan untuk mengatur posisi horizontal
+            children: const [
+              Text("Baris 1"),
+              Text("Baris 2"),
+              Text("Baris 3"),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
