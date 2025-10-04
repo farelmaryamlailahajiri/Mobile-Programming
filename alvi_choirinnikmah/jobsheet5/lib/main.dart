@@ -63,13 +63,19 @@ class Sib3aApp extends StatelessWidget {
                 ],
               ),
               // Tambahkan Container disini
-              Container( // tidak bisa dijadikan const karena ada properti yang nilainya berubah-ubah
+              /* Container( // tidak bisa dijadikan const karena ada properti yang nilainya berubah-ubah
                 width: 200,
                 height: 100,
                 color: Colors.amber,
                 child: const Center(
                   child: Text("Dasar Widget Container"),
                 ),
+              ), */
+              Container(
+                margin: const EdgeInsets.all(20), // jarak dari widget lain
+                padding: const EdgeInsets.all(10), // jarak dari border
+                color: Colors.amber,
+                child: const Text("Dasar Widget Container dengan Margin dan Padding", style: TextStyle(color: Colors.white)),
               ),
               const Text("Saya Sedang Belajar Dasar Widget Pada Flutter"),
             ],
