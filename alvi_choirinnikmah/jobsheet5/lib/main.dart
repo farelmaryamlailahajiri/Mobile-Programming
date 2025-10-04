@@ -50,20 +50,18 @@ class Sib3aApp extends StatelessWidget {
         body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center, // digunakan untuk mengatur posisi vertikal
-            crossAxisAlignment: CrossAxisAlignment.center, // digunakan untuk mengatur posisi horizontal
-            children: const [
-              Text("Baris 1"),
-              Text("Baris 2"),
-              Text("Baris 3"),
-              SizedBox(height: 10), 
+            children: const [Text("Hello World!"),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: const[
-                  Icon(Icons.home, size: 40),
-                  Icon(Icons.star, size: 40),
-                  Icon(Icons.settings, size: 40),
+                  Icon(Icons.star, color: Colors.amber, size: 40),
+                  Icon(Icons.star, color: Colors.amber, size: 40),
+                  Icon(Icons.star, color: Colors.amber, size: 40),
+                  Icon(Icons.star, color: Colors.amber, size: 40),
+                  Icon(Icons.star, color: Colors.amber, size: 40),
                 ],
               ),
+              const Text("Saya Sedang Belajar Dasar Widget Pada Flutter"),
             ],
           ),
         ),
