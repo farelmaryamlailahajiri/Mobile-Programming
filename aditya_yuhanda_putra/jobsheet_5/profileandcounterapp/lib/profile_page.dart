@@ -52,6 +52,13 @@ class ProfilePage extends StatelessWidget {
                 );
               },
             ),
+            const SizedBox(height: 20),
+            Container(
+              height: 150,
+              width: double.infinity,
+              color: Colors.grey.shade300,
+              child: const Placeholder(), // placeholder
+            ),
           ],
         ),
       ),
