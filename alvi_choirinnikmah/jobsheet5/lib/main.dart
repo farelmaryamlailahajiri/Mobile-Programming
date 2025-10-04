@@ -47,10 +47,11 @@ class Sib3aApp extends StatelessWidget {
             BottomNavigationBarItem(icon: Icon(Icons.school), label: 'School'),
           ],
         ),
-        body: const Center(
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center, // digunakan untuk mengatur posisi vertikal
-            children: const [Text("Hello World!"),
+            children: [
+              const Text("Hello World!"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const[
@@ -60,6 +61,15 @@ class Sib3aApp extends StatelessWidget {
                   Icon(Icons.star, color: Colors.amber, size: 40),
                   Icon(Icons.star, color: Colors.amber, size: 40),
                 ],
+              ),
+              // Tambahkan Container disini
+              Container( // tidak bisa dijadikan const karena ada properti yang nilainya berubah-ubah
+                width: 200,
+                height: 100,
+                color: Colors.amber,
+                child: const Center(
+                  child: Text("Dasar Widget Container"),
+                ),
               ),
               const Text("Saya Sedang Belajar Dasar Widget Pada Flutter"),
             ],
