@@ -32,10 +32,20 @@ class Sib3aApp extends StatelessWidget {
                 ),
               ),
               ListTile(leading: Icon(Icons.message), title: Text('Messages')),
-              ListTile(leading: Icon(Icons.account_circle), title: Text('Profile')),
+              ListTile(
+                leading: Icon(Icons.account_circle),
+                title: Text('Profile'),
+              ),
               ListTile(leading: Icon(Icons.settings), title: Text('Settings')),
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.business), label: 'Business'),
+            BottomNavigationBarItem(icon: Icon(Icons.school), label: 'School'),
+          ],
         ),
         body: const Center(
           child: Text("Hello Flutter ini jobsheet 5 - Scaffold & AppBar"),
