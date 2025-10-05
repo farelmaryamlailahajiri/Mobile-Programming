@@ -74,12 +74,26 @@ class MyApp extends StatelessWidget {
         ),
         */
         //CONTAINER
+        /*
         body: Container(
           width: 200,
           height: 100,
           color: Colors.amber,
           child: const Center(
             child: Text("Halo Flutter"),
+          ),
+        ),
+        */
+        //PADDING & MARGIN
+        body: Center(
+          child: Container(
+            margin: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(10),
+            color: Colors.blue,
+            child: const Text(
+              "Dengan Margin & Padding",
+              style: TextStyle(color: Colors.white),
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
