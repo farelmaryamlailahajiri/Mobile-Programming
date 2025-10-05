@@ -43,7 +43,12 @@ class sib3a extends StatelessWidget {
             //color: Colors.limeAccent,
             height: 200,
             decoration: BoxDecoration(
-              color: Colors.limeAccent,
+              gradient: const LinearGradient(
+                colors: [Colors.limeAccent, Colors.green],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              //color: Colors.limeAccent,
               border: Border.all(color: Colors.black, width: 2),
               borderRadius: BorderRadius.circular(20),
               boxShadow: const [
