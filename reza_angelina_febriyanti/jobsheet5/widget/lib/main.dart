@@ -158,12 +158,23 @@ class MyApp extends StatelessWidget {
         ),
         */
         //TEXT BUTTON
+        /*
         body: Center(
           child: TextButton(
             onPressed: () {
               print("Text Button ditekan!");
             },
             child: const Text("Text Button"),
+          ),
+        ),
+        */
+        //OUTLINED BUTTON
+        body: Center(
+          child: OutlinedButton(
+            onPressed: () {
+              print("Outlined Button ditekan!");
+            },
+            child: const Text("Outlined Button"),
           ),
         ),
         floatingActionButton: FloatingActionButton(
