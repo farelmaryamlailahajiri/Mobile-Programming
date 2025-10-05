@@ -212,10 +212,16 @@ class MyApp extends StatelessWidget {
         ),
         */
         //ICON
+        /*
         body: const Icon(
           Icons.home,
           size: 50,
           color: Colors.blue,
+        ),
+        */
+        //IMAGE
+        body: Center(
+          child: Image.asset('assets/penthouse.png'),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
