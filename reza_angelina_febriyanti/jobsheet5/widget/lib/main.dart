@@ -113,6 +113,7 @@ class MyApp extends StatelessWidget {
         ),
         */
         //GRADIENT BACKGROUND
+        /*
         body: Center(
           child: Container(
             width: 200,
@@ -130,6 +131,17 @@ class MyApp extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontSize: 16),
               ),
             ),
+          ),
+        ),
+        */
+        //ALIGNMENT
+        body: Center(
+          child: Container(
+            width: 200,
+            height: 100,
+            color: Colors.orange,
+            alignment: Alignment.bottomRight,
+            child: const Text("Sudut kanan bawah"),
           ),
         ),
         floatingActionButton: FloatingActionButton(
