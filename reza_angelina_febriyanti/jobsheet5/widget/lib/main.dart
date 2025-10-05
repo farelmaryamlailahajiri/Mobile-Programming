@@ -202,12 +202,20 @@ class MyApp extends StatelessWidget {
         ),
         */
         //FLUTTER LOGO
+        /*
         body: const Center(
           child: FlutterLogo(
             size: 100,
             style: FlutterLogoStyle.horizontal,
             textColor: Colors.blue,
           ),
+        ),
+        */
+        //ICON
+        body: const Icon(
+          Icons.home,
+          size: 50,
+          color: Colors.blue,
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
