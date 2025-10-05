@@ -37,6 +37,8 @@ class sib3a extends StatelessWidget {
       body: Column(
         children: [
           Container(
+            margin: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             alignment: Alignment.center,
             color: Colors.limeAccent,
             height: 200,
