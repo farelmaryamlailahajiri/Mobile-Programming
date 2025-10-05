@@ -191,12 +191,22 @@ class MyApp extends StatelessWidget {
         ),
         */
         //FLOATING ACTION BUTTON
+        /*
         body: Center(
           child: FloatingActionButton(
             onPressed: () {
               print("Floating Action Button ditekan!");
             },
             child: const Icon(Icons.add),
+          ),
+        ),
+        */
+        //FLUTTER LOGO
+        body: const Center(
+          child: FlutterLogo(
+            size: 100,
+            style: FlutterLogoStyle.horizontal,
+            textColor: Colors.blue,
           ),
         ),
         floatingActionButton: FloatingActionButton(
