@@ -135,6 +135,7 @@ class MyApp extends StatelessWidget {
         ),
         */
         //ALIGNMENT
+        /*
         body: Center(
           child: Container(
             width: 200,
@@ -142,6 +143,16 @@ class MyApp extends StatelessWidget {
             color: Colors.orange,
             alignment: Alignment.bottomRight,
             child: const Text("Sudut kanan bawah"),
+          ),
+        ),
+        */
+        //ELEVATED BUTTON
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              print("Elevated Button ditekan!");
+            },
+            child: const Text('Elevated Button'),
           ),
         ),
         floatingActionButton: FloatingActionButton(
