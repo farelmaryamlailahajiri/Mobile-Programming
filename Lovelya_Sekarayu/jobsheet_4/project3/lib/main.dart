@@ -62,11 +62,11 @@ class sib3a extends StatelessWidget {
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const <Widget>[
-                  Text(
+                children: <Widget>[
+                  const Text(
                     'You have pushed the button this many times:',
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.star, color: Colors.amber),
@@ -75,7 +75,13 @@ class sib3a extends StatelessWidget {
                       Icon(Icons.star_half, color: Colors.amber),
                       Icon(Icons.star_border, color: Colors.amber),
                     ],
-                  )
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Add your button action here
+                    },
+                    child: const Text('Click Me', style: TextStyle(fontSize: 16)),
+                  ),
                 ],
               ),
             ),
