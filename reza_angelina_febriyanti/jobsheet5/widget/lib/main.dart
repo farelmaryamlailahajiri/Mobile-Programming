@@ -99,6 +99,7 @@ class MyApp extends StatelessWidget {
         ),
         */
         //DEKORASI & BORDER
+        /*
         body: Center(
           child: Container(
             width: 150,
@@ -107,6 +108,27 @@ class MyApp extends StatelessWidget {
               color: Colors.teal,
               borderRadius: BorderRadius.circular(20),
               border: Border.all(color: Colors.black, width: 3),
+            ),
+          ),
+        ),
+        */
+        //GRADIENT BACKGROUND
+        body: Center(
+          child: Container(
+            width: 200,
+            height: 100,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.purple, Colors.pink],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              )
+            ),
+            child: const Center(
+              child: Text(
+                "Gradient Container",
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
             ),
           ),
         ),
