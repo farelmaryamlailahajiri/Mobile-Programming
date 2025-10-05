@@ -34,7 +34,11 @@ class sib3a extends StatelessWidget {
           Icon(Icons.settings), Icon(Icons.search)
         ],
         ),
-        body: Center(
+        body: Container(
+          alignment: Alignment.center,
+          color: Colors.limeAccent,
+          height: 200,
+          child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const <Widget>[
@@ -54,6 +58,8 @@ class sib3a extends StatelessWidget {
             ],
           ),
         ),
+      ),
+        
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           tooltip: 'ini tombol',
