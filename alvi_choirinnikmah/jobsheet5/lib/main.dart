@@ -126,6 +126,14 @@ class Sib3aApp extends StatelessWidget {
                 },
                 child: const Text("Outlined Button"),
               ),
+
+              // Icon Button, tombol yang berbentuk ikon, biasanya digunakan untuk aksi cepat
+              IconButton( 
+                icon: const Icon(Icons.favorite, color: Colors.red),
+                onPressed: () { 
+                  print("Icon Button pressed!"); 
+                },
+              ),
             ],
           ),
         ),
