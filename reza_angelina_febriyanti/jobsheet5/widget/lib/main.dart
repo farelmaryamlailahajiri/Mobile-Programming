@@ -221,7 +221,11 @@ class MyApp extends StatelessWidget {
         */
         //IMAGE
         body: Center(
-          child: Image.asset('assets/penthouse.png'),
+          //child: Image.asset('assets/penthouse.png'), //with assets
+          child: Image.network(
+            "https://flutter.dev/images/flutter-logo-sharing.png",
+            width: 150,
+          ), //with network
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
