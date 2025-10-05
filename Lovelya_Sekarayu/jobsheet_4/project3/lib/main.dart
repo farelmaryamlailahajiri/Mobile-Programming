@@ -26,6 +26,11 @@ class sib3a extends StatelessWidget {
                 'Subtitle',
                 style: TextStyle(fontSize: 14, color: Colors.white70),
               ),
+              FlutterLogo(
+                size: 48,
+                style: FlutterLogoStyle.stacked,
+                textColor: Colors.white,
+              )
             ],
           ), 
         backgroundColor: Colors.lime,
