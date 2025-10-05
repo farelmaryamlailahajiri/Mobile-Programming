@@ -82,6 +82,13 @@ class sib3a extends StatelessWidget {
                     },
                     child: const Text('Click Me', style: TextStyle(fontSize: 16)),
                   ),
+                  TextButton(
+                    onPressed: () {
+                      // Add your button action here
+                      print('Text Button Pressed');
+                    },
+                    child: const Text('Text Button'),
+                  )
                 ],
               ),
             ),
