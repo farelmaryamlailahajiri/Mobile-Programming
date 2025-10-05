@@ -102,6 +102,14 @@ class Sib3aApp extends StatelessWidget {
                 ),
               ),
               const Text("Saya Sedang Belajar Dasar Widget Pada Flutter"),
+
+              // Elevated Button, tombol dengan evek timbul, biasanya digunakan untuk aksi utama
+              ElevatedButton( 
+                onPressed: () { 
+                  print("Elevated Button pressed!"); 
+                },
+                child: const Text("Elevated Button"),
+              ),
             ],
           ),
         ),
