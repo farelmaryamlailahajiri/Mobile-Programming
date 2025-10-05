@@ -180,12 +180,23 @@ class MyApp extends StatelessWidget {
         ),
         */
         //ICON BUTTON
+        /*
         body: Center(
           child: IconButton(
             icon: const Icon(Icons.favorite, color: Colors.red),
             onPressed: () {
               print("Icon Button ditekan!");
             },
+          ),
+        ),
+        */
+        //FLOATING ACTION BUTTON
+        body: Center(
+          child: FloatingActionButton(
+            onPressed: () {
+              print("Floating Action Button ditekan!");
+            },
+            child: const Icon(Icons.add),
           ),
         ),
         floatingActionButton: FloatingActionButton(
