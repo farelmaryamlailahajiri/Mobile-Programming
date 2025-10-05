@@ -34,31 +34,36 @@ class sib3a extends StatelessWidget {
           Icon(Icons.settings), Icon(Icons.search)
         ],
         ),
-        body: Container(
-          alignment: Alignment.center,
-          color: Colors.limeAccent,
-          height: 200,
-          child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const <Widget>[
-              Text(
-                'You have pushed the button this many times:',
-              ),
-              Row(
+      body: Column(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            color: Colors.limeAccent,
+            height: 200,
+            child: Center(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.star, color: Colors.amber),
-                  Icon(Icons.star, color: Colors.amber),
-                  Icon(Icons.star, color: Colors.amber),
-                  Icon(Icons.star_half, color: Colors.amber),
-                  Icon(Icons.star_border, color: Colors.amber),
+                children: const <Widget>[
+                  Text(
+                    'You have pushed the button this many times:',
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star, color: Colors.amber),
+                      Icon(Icons.star_half, color: Colors.amber),
+                      Icon(Icons.star_border, color: Colors.amber),
+                    ],
+                  )
                 ],
-              )
-            ],
+              ),
+            ),
           ),
-        ),
+        ],
       ),
+        
         
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
