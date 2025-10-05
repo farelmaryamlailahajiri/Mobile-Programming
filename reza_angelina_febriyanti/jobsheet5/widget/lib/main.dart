@@ -53,6 +53,7 @@ class MyApp extends StatelessWidget {
         ),
         */
         //COLUMN & ROWS
+        /*
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,6 +71,16 @@ class MyApp extends StatelessWidget {
               ],
             ),
           ],
+        ),
+        */
+        //CONTAINER
+        body: Container(
+          width: 200,
+          height: 100,
+          color: Colors.amber,
+          child: const Center(
+            child: Text("Halo Flutter"),
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
