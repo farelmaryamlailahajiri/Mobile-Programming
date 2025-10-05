@@ -110,6 +110,14 @@ class Sib3aApp extends StatelessWidget {
                 },
                 child: const Text("Elevated Button"),
               ),
+
+              // Text Button, tombol tanpa efek timbul sederhana tanpa latar, biasanya digunakan untuk aksi sekunder
+              TextButton( 
+                onPressed: () { 
+                  print("Text Button pressed!"); 
+                },
+                child: const Text("Text Button"),
+              ),
             ],
           ),
         ),
