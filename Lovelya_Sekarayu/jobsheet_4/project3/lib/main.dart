@@ -40,8 +40,20 @@ class sib3a extends StatelessWidget {
             margin: const EdgeInsets.all(10),
             padding: const EdgeInsets.all(10),
             alignment: Alignment.center,
-            color: Colors.limeAccent,
+            //color: Colors.limeAccent,
             height: 200,
+            decoration: BoxDecoration(
+              color: Colors.limeAccent,
+              border: Border.all(color: Colors.black, width: 2),
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 5,
+                  offset: Offset(2, 2),
+                ),
+              ],
+            ),
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
