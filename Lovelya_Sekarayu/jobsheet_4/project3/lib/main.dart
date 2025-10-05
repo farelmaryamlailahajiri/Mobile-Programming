@@ -13,17 +13,47 @@ class sib3a extends StatelessWidget {
       title: 'Flutter Demo', 
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(
-          'Flutternya Lovelyta',
-          style: TextStyle(fontSize: 24, color: Colors.teal),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const[
+              Icon(Icons.account_circle, size: 48, color: Colors.white),
+              Text(
+                'Flutternya Lovelyta',
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+              Text(
+                'Subtitle',
+                style: TextStyle(fontSize: 14, color: Colors.white70),
+              ),
+            ],
           ), 
         backgroundColor: Colors.lime,
-        leading: const Icon(Icons.menu),
+        //leading: const Icon(Icons.menu),
         actions: const [
           Icon(Icons.settings), Icon(Icons.search)
         ],
         ),
-        body: Text('Hello, World!', style: TextStyle(fontSize: 24)),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Text(
+                'You have pushed the button this many times:',
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.star, color: Colors.amber),
+                  Icon(Icons.star, color: Colors.amber),
+                  Icon(Icons.star, color: Colors.amber),
+                  Icon(Icons.star_half, color: Colors.amber),
+                  Icon(Icons.star_border, color: Colors.amber),
+                ],
+              )
+            ],
+          ),
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           tooltip: 'ini tombol',
@@ -59,6 +89,22 @@ class sib3a extends StatelessWidget {
               ),
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.business),
+              label: 'Business',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.school),
+              label: 'School',
+            ),
+          ] ,
         ),
       ),
     );
