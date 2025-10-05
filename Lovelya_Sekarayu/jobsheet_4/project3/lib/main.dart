@@ -41,7 +41,7 @@ class sib3a extends StatelessWidget {
             padding: const EdgeInsets.all(10),
             alignment: Alignment.center,
             //color: Colors.limeAccent,
-            height: 200,
+            //height: 200,
             decoration: BoxDecoration(
               gradient: const LinearGradient(
                 colors: [Colors.limeAccent, Colors.green],
@@ -94,6 +94,13 @@ class sib3a extends StatelessWidget {
                       // Add your button action here
                     },
                     child: const Text('Outlined Button'),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      // Add your button action here
+                      print('Icon Button Pressed');
+                    },
+                    icon: const Icon(Icons.favorite, color: Colors.pinkAccent),
                   ),
                 ],
               ),
