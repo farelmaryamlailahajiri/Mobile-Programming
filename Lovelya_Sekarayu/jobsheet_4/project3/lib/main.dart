@@ -88,7 +88,13 @@ class sib3a extends StatelessWidget {
                       print('Text Button Pressed');
                     },
                     child: const Text('Text Button'),
-                  )
+                  ),
+                  OutlinedButton(
+                    onPressed: () {
+                      // Add your button action here
+                    },
+                    child: const Text('Outlined Button'),
+                  ),
                 ],
               ),
             ),
