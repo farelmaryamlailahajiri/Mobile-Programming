@@ -118,6 +118,14 @@ class Sib3aApp extends StatelessWidget {
                 },
                 child: const Text("Text Button"),
               ),
+
+              // Outlined Button, tombol dengan garis tepi tanpa background
+              OutlinedButton( 
+                onPressed: () { 
+                  print("Outlined Button pressed!"); 
+                },
+                child: const Text("Outlined Button"),
+              ),
             ],
           ),
         ),
