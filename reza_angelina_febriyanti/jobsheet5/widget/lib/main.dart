@@ -243,12 +243,29 @@ class MyApp extends StatelessWidget {
         ),
         */
         //PLACEHOLDER
+        /*
         body: const Center(
           child: Placeholder(
             fallbackWidth: 100,
             fallbackHeight: 100,
             color: Colors.red,
           ),
+        ),
+        */
+        //Flutter Logo, Icon, Image, Placeholder
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              FlutterLogo(size: 80),
+              Icon(Icons.star, color: Colors.orange, size: 50),
+              Image(
+                image: NetworkImage("https://flutter.dev/images/flutter-logo-sharing.png"),
+                width: 120,
+              ),
+              Placeholder(fallbackHeight: 100, fallbackWidth: 100),
+            ],
+          )
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
