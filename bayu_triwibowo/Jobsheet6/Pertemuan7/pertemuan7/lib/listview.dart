@@ -44,7 +44,7 @@ import 'package:flutter/material.dart';
 // }
 
 //bagaian 1
-import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const ListViewApp());
