@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text("Belajar Stateful Widget")),
-        body: Center(
-          child: MyStateful(),
+        body: /*Center*/ MyStateful(
+          //child: MyStateful(),
         ),
       ),
     );
