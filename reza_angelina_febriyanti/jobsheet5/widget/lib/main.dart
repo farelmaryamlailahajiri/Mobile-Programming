@@ -253,6 +253,7 @@ class MyApp extends StatelessWidget {
         ),
         */
         //Flutter Logo, Icon, Image, Placeholder
+        /*
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -266,6 +267,25 @@ class MyApp extends StatelessWidget {
               Placeholder(fallbackHeight: 100, fallbackWidth: 100),
             ],
           )
+        ),
+        */
+        //TEXT
+        body: const Center(
+          child: Text(
+            "Belajar Flutter",
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold, // <-- perbaikan di sini
+              fontStyle: FontStyle.italic,
+              color: Colors.blue,
+              letterSpacing: 2,
+              wordSpacing: 5,
+              decoration: TextDecoration.underline,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
