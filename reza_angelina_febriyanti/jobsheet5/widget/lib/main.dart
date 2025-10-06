@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -290,12 +291,24 @@ class MyApp extends StatelessWidget {
         ),
         */
         //FONT
+        /*
         body: const Center(
           child: Text(
             "Custom Font",
             style: TextStyle(
               fontFamily: "Poppins",
               fontSize: 24,
+            ),
+          ),
+        ),
+        */
+        //TEXT MENGGUNAKAN GOOGLE FONT
+        body: Center(
+          child: Text(
+            "Teks dengan Google Fonts",
+            style: GoogleFonts.lobster(
+              fontSize: 30,
+              color: Colors.red,
             ),
           ),
         ),
