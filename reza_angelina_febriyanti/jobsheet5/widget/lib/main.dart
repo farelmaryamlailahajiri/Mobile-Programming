@@ -270,6 +270,7 @@ class MyApp extends StatelessWidget {
         ),
         */
         //TEXT
+        /*
         body: const Center(
           child: Text(
             "Belajar Flutter",
@@ -285,6 +286,17 @@ class MyApp extends StatelessWidget {
             textAlign: TextAlign.center,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
+          ),
+        ),
+        */
+        //FONT
+        body: const Center(
+          child: Text(
+            "Custom Font",
+            style: TextStyle(
+              fontFamily: "Poppins",
+              fontSize: 24,
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(

@@ -54,4 +54,12 @@ flutter:
   uses-material-design: true
 
   assets:
-  -  assets/penthouse.png
+    - assets/penthouse.png
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+               
