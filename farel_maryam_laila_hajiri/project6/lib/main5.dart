@@ -28,7 +28,7 @@ class ProfileLayout extends StatelessWidget {
         children: const [
           CircleAvatar(
             radius: 50,
-            backgroundImage: AssetImage('assets/avatar.png'),
+            backgroundImage: AssetImage('images/profile.png'), 
           ),
           SizedBox(height: 10),
           Text(
