@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
         ),
         useMaterial3: true,
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       home: const MainNavigation(),
       debugShowCheckedModeBanner: false,
@@ -73,9 +75,9 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Profil Mahasiswa',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             fontWeight: FontWeight.bold,
             fontSize: 20,
           ),
@@ -107,7 +109,8 @@ class ProfilePage extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  // Foto Profil
+                  const FlutterLogo(size: 50),
+                  const SizedBox(height: 10),
                   Container(
                     width: 130,
                     height: 130,
@@ -143,18 +146,18 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  const Text(
+                  Text(
                     'Nazwa Nurul Wijaya',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
                     ),
                   ),
                   const SizedBox(height: 5),
-                  const Text(
+                  Text(
                     'Mahasiswa Teknologi Informasi',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 16,
                       color: Colors.deepPurple,
                     ),
@@ -163,7 +166,6 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
 
-            // Informasi Pribadi
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
@@ -182,9 +184,9 @@ class ProfilePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Informasi Pribadi',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
@@ -214,8 +216,6 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
-
-            // Kontak & Media Sosial
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
@@ -234,9 +234,9 @@ class ProfilePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Kontak & Media Sosial',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
@@ -265,7 +265,6 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
 
-            // Tentang Saya
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
@@ -281,21 +280,21 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Tentang Saya',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     'Saya adalah mahasiswa Teknologi Informasi yang antusias dalam pengembangan aplikasi mobile. Saat ini sedang mempelajari Flutter dan Dart untuk membuat aplikasi yang kreatif dan fungsional.',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       fontSize: 14,
                       color: Colors.grey,
                       height: 1.5,
@@ -333,14 +332,14 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
+                  style: GoogleFonts.poppins(
                     fontSize: 12,
                     color: Colors.grey,
                   ),
                 ),
                 Text(
                   value,
-                  style: const TextStyle(
+                  style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   ),
@@ -373,14 +372,14 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
+                  style: GoogleFonts.poppins(
                     fontSize: 12,
                     color: Colors.grey,
                   ),
                 ),
                 Text(
                   value,
-                  style: const TextStyle(
+                  style: GoogleFonts.poppins(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                   ),
@@ -422,29 +421,13 @@ class _CounterPageState extends State<CounterPage> {
     });
   }
 
-  void _incrementByFive() {
-    setState(() {
-      _counter += 5;
-    });
-  }
-
-  void _decrementByFive() {
-    setState(() {
-      if (_counter >= 5) {
-        _counter -= 5;
-      } else {
-        _counter = 0;
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Counter App',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             fontWeight: FontWeight.bold,
             fontSize: 20,
           ),
@@ -452,37 +435,20 @@ class _CounterPageState extends State<CounterPage> {
         centerTitle: true,
         backgroundColor: Colors.purple.shade50,
         elevation: 0,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            onPressed: _resetCounter,
-            tooltip: 'Reset Counter',
-            color: Colors.purple,
-          ),
-        ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Display Counter dengan animasi
-            AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
+            Container(
               padding: const EdgeInsets.all(40),
               decoration: BoxDecoration(
                 color: _getCounterColor(),
                 shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    color: _getCounterColor().withOpacity(0.5),
-                    blurRadius: 15,
-                    offset: const Offset(0, 5),
-                  ),
-                ],
               ),
               child: Text(
                 '$_counter',
-                style: const TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 48,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -490,11 +456,9 @@ class _CounterPageState extends State<CounterPage> {
               ),
             ),
             const SizedBox(height: 30),
-
-            // Status Counter
             Text(
               _getCounterStatus(),
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontSize: 18,
                 color: Colors.grey.shade600,
                 fontWeight: FontWeight.w500,
@@ -502,50 +466,41 @@ class _CounterPageState extends State<CounterPage> {
             ),
             const SizedBox(height: 40),
 
-            // Tombol Counter Utama
+            // Tombol Counter Utama dalam Row
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildCounterButton(
-                  Icons.remove,
-                  _decrementCounter,
-                  Colors.red.shade400,
+                ElevatedButton(
+                  onPressed: _decrementCounter,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red.shade400,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                  ),
+                  child: const Icon(Icons.remove, size: 28),
                 ),
                 const SizedBox(width: 20),
-                _buildCounterButton(
-                  Icons.add,
-                  _incrementCounter,
-                  Colors.green.shade400,
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
 
-            // Tombol Reset
-            OutlinedButton(
-              onPressed: _resetCounter,
-              style: OutlinedButton.styleFrom(
-                foregroundColor: Colors.grey,
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
-                side: const BorderSide(color: Colors.grey),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
+                OutlinedButton(
+                  onPressed: _resetCounter,
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: Colors.grey,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                    side: const BorderSide(color: Colors.grey),
+                  ),
+                  child: const Text('Reset'),
                 ),
-              ),
-              child: const Text(
-                'Reset',
-                style: TextStyle(fontSize: 16),
-              ),
-            ),
-            const SizedBox(height: 30),
-
-            // Tombol Tambahan +5 / -5
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _buildQuickButton('-5', _decrementByFive, Colors.orange),
-                const SizedBox(width: 15),
-                _buildQuickButton('+5', _incrementByFive, Colors.blue),
+                const SizedBox(width: 20),
+            
+                ElevatedButton(
+                  onPressed: _incrementCounter,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green.shade400,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                  ),
+                  child: const Icon(Icons.add, size: 28),
+                ),
               ],
             ),
           ],
@@ -556,47 +511,6 @@ class _CounterPageState extends State<CounterPage> {
         backgroundColor: Colors.purple,
         foregroundColor: Colors.white,
         child: const Icon(Icons.add),
-      ),
-    );
-  }
-
-  Widget _buildCounterButton(IconData icon, VoidCallback onPressed, Color color) {
-    return Container(
-      width: 70,
-      height: 70,
-      decoration: BoxDecoration(
-        color: color,
-        shape: BoxShape.circle,
-        boxShadow: [
-          BoxShadow(
-            color: color.withOpacity(0.5),
-            blurRadius: 8,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
-      child: IconButton(
-        icon: Icon(icon, size: 30),
-        color: Colors.white,
-        onPressed: onPressed,
-      ),
-    );
-  }
-
-  Widget _buildQuickButton(String text, VoidCallback onPressed, Color color) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: color,
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
       ),
     );
   }
