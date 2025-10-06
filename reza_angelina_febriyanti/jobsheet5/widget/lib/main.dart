@@ -6,7 +6,59 @@ void main() {
   runApp(const MyApp());
 }
 
-//WIDGET YG TDK BISA BERUBAH SELAMA APP BERJALAN
+//WIDGET DINAMIS
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("Belajar Stateful Widget")),
+        body: Center(
+          child: MyStateful(),
+        ),
+      ),
+    );
+  }
+}
+
+class MyStateful extends StatefulWidget {
+  const MyStateful({super.key});
+
+  @override
+  State<MyStateful> createState() => _MyStatefulState();
+}
+
+class _MyStatefulState extends State<MyStateful> {
+  int counter = 0;
+
+  void tambah() {
+    setState(() {
+      counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Counter: $counter",
+          style: const TextStyle(fontSize: 24),
+        ),
+        ElevatedButton(
+          onPressed: tambah,
+          child: const Text("Tambah"),
+        ),
+      ],
+    );
+  }
+}
+
+//WIDGET STATIS
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -32,6 +84,7 @@ class MyStateless extends StatelessWidget {
     );
   }
 }
+*/
 
 /*
 class MyApp extends StatelessWidget {
