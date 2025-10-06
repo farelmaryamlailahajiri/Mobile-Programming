@@ -119,7 +119,7 @@ class ProfilePage extends StatelessWidget {
               children: const [
                 Icon(Icons.email),
                 SizedBox(width: 8),
-                Text('email@domain.com'),
+                Text('daffan245@gmail.com'),
                 SizedBox(width: 24),
                 Icon(Icons.phone),
                 SizedBox(width: 8),
