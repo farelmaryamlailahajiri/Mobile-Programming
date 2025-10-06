@@ -27,10 +27,14 @@ class Home extends StatelessWidget {
     );
   }
 
-  Column body() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [Text("lorem"), Text("lorem"), Text("lorem")],
+  Stack body() {
+    return Stack(
+      children: [
+        Text("lorem"),
+        Text("lorem"),
+        Text("lorem"),
+        ElevatedButton(onPressed: () => {}, child: Text("data")),
+      ],
     );
   }
 }
