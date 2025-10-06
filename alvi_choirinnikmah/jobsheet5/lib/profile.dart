@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const profileApp());
@@ -11,6 +12,21 @@ class profileApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'SIB 3A - Alvi Choirinnikmah',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        textTheme:
+            GoogleFonts.poppinsTextTheme(), // semua teks pakai GoogleFont
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.teal,
+            foregroundColor: Colors.white,
+            textStyle: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
+          ),
+        ),
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Profil Mahasiswa"),
@@ -87,11 +103,10 @@ class profileApp extends StatelessWidget {
                       SizedBox(height: 10),
                       Text(
                         "Alvi Choirinnikmah",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          fontFamily: 'Roboto',
                         ),
                       ),
                       Text(
@@ -167,9 +182,16 @@ class profileApp extends StatelessWidget {
             ),
           ),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add),
+        floatingActionButton: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.favorite, color: Colors.red),
+              onPressed: () {
+                print("Icon Button pressed!");
+              },
+            ),
+          ],
         ),
       ),
     );
