@@ -14,7 +14,8 @@ class App extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  Home({super.key});
+  final List<int> items = [1, 2, 3, 4];
 
   @override
   Widget build(BuildContext context) {
@@ -23,38 +24,20 @@ class Home extends StatelessWidget {
         title: Text("App", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blueAccent,
       ),
-      body: ProfileLayout(),
+      body: body(),
     );
   }
 
   ListView body() {
-    return ListView();
-  }
-}
-
-class ProfileLayout extends StatelessWidget {
-  const ProfileLayout({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Layout Profil')),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleAvatar(
-            radius: 50,
-            backgroundImage: AssetImage('assets/avatar.png'),
-          ),
-          SizedBox(height: 10),
-          Text(
-            'Luqman Affandi',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 5),
-          Text('Flutter Developer', style: TextStyle(color: Colors.grey[600])),
-        ],
-      ),
+    return ListView.builder(
+      itemCount: items.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: Icon(Icons.code),
+          title: Text("${items[index]}"),
+          onTap: () => print("${items[index]}"),
+        );
+      },
     );
   }
 }
