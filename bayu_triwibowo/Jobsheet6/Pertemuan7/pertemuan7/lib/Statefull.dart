@@ -30,7 +30,7 @@ class _GantiWarnaAppState extends State<GantiWarnaApp> {
        
         appBar: AppBar(
           title: const Text('Ganti Warna'),
-          backgroundColor: _isBlue ? Colors.blue : Colors.black,
+          backgroundColor: _isBlue ? Colors.blue : Colors.black, 
         ),
         
         body: Center(
@@ -38,7 +38,7 @@ class _GantiWarnaAppState extends State<GantiWarnaApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                _isBlue ? 'Warna biru' : 'Warna hitam',
+                _isBlue ? 'Iki biru' : 'Iki hitam',
                 style: TextStyle(
                   fontSize: 30,
                   color: _isBlue ? Colors.blue[900] : Colors.white,
