@@ -35,7 +35,26 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Center(
+        body: Container(
+          margin: const EdgeInsets.all(10),
+          alignment: Alignment.center,
+          height: 200,
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [Colors.greenAccent, Colors.grey],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                spreadRadius: 2,
+                blurRadius: 5,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const <Widget>[
@@ -53,6 +72,8 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
+
+        //FLOATING ACTION BUTTON
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           tooltip: 'ini tombol tambah',
