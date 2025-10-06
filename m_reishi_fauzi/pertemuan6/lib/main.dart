@@ -11,7 +11,14 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter R FAUZI'),
+          title: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Icon(Icons.account_circle, size: 32),
+              Text('Belajar Flutter', style: TextStyle(fontSize: 16)),
+              Text('FAUZI', style: TextStyle(fontSize: 12)),
+            ],
+          ),
           backgroundColor: Colors.lime,
           actions: [
             IconButton(
@@ -28,7 +35,24 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
-        body: Text('hallo, semua', style: TextStyle(fontSize: 24)),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Text('Hello, World!', style: TextStyle(fontSize: 24)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.star, color: Colors.amber),
+                  Icon(Icons.star, color: Colors.amber),
+                  Icon(Icons.star, color: Colors.amber),
+                  Icon(Icons.star_half, color: Colors.amber),
+                  Icon(Icons.star_border, color: Colors.amber),
+                ],
+              ),
+            ],
+          ),
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           tooltip: 'ini tombol tambah',
