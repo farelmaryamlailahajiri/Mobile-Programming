@@ -6,6 +6,34 @@ void main() {
   runApp(const MyApp());
 }
 
+//WIDGET YG TDK BISA BERUBAH SELAMA APP BERJALAN
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Contoh Stateless Widget',
+      home: Scaffold(
+        appBar: AppBar(title: Text("Belajar Stateless Widget")),
+        body: MyStateless(),
+      ),
+    );
+  }
+}
+
+class MyStateless extends StatelessWidget {
+  const MyStateless({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text("Ini Stateless Widget"),
+    );
+  }
+}
+
+/*
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   // This widget is the root of your application.
@@ -356,6 +384,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+*/
 /*
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
