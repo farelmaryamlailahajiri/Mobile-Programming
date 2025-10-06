@@ -13,10 +13,17 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Icon(Icons.account_circle, size: 32),
               Text('Belajar Flutter', style: TextStyle(fontSize: 16)),
               Text('FAUZI', style: TextStyle(fontSize: 12)),
+
+              FlutterLogo(
+                size: 32,
+                style: FlutterLogoStyle.horizontal,
+                textColor: Colors.white,
+              ),
+              Image.asset('assets/gambar/logopolinema.png', height: 32),
             ],
           ),
           backgroundColor: Colors.lime,
