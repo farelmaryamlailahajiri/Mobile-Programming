@@ -16,7 +16,7 @@ class sib3a extends StatelessWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const[
+            children: [
               Icon(Icons.account_circle, size: 48, color: Colors.white),
               Text(
                 'Flutternya Lovelyta',
@@ -30,7 +30,8 @@ class sib3a extends StatelessWidget {
                 size: 48,
                 style: FlutterLogoStyle.stacked,
                 textColor: Colors.white,
-              )
+              ),
+              Image.asset('assets/images/logo_polinema.png', width: 48, height: 48),
             ],
           ), 
         backgroundColor: Colors.lime,
