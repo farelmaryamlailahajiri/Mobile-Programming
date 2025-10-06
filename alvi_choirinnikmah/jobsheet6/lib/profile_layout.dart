@@ -24,5 +24,5 @@ class ProfileLayout extends StatelessWidget {
       ),
       ),
     );
-  }
+  } 
 }
