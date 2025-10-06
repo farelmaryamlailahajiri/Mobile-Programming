@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,10 +7,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final imagePath = 'D:/Mobile-Programming/reza_angelina_febriyanti/domba.jpeg';
+
     return MaterialApp(
       title: 'Contoh Scaffold',
       home: Scaffold(
@@ -220,12 +222,23 @@ class MyApp extends StatelessWidget {
         ),
         */
         //IMAGE
+        /*
         body: Center(
           //child: Image.asset('assets/penthouse.png'), //with assets
           child: Image.network(
             "https://flutter.dev/images/flutter-logo-sharing.png",
             width: 150,
           ), //with network
+        ),
+        */
+        //IMAGE DARI FILE LOKAL
+        body: Center(
+          child: Image.file(
+            File(imagePath),
+            width: 200,
+            height: 150,
+            fit: BoxFit.cover,
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
