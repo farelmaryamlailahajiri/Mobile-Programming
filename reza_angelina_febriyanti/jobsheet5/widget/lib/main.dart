@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final imagePath = 'D:/Mobile-Programming/reza_angelina_febriyanti/domba.jpeg';
+    //final imagePath = 'D:/Mobile-Programming/reza_angelina_febriyanti/domba.jpeg';
 
     return MaterialApp(
       title: 'Contoh Scaffold',
@@ -232,12 +232,22 @@ class MyApp extends StatelessWidget {
         ),
         */
         //IMAGE DARI FILE LOKAL
+        /*
         body: Center(
           child: Image.file(
             File(imagePath),
             width: 200,
             height: 150,
             fit: BoxFit.cover,
+          ),
+        ),
+        */
+        //PLACEHOLDER
+        body: const Center(
+          child: Placeholder(
+            fallbackWidth: 100,
+            fallbackHeight: 100,
+            color: Colors.red,
           ),
         ),
         floatingActionButton: FloatingActionButton(
