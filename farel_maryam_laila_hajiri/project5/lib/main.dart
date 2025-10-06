@@ -19,7 +19,7 @@ class sib3a extends StatelessWidget {
             children: [
               Icon(Icons.account_circle, size: 48, color: Colors.white),
               Text(
-                'Flutternya Josephine', 
+                'Flutternya Farel', 
                 style: TextStyle(fontSize: 20, color: Colors.white)
                 ),
               Text(
