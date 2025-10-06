@@ -26,7 +26,7 @@ class ColumnExample extends StatelessWidget {
       ),
     );
   } */
-  @override
+  /* @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -51,6 +51,21 @@ class ColumnExample extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  } */
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Contoh ListView')),
+        body:   ListView(
+          children: [
+            ListTile(title: Text('Item 1'), leading: Icon(Icons.star)),
+            ListTile(title: Text('Item 2'), leading: Icon(Icons.favorite)),
+            ListTile(title: Text('Item 3'), leading: Icon(Icons.home)),
+          ],
         ),
       ),
     );
