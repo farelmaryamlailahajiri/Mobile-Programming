@@ -47,118 +47,124 @@ class profileApp extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Profile Mahasiswa with Flutter"),
-                  const FlutterLogo(size: 40), // logo flutter
-                ],
-              ),
-              const SizedBox(height: 20), // jarak vertikal
-              Container(
-                width: 400,
-                height: 450,
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [Colors.teal, Colors.tealAccent],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                ),
-                child: Column(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const CircleAvatar(
-                      radius: 45,
-                      backgroundColor: Colors.white,
-                      child: ClipOval(
-                        child: Placeholder(
-                          color: Colors.grey,
-                          fallbackHeight: 90,
-                          fallbackWidth: 90,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      "Alvi Choirinnikmah",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontFamily: 'Roboto',
-                      ),
-                    ),
-                    Text(
-                      "2341760191",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        letterSpacing: 1.0,
-                      ),
-                    ),
-                    Text(
-                      "Sistem Informasi Bisnis",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontStyle: FontStyle.italic,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    Container(
-                      width: 350,
-                      height: 80,
-                      margin: const EdgeInsets.symmetric(horizontal: 20),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black12,
-                            blurRadius: 5,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: const [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.email, size: 30),
-                              SizedBox(height: 4),
-                              Text("Email"),
-                            ],
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.phone, size: 30),
-                              SizedBox(height: 4),
-                              Text("Email"),
-                            ],
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.location_on, size: 30),
-                              SizedBox(height: 4),
-                              Text("Location"),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
+                    Text("Profile Mahasiswa with Flutter"),
+                    const FlutterLogo(size: 40), // logo flutter
                   ],
                 ),
-              ),
-            ],
+                const SizedBox(height: 20), // jarak vertikal
+                Container(
+                  width: 400,
+                  height: 450,
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.teal, Colors.tealAccent],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const CircleAvatar(
+                        radius: 45,
+                        backgroundColor: Colors.white,
+                        child: ClipOval(
+                          child: Placeholder(
+                            color: Colors.grey,
+                            fallbackHeight: 90,
+                            fallbackWidth: 90,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "Alvi Choirinnikmah",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontFamily: 'Roboto',
+                        ),
+                      ),
+                      Text(
+                        "2341760191",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          letterSpacing: 1.0,
+                        ),
+                      ),
+                      Text(
+                        "Sistem Informasi Bisnis",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Container(
+                        width: 350,
+                        height: 80,
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black12,
+                              blurRadius: 5,
+                              offset: Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.email, size: 30),
+                                SizedBox(height: 4),
+                                Text("Email"),
+                              ],
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.phone, size: 30),
+                                SizedBox(height: 4),
+                                Text("Email"),
+                              ],
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.location_on, size: 30),
+                                SizedBox(height: 4),
+                                Text("Location"),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20),
+
+                // === Tampilkan Stateful Widget ===
+                const MyStateful(),
+              ],
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -166,6 +172,59 @@ class profileApp extends StatelessWidget {
           child: const Icon(Icons.add),
         ),
       ),
+    );
+  }
+}
+
+class MyStateful extends StatefulWidget {
+  const MyStateful({super.key});
+
+  @override
+  State<MyStateful> createState() => _MyStatefulState();
+}
+
+class _MyStatefulState extends State<MyStateful> {
+  int counter = 0;
+
+  void tambah() {
+    setState(() {
+      counter++;
+    });
+  }
+
+  void kurang() {
+    setState(() {
+      counter--;
+    });
+  }
+
+  void reset() {
+    setState(() {
+      counter = 0;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "$counter",
+          style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(onPressed: tambah, child: const Text("Tambah")),
+            const SizedBox(width: 10),
+            ElevatedButton(onPressed: kurang, child: const Text("Kurang")),
+            const SizedBox(width: 10),
+            ElevatedButton(onPressed: reset, child: const Text("Reset")),
+          ],
+        ),
+      ],
     );
   }
 }
