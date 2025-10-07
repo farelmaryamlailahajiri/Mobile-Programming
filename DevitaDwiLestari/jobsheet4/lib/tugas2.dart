@@ -12,51 +12,50 @@ class Percobaan2 extends StatelessWidget {
     return MaterialApp(
       title: 'Khloe Rose - Fictional', // Judul aplikasi
       home: Scaffold(
-        // Struktur dasar layar: AppBar + Body
+       
         appBar: AppBar(
           title: const Text(
-            'Khloe Rose - Fictional', // Judul di AppBar
+            'Khloe Rose - Fictional', 
             style: TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Lobster', // font khusus
+              fontFamily: 'Lobster', 
             ),
           ),
-          backgroundColor: Colors.purple, // warna background AppBar
-          foregroundColor: Colors.white, // warna teks di AppBar
+          backgroundColor: Colors.purple, 
+          foregroundColor: Colors.white, 
         ),
-        // Body layar
+        
         body: Container(
-          // Container bisa diberi dekorasi, di sini untuk background image
+          
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/bg.jpg"), // gambar background
-              fit: BoxFit.cover, // supaya gambar menutupi seluruh layar
+              image: AssetImage("assets/bg.jpg"), 
+              fit: BoxFit.cover, 
             ),
           ),
           child: const Padding(
-            padding: EdgeInsets.all(16.0), // jarak dari pinggir layar
+            padding: EdgeInsets.all(16.0), 
             child: SingleChildScrollView(
-              // Supaya teks panjang bisa di-scroll
+           
               child: Center(
                 child: DefaultTextStyle(
-                  // Mengatur style default untuk semua Text di bawahnya
+                 
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.white, // teks putih supaya terlihat di atas gambar
+                    color: Colors.white, 
                   ),
-                  textAlign: TextAlign.center, // rata tengah semua teks
+                  textAlign: TextAlign.center, 
                   child: Column(
                     children: [
-                      // Judul lagu
+                     
                       Text(
                         'Fictional\nby Khloe Rose',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 20), // jarak antar blok teks
-                      
-                      // Lirik lagu
+                      SizedBox(height: 20), 
+          
                       Text("Well, I guess the third time's not a charm"),
                       Text("Nursing a three times broken heart"),
                       Text("And down the rabbit hole again"),
@@ -69,7 +68,7 @@ class Percobaan2 extends StatelessWidget {
                       Text("\"That's not healthy,\" they said"),
                       Text("\"To live in your head\""),
                       Text("But it hurts a lot less to me"),
-                      SizedBox(height: 10), // jarak antar bait
+                      SizedBox(height: 10),
 
                       Text("I fall in love with boys I see on a TV screen"),
                       Text("The ones in books who are as perfect as they can be"),
@@ -80,7 +79,7 @@ class Percobaan2 extends StatelessWidget {
                       Text("I'm tired of giving more than I receive"),
                       Text("So, I'll just stick to the boys"),
                       Text("Who don't know me"),
-                      SizedBox(height: 10), // jarak antar bait
+                      SizedBox(height: 10),
 
                       Text("Oh, I hid his number, I almost called"),
                       Text("Like, maybe he's hurting after all"),
