@@ -69,17 +69,74 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+class MyDrawer extends StatelessWidget {
+  final Function(int) onItemSelected;
+
+  const MyDrawer({super.key, required this.onItemSelected});
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          const DrawerHeader(
+            decoration: BoxDecoration(color: Colors.teal),
+            child: Center(
+              child: Text(
+                "Menu Aplikasi",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text("Profil"),
+            onTap: () {
+              onItemSelected(0);
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add),
+            title: const Text("Counter"),
+            onTap: () {
+              onItemSelected(1);
+              Navigator.pop(context);
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: const Icon(Icons.exit_to_app),
+            title: const Text("Keluar"),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 // Halaman Profil
 class ProfilPage extends StatelessWidget {
   const ProfilPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final parentState = context.findAncestorStateOfType<_HomePageState>();
+
     return Scaffold(
       appBar: AppBar(title: const Text("Profil Mahasiswa")),
+      drawer: MyDrawer(
+        onItemSelected: (index) {
+          parentState?._onItemTapped(index);
+        },
+      ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.teal[50], 
+          color: Colors.teal[50],
           padding: const EdgeInsets.all(16),
           margin: const EdgeInsets.all(8),
           child: Column(
@@ -93,10 +150,9 @@ class ProfilPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              Text("Devita Dwi Lestari", style: GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.bold)),
+              Text("Devita Dwi Lestari", style: GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.bold),),
               Text("NIM: 2341760002", style: GoogleFonts.poppins(fontSize: 18)),
-              Text("Jurusan: Teknologi Informasi", style: GoogleFonts.poppins(fontSize: 18)),
-              const SizedBox(height: 16),
+              Text("Jurusan: Teknologi Informasi",style: GoogleFonts.poppins(fontSize: 18)), const SizedBox(height: 16),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -135,13 +191,20 @@ class _CounterPageState extends State<CounterPage> {
 
   @override
   Widget build(BuildContext context) {
+    final parentState = context.findAncestorStateOfType<_HomePageState>();
+
     return Scaffold(
       appBar: AppBar(title: const Text("Counter App")),
+      drawer: MyDrawer(
+        onItemSelected: (index) {
+          parentState?._onItemTapped(index);
+        },
+      ),
       body: Center(
         child: Container(
-          color: Colors.teal[50], 
-          padding: const EdgeInsets.all(20), 
-          margin: const EdgeInsets.all(10), 
+          color: Colors.teal[50],
+          padding: const EdgeInsets.all(20),
+          margin: const EdgeInsets.all(10),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -159,7 +222,8 @@ class _CounterPageState extends State<CounterPage> {
                   const SizedBox(width: 8),
                   ElevatedButton(onPressed: _decrement, child: const Text("-")),
                   const SizedBox(width: 8),
-                  OutlinedButton(onPressed: _reset, child: const Text("Reset")),
+                  OutlinedButton(
+                      onPressed: _reset, child: const Text("Reset")),
                 ],
               ),
             ],
