@@ -18,7 +18,9 @@ class GridExample extends StatelessWidget {
             return Card(
               color: Colors.blue[100],
               margin: EdgeInsets.all(8),
-              child: Text('Item ${index + 1}', style: TextStyle(fontSize: 20)),
+              child: Center(
+                child: Text('Item ${index + 1}', style: TextStyle(fontSize: 20)),
+              ),
             );
           }),
         ),
