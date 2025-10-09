@@ -13,7 +13,7 @@ class ListViewPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Center(
+          Expanded(
             child: ListView.builder(
               itemCount: items.length,
               itemBuilder: (context, index) {

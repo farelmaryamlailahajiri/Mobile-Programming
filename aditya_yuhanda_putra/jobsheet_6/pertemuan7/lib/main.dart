@@ -9,6 +9,7 @@ import 'multichildstack.dart';
 import 'multichildlistview.dart';
 import 'listview.dart';
 import 'gridview.dart';
+import 'stylingnpositioning.dart';
 
 void main() => runApp(const MyApp());
 
@@ -78,7 +79,7 @@ final GoRouter _router = GoRouter(
         GoRoute(
           path: 'stylingnpositioning',
           builder: (BuildContext context, GoRouterState state) {
-            return StatefulPage();
+            return StylingAndPositioning();
           },
         ),
       ],
@@ -159,22 +160,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-// /// The details screen
-// class DetailsScreen extends StatelessWidget {
-//   /// Constructs a [DetailsScreen]
-//   const DetailsScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: const Text('Details Screen')),
-//       body: Center(
-//         child: ElevatedButton(
-//           onPressed: () => context.go('/'),
-//           child: const Text('Go back to the Home screen'),
-//         ),
-//       ),
-//     );
-//   }
-// }
