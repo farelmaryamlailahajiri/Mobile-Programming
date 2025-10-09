@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const sib3a());
+}
+
+class sib3a extends StatelessWidget {
+  const sib3a({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('contoh stack')),
+        body: Center(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(height: 200, width: 200, color: Colors.blue[100]),
+              Container(height: 150, width: 150, color: Colors.blue[300]),
+              Text(
+                'Tumpuk!',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
