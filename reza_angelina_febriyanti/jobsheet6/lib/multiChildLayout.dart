@@ -1,7 +1,34 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
+void main() {
+  runApp(const ListViewExample());
+}
 
+class ListViewExample extends StatelessWidget {
+  const ListViewExample({super.key});
+
+  final List<String> items = const ['Flutter', 'Dart', 'Firebase', 'UI/UX', 'API'];
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('ListView Example')),
+        body: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: const Icon(Icons.code),
+              title: Text(items[index]),
+              onTap: () => print('Klik: ${items[index]}'),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+/*
 void main() {
   runApp(const ProfileLayout());
 }
@@ -38,6 +65,7 @@ class ProfileLayout extends StatelessWidget {
     );
   }
 }
+*/
 
 /*
 void main() {
