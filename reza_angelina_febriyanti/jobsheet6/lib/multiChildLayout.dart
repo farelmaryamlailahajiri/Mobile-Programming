@@ -1,9 +1,50 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const ProfileLayout());
+}
+
+// ROW, COLUMN, CONTAINER
+class ProfileLayout extends StatelessWidget {
+  const ProfileLayout({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Layout Profil')),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('assets/avatar.jpeg'),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Reza Angelina',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 5),
+            Text(
+              'Flutter Developer',
+              style: TextStyle(color: Colors.grey[600]),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/*
 void main() {
   runApp(ListViewExample());
 }
 
+//LIST VIEW
 class ListViewExample extends StatelessWidget {
   const ListViewExample({super.key});
 
@@ -23,6 +64,8 @@ class ListViewExample extends StatelessWidget {
     );
   }
 }
+*/
+
 /*
 void main() {
   runApp(StackExample());
