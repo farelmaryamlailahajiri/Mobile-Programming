@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    initialRoute: '/',
+    routes: {
+      '/': (context) => HomePage(),
+      '/second': (context) => SecondPage(),
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,16 +26,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Halaman Utama')),
+      appBar: AppBar(title: Text('Named Route Example')),
       body: Center(
         child: ElevatedButton(
-          child: const Text('Ke Halaman Kedua'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondPage()),
-            );
-          },
+          onPressed: () => Navigator.pushNamed(context, '/second'),
+          child: Text('Ke Halaman Kedua'),
         ),
       ),
     );
@@ -40,10 +41,10 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Halaman Kedua')),
+      appBar: AppBar(title: Text('Halaman Kedua')),
       body: Center(
         child: ElevatedButton(
-          child: const Text('Kembali'),
+          child: Text('Kembali'),
           onPressed: () => Navigator.pop(context),
         ),
       ),
