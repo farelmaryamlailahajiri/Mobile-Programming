@@ -142,7 +142,7 @@ void printBilanganGenap(List<int> numbers) {
   }
 } */
 
-void main () {
+/* void main () {
   // Deklarasi 
   Map<String, int> ageMap = {'Alice': 25, 'Bob': 30};
 
@@ -160,4 +160,20 @@ void printLebihTua(Map<String, int> map, int age) {
       } 
    }
   ); 
+} */
+
+void main() {
+  Set<int> uniqueNumbers = {1, 2, 3, 4};
+
+  uniqueNumbers.add(5); // Menambahkan elemen 
+  uniqueNumbers.remove(2); // Menghapus elemen
+  print(uniqueNumbers.contains(3)); // Memeriksa apakah elemen ada
+  uniqueNumbers.forEach((num) => print(num)); // Iterasi Set
+  printData(uniqueNumbers);
+}
+
+void printData(Set<int> numbers) { 
+   numbers.forEach(
+      (num) => print(num)
+   ); 
 }
