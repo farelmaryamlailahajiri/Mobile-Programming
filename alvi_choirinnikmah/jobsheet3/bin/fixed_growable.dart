@@ -117,7 +117,7 @@ void main() {
 } */
 
 // List adalah koleksi data yang terurut dan dapat diakses menggunakan indeks
-import 'dart:io';
+/* import 'dart:io';
 
 void main() {
   List<int> numbers = [1, 2, 3, 4, 5];
@@ -140,4 +140,15 @@ void printBilanganGenap(List<int> numbers) {
       print(num);
     }
   }
+} */
+
+void main () {
+  // Deklarasi 
+  Map<String, int> ageMap = {'Alice': 25, 'Bob': 30};
+
+  ageMap['Charlie'] = 35; // Menambahkan pasangan kunci - nilai
+  ageMap.remove('Alice'); // Menghapus pasangan berdasarkan kunci 
+  print(ageMap['Bob']); // Mengakses nilai berdasarkan kunci
+  ageMap.forEach((key, value) => print('$key is $value years old.')); // Iterasi Map 
 }
+
