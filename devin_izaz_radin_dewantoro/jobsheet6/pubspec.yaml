@@ -60,7 +60,15 @@ flutter:
   uses-material-design: true
   assets:
     - assets/devin.jpg
-
+    - assets/psd1.jpeg
+    - assets/pm1.jpeg
+    - assets/K31.jpeg
+    - assets/metpen.jpeg
+    - assets/pmpl1.jpeg
+    - assets/manpro1.jpeg
+    - assets/kecbis1.jpeg
+    - assets/mrp.jpeg
+    - assets/audsi1.jpeg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
