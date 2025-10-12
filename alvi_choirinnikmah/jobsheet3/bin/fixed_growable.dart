@@ -117,13 +117,27 @@ void main() {
 } */
 
 // List adalah koleksi data yang terurut dan dapat diakses menggunakan indeks
-void main () {
-  List <int> numbers = [1,2 ,3, 4, 5];
+import 'dart:io';
 
-  numbers.add(6); // menambahkan elemen 
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5];
+
+  numbers.add(6); // menambahkan elemen
   numbers.addAll([7, 8]); // Menggabungkan List
   numbers.remove(8);
   print(numbers); // Menampilkan semua yang ada pada variabel numbers
   print(numbers[5]); // Mengakses elemen berdasarkan indeks
   numbers.forEach((num) => print(num)); // Cetak semua elemen
+
+  // Panggil fungsi Bilangan Genap
+  print("Bilangan Genap : ");
+  printBilanganGenap(numbers);
+}
+
+void printBilanganGenap(List<int> numbers) {
+  for (var num in numbers) {
+    if (num % 2 == 0) {
+      print(num);
+    }
+  }
 }
