@@ -150,5 +150,14 @@ void main () {
   ageMap.remove('Alice'); // Menghapus pasangan berdasarkan kunci 
   print(ageMap['Bob']); // Mengakses nilai berdasarkan kunci
   ageMap.forEach((key, value) => print('$key is $value years old.')); // Iterasi Map 
+  printLebihTua(ageMap, 30);
 }
 
+void printLebihTua(Map<String, int> map, int age) { 
+  map.forEach((key, value) { 
+     if (value > age) { 
+         print('$key is older than $age.'); 
+      } 
+   }
+  ); 
+}
