@@ -18,6 +18,7 @@ class GalleryPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Galeri Mahasiswa'),
+        titleTextStyle: TextStyle(fontSize: 20),
         backgroundColor: Colors.blue,
         elevation: 0,
       ),

@@ -19,6 +19,7 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Profil Mahasiswa'),
         backgroundColor: Colors.blue,
+        titleTextStyle: TextStyle(fontSize: 20),
         elevation: 0,
         ),
       body: Padding(
@@ -42,9 +43,11 @@ class ProfilePage extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Nama: Devin Izaz Radin Dewantoro'),
+                    Text("Nama: Devin I'zaz Radin Dewantoro"),
                     Text('NIM: 2341760034'),
                     Text('Program Studi: D-IV Sistem Informasi Bisnis'),
+                    Text('Email: devinizazradindewantoro@gmail.com'),
+                    Text('Nomor: +6281335729933'),
                   ],
                 ),
               ],
