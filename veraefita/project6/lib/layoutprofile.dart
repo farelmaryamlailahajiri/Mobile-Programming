@@ -32,7 +32,7 @@ class ProfileLayout extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text(
-            'Deva Selviana',
+            'vera efita',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 5),
