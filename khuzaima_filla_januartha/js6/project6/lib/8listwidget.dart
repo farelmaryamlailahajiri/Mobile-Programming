@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: ListViewExample(),
+    home: ListWidgetExample(),
   ));
 }
 
-class ListViewExample extends StatelessWidget {
+class ListWidgetExample extends StatelessWidget {
   final List<String> items = ['Flutter', 'Dart', 'Firebase', 'UI/UX', 'API'];
 
   @override
