@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart'; // tambahkan ini
 
 void main() {
+  setUrlStrategy(PathUrlStrategy());
+
   final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => HomePage()),
@@ -9,7 +12,10 @@ void main() {
     ],
   );
 
-  runApp(MaterialApp.router(routerConfig: router, title: 'GoRouter Example'));
+  runApp(MaterialApp.router(
+    routerConfig: router,
+    title: 'GoRouter Example',
+  ));
 }
 
 class HomePage extends StatelessWidget {
