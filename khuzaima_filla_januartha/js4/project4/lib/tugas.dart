@@ -25,16 +25,16 @@ class Percobaan1 extends StatelessWidget {
             fontStyle: FontStyle.italic,
           ),
         ),
-        // Menggunakan Stack untuk menumpuk widget
+        
         body: Stack(
           children: [
-            // 1. Widget untuk Background Gambar
+            
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  // Ganti 'assets/background.jpg' dengan path gambar Anda
+                 
                   image: AssetImage("assets/bgff.jpg"), 
-                  // Membuat gambar menutupi seluruh layar
+                 
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(const Color.fromRGBO(0, 0, 0, 0.7), BlendMode.darken,
                   ),
@@ -42,10 +42,8 @@ class Percobaan1 extends StatelessWidget {
               ),
             ),
 
-            // 2. Widget untuk Konten Lirik di atas gambar
-            // Dibungkus SingleChildScrollView agar bisa di-scroll jika layar kecil
             SingleChildScrollView(
-              // Diberi padding agar teks tidak menempel di tepi layar
+             
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
                 child: Center(
@@ -58,13 +56,13 @@ class Percobaan1 extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white, // Warna teks diubah agar kontras
-                          shadows: [ // Bayangan agar teks mudah dibaca
+                          color: Colors.white, 
+                          shadows: [ 
                             Shadow(blurRadius: 7.0, color: Colors.black54, offset: Offset(0, 2))
                           ]
                         ),
                       ),
-                      const SizedBox(height: 8), // Jarak antara judul dan artis
+                      const SizedBox(height: 8), 
                       const Text(
                         "flowfist",
                         style: TextStyle(
@@ -77,15 +75,15 @@ class Percobaan1 extends StatelessWidget {
                           ]
                         ),
                       ),
-                      const SizedBox(height: 32), // Jarak antara artis dan bait pertama
+                      const SizedBox(height: 32), 
 
-                      // Lirik lagu dengan style yang sama dan jarak yang rapi
+                      
                       const Text(
                         "I've chosen you, to colorize\nLike a rainbow fills the blue sky\nIt's hard to say, oooh",
                         textAlign: TextAlign.center,
                         style: TextStyle(color: Colors.white38),
                       ),
-                      const SizedBox(height: 24), // Jarak antar bait
+                      const SizedBox(height: 24), 
                       const Text(
                         "You never say, what's in your heart\nThat is your love really true for me\nYou can't even hide it",
                         textAlign: TextAlign.center,
