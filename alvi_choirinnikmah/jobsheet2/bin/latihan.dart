@@ -1,5 +1,11 @@
 void main() {
-  String test = "test2";
+  // Tambahan kode 
+  String test = "true";
+  if (test == "true") {
+    print("Kebenaran");
+  }
+
+  // String test = "test2";
   if (test == "test1") {
     print("Test1");
   } else if (test == "test2") {
@@ -10,3 +16,8 @@ void main() {
 
   if (test == "test2") print("Test2 again");
 }
+
+/*  Catatan: Penambahan kode if dapat membuat kode error jika dijalankan karena
+    terjadi duplikasi variabel 'test'. Sehingga nama variabel harus diubah agar tidak
+    terjadi duplikasi atau deklarasi test sebelumnya dapat di comment.
+*/
