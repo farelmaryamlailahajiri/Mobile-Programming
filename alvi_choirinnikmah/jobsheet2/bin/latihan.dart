@@ -24,7 +24,7 @@
 */
 
 // 2. Menerapkan Perulangan "while" dan "do-while"
-void main() {
+/* void main() {
   int counter = 0; // dekalrasi dan inisialisasi
   while (counter < 33) {
     print(counter);
@@ -35,8 +35,16 @@ void main() {
     print(counter);
     counter++;
   } while (counter < 77);
-}
+} */
 
 /* Catatan : Penambahan kode do-while tidak menimbulkan error karena tidak ada
    duplikasi variabel. Saat dijalankan kode akan mencetak baris kode while  untuk mencetak angka
-   0 - 32, kemudian dilanjutkan dengan do-while untuk mencetak angka 33 - 76. */
+   0 - 32, kemudian dilanjutkan dengan do-while untuk mencetak angka 33 - 76. 
+*/
+
+// 3. Menerapkan Perulangan "for" dan "break-continue"
+void main() {
+  for(int index = 10; index < 27; index++) {
+    print(index);
+  }
+}
