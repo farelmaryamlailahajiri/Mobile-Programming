@@ -90,4 +90,17 @@ void main() {
     print(list);
     print(list2);
     print(list2.length);
+
+    // Tambahkan kode
+    var list1 = [1, 2, null];
+    print(list1);
+    var list3 = [0, ...?list1];
+    print(list3);
+    print(list3.length);
+
+    // Menambahkan variabel list berisi NIM menggunakan Spread Operator
+    var nim = [2, 3, 4, 1, 7, 6, 0, 1, 9, 1];
+    var combinedList = [...list3, ...nim];
+    print(combinedList);
+    print(combinedList.length);
 }
