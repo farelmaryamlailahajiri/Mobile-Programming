@@ -61,4 +61,24 @@ void main() {
 
   print(gifts);
   print(novleGases);
+
+  // Tambahkan kode
+  var mhs1 = Map<String, String>();
+  gifts['first'] = 'partridge';
+  gifts['second'] = 'turtledove';
+  gifts['fifth'] = 'golden ring';
+  mhs1['nama'] = 'Alvi Choirinnikmah';
+  mhs1['NIM'] = '2341760191';
+
+  var mhs2 = Map<int, String>();
+  novleGases[2] = 'helium';
+  novleGases[10] = 'neon';
+  novleGases[18] = 'argon';
+  mhs2[1] = 'Alvi Choirinnikmah';
+  mhs2[2] = '2341760191';
+
+  print(gifts);
+  print(novleGases);
+  print(mhs1);
+  print(mhs2);
 }
