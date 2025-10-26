@@ -24,7 +24,7 @@
 } */
 
 // 2. Eksperimen Tipe Data Set
-void main() {
+/* void main() {
     var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
     print(halogens);
 
@@ -46,4 +46,19 @@ void main() {
     print(names1);
     print(names2);
     print(names3);
+} */
+
+// 3. Eksperimen Tipe Data Maps
+void main() {
+  var gifts = {
+    // key : value
+    'first': 'partridge',
+    'second': 'turtledove',
+    'fifth': 1,
+  };
+
+  var novleGases = {2: 'helium', 10: 'neon', 18: 2};
+
+  print(gifts);
+  print(novleGases);
 }
