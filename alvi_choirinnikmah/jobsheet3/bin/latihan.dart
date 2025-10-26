@@ -1,5 +1,5 @@
 // 1. Eksperimen Tipe Data List
-void main() {
+/* void main() {
     var list = [1, 2, 3];
     assert(list.length == 3); // Memastikan panjang list adalah 3
     assert(list[1] == 2); // Memastikan elemen kedua adalah 2
@@ -9,4 +9,16 @@ void main() {
     list[1] = 1;
     assert(list[1] == 1);
     print(list[1]);
+} */
+
+/*  Ubah kode pada langkah 1 menjadi variabel final yang mempunyai index = 5 dengan default value = null. 
+    Isilah nama dan NIM Anda pada elemen index ke-1 dan ke-2. Lalu print dan capture hasilnya.
+*/
+
+void main() {
+    final List<String?> list= List.filled(5, null);
+    list[1] = "Alvi Choirinnikmah";
+    list[2] = "2341760191";
+
+    print(list);
 }
