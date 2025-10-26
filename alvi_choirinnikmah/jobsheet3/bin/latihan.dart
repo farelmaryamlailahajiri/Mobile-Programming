@@ -27,4 +27,23 @@
 void main() {
     var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
     print(halogens);
+
+    // Tambahkan kode
+    var names1 = <String>{};
+    Set<String> names2 = {};
+    var names3 = <String>{};
+
+    // Tambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll().
+    names1.add("Alvi Choirinnikmah");
+    names1.addAll(["2341760191"]);
+
+    names2.add("Alvi Choirinnikmah");
+    names2.addAll(["2341760191"]);
+
+    names3.add("Alvi Choirinnikmah");
+    names3.addAll(["2341760191"]);
+
+    print(names1);
+    print(names2);
+    print(names3);
 }
