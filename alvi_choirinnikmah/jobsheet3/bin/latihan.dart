@@ -49,7 +49,7 @@
 } */
 
 // 3. Eksperimen Tipe Data Maps
-void main() {
+/* void main() {
   var gifts = {
     // key : value
     'first': 'partridge',
@@ -81,4 +81,13 @@ void main() {
   print(novleGases);
   print(mhs1);
   print(mhs2);
+} */
+
+// 4. Eksperimen Tipe Data List: Spread dan Control-flow Operators
+void main() {
+    var list = [1, 2, 3];
+    var list2 = [0, ...list];
+    print(list);
+    print(list2);
+    print(list2.length);
 }
