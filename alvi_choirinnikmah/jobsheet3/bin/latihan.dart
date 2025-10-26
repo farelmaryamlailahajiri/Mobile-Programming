@@ -15,10 +15,16 @@
     Isilah nama dan NIM Anda pada elemen index ke-1 dan ke-2. Lalu print dan capture hasilnya.
 */
 
-void main() {
+/* void main() {
     final List<String?> list= List.filled(5, null);
     list[1] = "Alvi Choirinnikmah";
     list[2] = "2341760191";
 
     print(list);
+} */
+
+// 2. Eksperimen Tipe Data Set
+void main() {
+    var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
+    print(halogens);
 }
