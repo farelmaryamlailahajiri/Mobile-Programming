@@ -16,7 +16,6 @@ class _CameraPageState extends State<CameraPage> {
   late Future<void> _initializeControllerFuture;
 
   @override
-
   void initState() {
     super.initState();
     _controller = CameraController(widget.camera, ResolutionPreset.medium);
@@ -36,10 +35,12 @@ class _CameraPageState extends State<CameraPage> {
 
     if (_controller.description.lensDirection == CameraLensDirection.back) {
       newCamera = cameras.firstWhere(
-          (camera) => camera.lensDirection == CameraLensDirection.front);
+        (camera) => camera.lensDirection == CameraLensDirection.front,
+      );
     } else {
       newCamera = cameras.firstWhere(
-          (camera) => camera.lensDirection == CameraLensDirection.back);
+        (camera) => camera.lensDirection == CameraLensDirection.back,
+      );
     }
 
     _controller.dispose();
@@ -52,10 +53,11 @@ class _CameraPageState extends State<CameraPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Take a picture'),
+      appBar: AppBar(
+        title: const Text('Take a picture'),
         actions: [
           IconButton(
-            icon: const Icon(Icons.switch_camera),
+            icon: const Icon(Icons.cameraswitch),
             onPressed: switchCamera,
           ),
         ],
@@ -76,34 +78,37 @@ class _CameraPageState extends State<CameraPage> {
             await _initializeControllerFuture;
             // Ambil foto dan simpan ke file
             final image = await _controller.takePicture();
-            
+
             // Dapatkan direktori penyimpanan sementara
             final directory = await getApplicationDocumentsDirectory();
-            final name = '${DateTime.now()}.millisecondSinceEpoch}.png';
+            final timestamp = DateTime.now().millisecondsSinceEpoch;
+            final name = 'photo_$timestamp.png';
             final localPath = '${directory.path}/$name';
 
-            // Simpan file ke directori lokal 
+            // Simpan file ke directori lokal
             await image.saveTo(localPath);
 
             // Navigate ke preview screen setelah mengambil foto
             if (!mounted) return;
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('Foto disimpan di : localPath')),
+              SnackBar(content: Text('Foto disimpan di: $localPath')),
             );
-            
+
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => DisplayPictureScreen(
-                  imagePath: image.path,
-                ),
+                builder: (context) =>
+                    DisplayPictureScreen(imagePath: image.path),
               ),
             );
           } catch (e) {
             print(e);
           }
         },
-        child: const Icon(Icons.camera_alt),
+        backgroundColor: Colors.blueAccent,
+        shape: const CircleBorder(), // memastikan bentuk benar-benar bulat
+        elevation: 6, // sedikit bayangan biar elegan
+        child: const Icon(Icons.camera_alt, size: 32, color: Colors.white),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
@@ -121,7 +126,9 @@ class DisplayPictureScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Display the Picture')),
       body: Center(
-        child: Image.file(File(imagePath)), // atau Image.file(File(imagePath)) untuk local file
+        child: Image.file(
+          File(imagePath),
+        ), // atau Image.file(File(imagePath)) untuk local file
       ),
     );
   }

@@ -190,7 +190,7 @@ class _HomePageStatefulState extends State<HomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
-  }
+  } 
 
   Widget buildImageCard(String title, String count, String imagePath) {
     return Card(
