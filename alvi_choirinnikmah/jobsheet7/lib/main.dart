@@ -1,6 +1,8 @@
-// import 'package:camera/camera.dart';
+import 'dart:io';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design/material_design.dart';
+import 'camera_page.dart'; // pastikan import file camera_page.dart jika dipisah
 
 /* late List<CameraDescription> _cameras;
 
@@ -66,13 +68,25 @@ class _CameraAppState extends State<CameraApp> {
 
 // Implementasika Material Design dari https://pub.dev.
 
-void main() {
-  runApp(const MyMaterialApp());
+late List<CameraDescription> _cameras;
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  _cameras = await availableCameras();
+  //runApp(const CameraApp());
+  final cameras = await availableCameras();
+  runApp(MyMaterialApp(cameras: cameras));
 }
 
-class MyMaterialApp extends StatelessWidget {
-  const MyMaterialApp({super.key});
+/* void main() {
+  runApp(const MyMaterialApp());
+} */
 
+class MyMaterialApp extends StatelessWidget {
+  final List<CameraDescription> cameras;
+  const MyMaterialApp({super.key, required this.cameras});
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -98,18 +112,23 @@ class HomePage extends StatefulWidget {
 class _HomePageStatefulState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  
-
   // Fungsi ganti halaman botton navigation
   void _onNavItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
-  } 
+  }
 
-  void _onTakePhotoPressed() {
+  /* void _onTakePhotoPressed() {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Take Photo Pressed')),
+    );
+  } */
+
+  void _onTakePhotoPressed() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => CameraPage(camera: _cameras[0])),
     );
   }
 
@@ -122,9 +141,7 @@ class _HomePageStatefulState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Material Design App'),
         actions: const [
-          CircleAvatar(
-            backgroundImage: AssetImage('assets/gambar.jpg'),
-          ),
+          CircleAvatar(backgroundImage: AssetImage('assets/gambar.jpg')),
           SizedBox(width: 16),
         ],
       ),
@@ -160,13 +177,16 @@ class _HomePageStatefulState extends State<HomePage> {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.favorite), label: ''),
           NavigationDestination(icon: Icon(Icons.explore), label: ''),
-          NavigationDestination(icon: Icon(Icons.account_circle_outlined), label: ''), 
+          NavigationDestination(
+            icon: Icon(Icons.account_circle_outlined),
+            label: '',
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _onTakePhotoPressed,
         icon: const Icon(Icons.camera_alt),
-        label: const Text ("Take a Photo"),
+        label: const Text("Take a Photo"),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
@@ -184,10 +204,7 @@ class _HomePageStatefulState extends State<HomePage> {
               gradient: LinearGradient(
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,
-                colors: [
-                  Colors.black.withOpacity(0.6),
-                  Colors.transparent,
-                ],
+                colors: [Colors.black.withOpacity(0.6), Colors.transparent],
               ),
             ),
           ),
@@ -207,14 +224,11 @@ class _HomePageStatefulState extends State<HomePage> {
                 ),
                 Text(
                   '$count items',
-                  style: const TextStyle(
-                    color: Colors.white70,
-                    fontSize: 12,
-                  ),
+                  style: const TextStyle(color: Colors.white70, fontSize: 12),
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
