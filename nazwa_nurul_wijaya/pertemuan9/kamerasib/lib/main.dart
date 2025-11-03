@@ -1,64 +1,58 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'tugas_page.dart';
 
-late List<CameraDescription> _cameras;
+List<CameraDescription> cameras = [];
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  _cameras = await availableCameras();
-  runApp(const CameraApp());
+  
+  try {
+    cameras = await availableCameras();
+    print('Jumlah kamera ditemukan: ${cameras.length}');
+  } on CameraException catch (e) {
+    print('Error kamera: ${e.description}');
+  } catch (e) {
+    print('Error: $e');
+  }
+  
+  runApp(const MyApp());
 }
 
-/// CameraApp is the Main Application.
-class CameraApp extends StatefulWidget {
-  /// Default Constructor
-  const CameraApp({super.key});
-
-  @override
-  State<CameraApp> createState() => _CameraAppState();
-}
-
-class _CameraAppState extends State<CameraApp> {
-  late CameraController controller;
-
-  @override
-  void initState() {
-    super.initState();
-    controller = CameraController(_cameras[0], ResolutionPreset.max);
-    controller
-        .initialize()
-        .then((_) {
-          if (!mounted) {
-            return;
-          }
-          setState(() {});
-        })
-        .catchError((Object e) {
-          if (e is CameraException) {
-            switch (e.code) {
-              case 'CameraAccessDenied':
-                // Handle access errors here.
-                break;
-              default:
-                // Handle other errors here.
-                break;
-            }
-          }
-        });
-  }
-
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    if (!controller.value.isInitialized) {
-      return Container();
-    }
-    return MaterialApp(home: CameraPreview(controller));
+    return MaterialApp(
+      title: 'Kamera SIB',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        useMaterial3: true,
+      ),
+      home: cameras.isEmpty
+          ? const Scaffold(
+              body: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.error_outline, size: 64, color: Colors.red),
+                    SizedBox(height: 16),
+                    Text(
+                      'Tidak ada kamera yang terdeteksi',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Pastikan emulator/hp mendukung kamera',
+                      style: TextStyle(fontSize: 14, color: Colors.grey),
+                    ),
+                  ],
+                ),
+              ),
+            )
+          : TugasPage(cameras: cameras),
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
