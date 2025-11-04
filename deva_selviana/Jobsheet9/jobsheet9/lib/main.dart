@@ -1,18 +1,18 @@
-import 'dart:io';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart' show join;
-import 'package:path_provider/path_provider.dart';
 
 late List<CameraDescription> _cameras;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   _cameras = await availableCameras();
   runApp(const CameraApp());
 }
 
+/// CameraApp is the Main Application.
 class CameraApp extends StatefulWidget {
+  /// Default Constructor
   const CameraApp({super.key});
 
   @override
@@ -20,183 +20,44 @@ class CameraApp extends StatefulWidget {
 }
 
 class _CameraAppState extends State<CameraApp> {
-  late CameraController _controller;
-  int _selectedCameraIndex = 0;
-  bool _isRecording = false;
-  XFile? _capturedMedia;
+  late CameraController controller;
 
   @override
   void initState() {
     super.initState();
-    _initializeCamera(_cameras[_selectedCameraIndex]);
-  }
-
-  Future<void> _initializeCamera(CameraDescription cameraDescription) async {
-    _controller = CameraController(cameraDescription, ResolutionPreset.high);
-    try {
-      await _controller.initialize();
-      if (!mounted) return;
-      setState(() {});
-    } catch (e) {
-      debugPrint("Error initializing camera: $e");
-    }
-  }
-
-  Future<void> _switchCamera() async {
-    if (_cameras.length < 2) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Kamera depan/belakang tidak tersedia")),
-      );
-      return;
-    }
-
-    _selectedCameraIndex = (_selectedCameraIndex + 1) % _cameras.length;
-    await _controller.dispose();
-    await _initializeCamera(_cameras[_selectedCameraIndex]);
-  }
-
-  Future<void> _takePicture() async {
-    if (!_controller.value.isInitialized) return;
-    if (_controller.value.isTakingPicture) return;
-
-    try {
-      final Directory appDir = await getApplicationDocumentsDirectory();
-      final String filePath =
-          join(appDir.path, '${DateTime.now().millisecondsSinceEpoch}.jpg');
-
-      final XFile picture = await _controller.takePicture();
-      await picture.saveTo(filePath);
-
-      if (!mounted) return;
-
-      setState(() {
-        _capturedMedia = XFile(filePath);
-      });
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Foto disimpan di: $filePath')),
-      );
-    } catch (e) {
-      debugPrint('Error saat mengambil foto: $e');
-    }
-  }
-
-  Future<void> _recordVideo() async {
-    if (!_controller.value.isInitialized) return;
-
-    final Directory appDir = await getApplicationDocumentsDirectory();
-    final String filePath =
-        join(appDir.path, '${DateTime.now().millisecondsSinceEpoch}.mp4');
-
-    try {
-      if (_isRecording) {
-        // Stop recording
-        final XFile videoFile = await _controller.stopVideoRecording();
-        await videoFile.saveTo(filePath);
-
-        setState(() {
-          _isRecording = false;
-          _capturedMedia = XFile(filePath);
+    controller = CameraController(_cameras[0], ResolutionPreset.max);
+    controller
+        .initialize()
+        .then((_) {
+          if (!mounted) {
+            return;
+          }
+          setState(() {});
+        })
+        .catchError((Object e) {
+          if (e is CameraException) {
+            switch (e.code) {
+              case 'CameraAccessDenied':
+                // Handle access errors here.
+                break;
+              default:
+                // Handle other errors here.
+                break;
+            }
+          }
         });
-
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Video disimpan di: $filePath')),
-        );
-      } else {
-        // Start recording
-        await _controller.startVideoRecording();
-
-        setState(() {
-          _isRecording = true;
-        });
-
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Merekam video...')),
-        );
-      }
-    } catch (e) {
-      debugPrint('Error saat merekam video: $e');
-    }
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    controller.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (!_controller.value.isInitialized) {
-      return const MaterialApp(
-        home: Scaffold(
-          body: Center(child: CircularProgressIndicator()),
-        ),
-      );
+    if (!controller.value.isInitialized) {
+      return Container();
     }
-
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Aplikasi Kamera Material Design'),
-          backgroundColor: Colors.teal,
-          centerTitle: true,
-        ),
-        body: Stack(
-          children: [
-            CameraPreview(_controller),
-            if (_capturedMedia != null)
-              Positioned(
-                bottom: 140,
-                left: 20,
-                right: 20,
-                child: Container(
-                  height: 100,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white, width: 2),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: _capturedMedia!.path.endsWith(".mp4")
-                      ? const Center(
-                          child: Icon(Icons.videocam, color: Colors.white, size: 50),
-                        )
-                      : Image.file(File(_capturedMedia!.path), fit: BoxFit.cover),
-                ),
-              ),
-            Positioned(
-              bottom: 20,
-              left: 0,
-              right: 0,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  FloatingActionButton(
-                    heroTag: 'switch',
-                    backgroundColor: Colors.tealAccent,
-                    onPressed: _switchCamera,
-                    child: const Icon(Icons.cameraswitch),
-                  ),
-                  const SizedBox(width: 20),
-                  FloatingActionButton(
-                    heroTag: 'capture',
-                    backgroundColor: Colors.tealAccent,
-                    onPressed: _takePicture,
-                    child: const Icon(Icons.camera_alt),
-                  ),
-                  const SizedBox(width: 20),
-                  FloatingActionButton(
-                    heroTag: 'video',
-                    backgroundColor: _isRecording ? Colors.red : Colors.tealAccent,
-                    onPressed: _recordVideo,
-                    child: Icon(_isRecording ? Icons.stop : Icons.videocam),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+    return MaterialApp(home: CameraPreview(controller));
+  }                                                                                                                                                                                                                                      }
