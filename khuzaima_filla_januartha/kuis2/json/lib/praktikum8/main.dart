@@ -7,16 +7,6 @@ void main() {
   runApp(WireMockApp());
 }
 
-class ApiConfig {
-  static const String baseUrl =
-      'https://khzmfl.wiremockapi.cloud/'; // Ganti sesuai WireMock kamu
-  static const usersEndpoint = '/users';
-  static Map<String, String> headers = {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-  };
-}
-
 class WireMockApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,18 +14,30 @@ class WireMockApp extends StatelessWidget {
       title: 'WireMock Cloud Demo',
       theme: ThemeData(primarySwatch: Colors.indigo),
       home: UserPage(),
-    );
+    ); // MaterialApp
   }
+}
+
+class ApiConfig {
+  static const String baseUrl =
+      'https://khzmfl.wiremockapi.cloud'; // Ganti sesuai WireMock kamu
+  static const usersEndpoint = '/users';
+
+  static Map<String, String> headers = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  };
 }
 
 class UserPage extends StatefulWidget {
   @override
-  UserPageState createState() => UserPageState();
+  _UserPageState createState() => _UserPageState();
 }
 
-class UserPageState extends State<UserPage> {
+class _UserPageState extends State<UserPage> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
+
   List<dynamic> users = [];
   bool isLoading = false;
   String? errorMessage;
@@ -55,18 +57,15 @@ class UserPageState extends State<UserPage> {
     });
 
     final url = Uri.parse('${ApiConfig.baseUrl}${ApiConfig.usersEndpoint}');
+
     try {
       final response = await http
           .get(url, headers: ApiConfig.headers)
           .timeout(const Duration(seconds: 10));
 
       if (response.statusCode == 200) {
-        // Asumsi API mengembalikan List<User> atau List<Map>
-        // Sesuaikan jika hanya mengembalikan 1 object
-        // users = [jsonDecode(response.body)]; 
-        // Untuk WireMock stub /users/{id}
-        final data = jsonDecode(response.body); 
-        setState(() => users = data is List ? data : [data]);
+        final data = jsonDecode(response.body);
+        setState(() => users = data);
       } else {
         setState(() => errorMessage = 'Error ${response.statusCode}');
       }
@@ -84,7 +83,7 @@ class UserPageState extends State<UserPage> {
 
     if (name.isEmpty || email.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Nama & Email tidak boleh kosong")),
+        const SnackBar(content: Text('Nama & Email tidak boleh kosong!')),
       );
       return;
     }
@@ -102,58 +101,58 @@ class UserPageState extends State<UserPage> {
         setState(() {
           postMessage = result['message'] ?? 'User berhasil ditambahkan!';
         });
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text(postMessage!)));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(postMessage!)),
+        );
         _nameController.clear();
         _emailController.clear();
         fetchUsers();
       } else {
-        setState(
-          () => postMessage = 'Gagal menambah user (${response.statusCode})',
+        setState(() {
+          postMessage = 'Gagal menambah user (${response.statusCode})';
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(postMessage!)),
         );
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text(postMessage!)));
       }
     } catch (e) {
       setState(() => postMessage = 'Error: $e');
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(postMessage!)));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(postMessage!)),
+      );
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('WireMock Cloud Users')),
+      appBar: AppBar(title: const Text('WireMock Cloud - Users')),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            // Input form
+            // Input Form
             TextField(
               controller: _nameController,
               decoration: const InputDecoration(
                 labelText: 'Nama',
                 border: OutlineInputBorder(),
-              ),
-            ),
+              ), // InputDecoration
+            ), // TextField
             const SizedBox(height: 8),
             TextField(
               controller: _emailController,
               decoration: const InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(),
-              ),
-            ),
+              ), // InputDecoration
+            ), // TextField
             const SizedBox(height: 10),
             ElevatedButton.icon(
               icon: const Icon(Icons.add),
               label: const Text('Tambah User'),
               onPressed: addUser,
-            ),
+            ), // ElevatedButton.icon
             const SizedBox(height: 20),
             if (postMessage != null) ...[
               Container(
@@ -163,23 +162,24 @@ class UserPageState extends State<UserPage> {
                   color: Colors.green[50],
                   border: Border.all(color: Colors.green),
                   borderRadius: BorderRadius.circular(8),
-                ),
+                ), // BoxDecoration
                 child: Text(
                   postMessage!,
                   style: const TextStyle(
                     color: Colors.green,
                     fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
+                  ), // TextStyle
+                ), // Text
+              ), // Container
               const SizedBox(height: 20),
             ],
             const Divider(),
             const Text(
               'Daftar User',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            ),
+            ), // Text
             const Divider(),
+
             // Data list
             Expanded(
               child: isLoading
@@ -197,17 +197,17 @@ class UserPageState extends State<UserPage> {
                                       child: Text('${user['id']}')),
                                   title: Text(user['name']),
                                   subtitle: Text(user['email']),
-                                );
+                                ); // ListTile
                               },
-                            ),
-            ),
+                            ), // ListView.builder
+            ), // Expanded
           ],
-        ),
-      ),
+        ), // Column
+      ), // Padding
       floatingActionButton: FloatingActionButton(
         onPressed: fetchUsers,
         child: const Icon(Icons.refresh),
-      ),
-    );
+      ), // FloatingActionButton
+    ); // Scaffold
   }
 }
